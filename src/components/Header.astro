@@ -1,0 +1,15 @@
+
+interface props{
+  currentPath?: string;
+}
+
+/** 現在のページパス（アクティブ状態のハイライトに使用） */
+const { currentPath = '/'} = Astro.props
+
+/** グローバルナビゲーション項目 */
+const navItem =[
+{label: 'ABOUT',href: '/about' },
+{label: 'PROJECT', href: '/project' }<
+{label: 'CONTACT', href: '/contact'}
+];
+
