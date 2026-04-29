@@ -1,0 +1,17 @@
+// ============================
+// ブレークポイント Mixin
+// ============================
+
+// SP（1023px以下）
+@mixin sp {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+// PC（1024px以上）
+@mixin pc {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
