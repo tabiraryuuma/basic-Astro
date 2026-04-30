@@ -1,15 +1,27 @@
+---
+/**
+ * Header.astro
+ * 左側にロゴ＋グローバルナビ、右側に施設名タブ・SNS・予約ボタン・言語切替・ハンバーガーを配置。
+ * ※ スタイルは header.scss で管理
+ */
 
-interface props{
+interface Props {
   currentPath?: string;
 }
-
-/** 現在のページパス（アクティブ状態のハイライトに使用） */
+/** 現在のページ（currentPath）を取得し、無い場合は「/」を使う */
 const { currentPath = '/'} = Astro.props
 
 /** グローバルナビゲーション項目 */
-const navItem =[
-{label: 'ABOUT',href: '/about' },
-{label: 'PROJECT', href: '/project' }<
-{label: 'CONTACT', href: '/contact'}
+const navItems = [
+  { label: 'ABOUT', href: '/about' },
+  { label: 'PROJECT', href: '/project' },
+  { label: 'CONTACT', href: '/contact' },
 ];
+
+---
+<!-- ========== ヘッダーエリア========== -->
+<header class="header" id="siteHeader">
+   <div class="header__inner">
+
+
 
