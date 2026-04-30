@@ -1,0 +1,13 @@
+.components {
+  padding: 40px;
+
+  &__block {
+    margin-bottom: 40px;
+  }
+
+  &__preview {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: #fafafa;
+  }
+}
