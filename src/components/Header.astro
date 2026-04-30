@@ -6,14 +6,13 @@
  */
 
 /** このロゴ使います宣伝 */
-import logo from '../assets/SVG/yoneda-hotel-group-logo.svg';
-
 interface Props {
   currentPath?: string;
 }
 
 /** 現在のページ（currentPath）を取得し、無い場合は「/」を使う */
 const { currentPath = '/' } = Astro.props;
+
 
 /** グローバルナビゲーション項目 */
 const navItems = [
