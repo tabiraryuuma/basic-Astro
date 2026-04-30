@@ -2,16 +2,22 @@
 // ブレークポイント Mixin
 // ============================
 
-// SP（1023px以下）
-@mixin sp {
-  @media (max-width: 1023px) {
-    @content;
-  }
-}
+// PC版　= min-lg（1024px以上）
+// SP版 = max-lg（1023px以下）
+//使い方の例： @include mq('max-lg'):ソースコード
+$breakpoints: (
+  'min-lg': (min-width: 1024px),
+  'max-lg': (max-width: 1023px),
+) !default;
 
-// PC（1024px以上）
-@mixin pc {
-  @media (min-width: 1024px) {
+
+
+/* ---------------------------------------------------
+  Mixin
+--------------------------------------------------- */
+// ブレークポイント
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
 }
