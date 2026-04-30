@@ -5,14 +5,14 @@
  * ※ スタイルは header.scss で管理
  */
 
-import astroImg from '../assets/astro.svg';
-
+/** このロゴ使います宣伝 */
 interface Props {
   currentPath?: string;
 }
 
 /** 現在のページ（currentPath）を取得し、無い場合は「/」を使う */
 const { currentPath = '/' } = Astro.props;
+
 
 /** グローバルナビゲーション項目 */
 const navItems = [
