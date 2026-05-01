@@ -1,1 +1,21 @@
 @charset "UTF-8";
+
+// ========================================
+// Global Style Entry
+// - foundation
+// - layout
+// - components
+// ========================================
+
+// foundation
+@use "./foundation/reset";
+@use "./foundation/variables";
+@use "./foundation/mixins";
+@use "./foundation/base";
+
+// layout
+@use "./layout/header";
+
+// components
+@use "./components/button";
+@use "./components/card";
