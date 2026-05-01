@@ -1,0 +1,13 @@
+@use "./foundation/reset" as *;
+@use "./foundation/variables" as *;
+@use "./foundation/base" as *;
+// ========================================
+// Reset(リセット)
+// - ブラウザのデフォルトスタイルをリセット
+// ========================================
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}

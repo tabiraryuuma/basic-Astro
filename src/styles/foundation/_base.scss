@@ -1,0 +1,9 @@
+// ========================================
+// Base
+// - 全体の基本設定
+// - フォントサイズ（10pxベース）
+// - line-height / body設定
+// ========================================
+@use "./foundation/reset" as *;
+@use "./foundation/variables" as *;
+@use "./foundation/mixins" as *;
