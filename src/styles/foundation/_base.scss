@@ -7,3 +7,19 @@
 @use "./foundation/reset" as *;
 @use "./foundation/variables" as *;
 @use "./foundation/mixins" as *;
+// ========================================
+
+// ========================================
+// - 10pxベース（1rem = 10px）
+/* 1rem = 10px（チームルール） */
+// ========================================
+
+html {
+  font-size: 62.5%; /* 1rem = 10px（16px × 62.5% = 10px） */
+}
+
+body {
+  font-size: 1.6rem; /* 16px相当 */
+  line-height: 1.6;
+  color: $font-color; // variablesで定義している場合
+}
