@@ -1,6 +1,4 @@
-@use "./foundation/reset" as *;
-@use "./foundation/variables" as *;
-@use "./foundation/base" as *;
+@use "./variables" as *;
 // ========================================
 // Reset(リセット)
 // - ブラウザのデフォルトスタイルをリセット
@@ -37,4 +35,3 @@ ul {
   list-style: none;
   padding: 0;
 }
-
