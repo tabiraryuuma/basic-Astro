@@ -3,9 +3,12 @@
 
 import '../styles/components/_button.scss';
 
-const { href = "#" } = Astro.props;
+const { 
+  href = "#", 
+  text = "ボタン"
+   } = Astro.props;
 ---
 
-<a href={href}class="btn">
-  <slot />
+<a href={href} class="btn">
+  <span>{text}</span>
 </a>
