@@ -20,6 +20,14 @@ const navItems = [
   { label: 'PROJECT', href: '/project' },
   { label: 'CONTACT', href: '/contact' },
 ];
+
+/** 施設一覧 */
+const facilities = [
+  { label: 'Itoshima 810', href: '/facility/itoshima-810' },
+  { label: 'Itoshima 808', href: '/facility/itoshima-808' },
+  { label: 'Tamagawa4', href: '/facility/tamagawa4' },
+  { label: 'Okusu3', href: '/facility/okusu3' },
+];
 ---
 
 
@@ -32,9 +40,46 @@ const navItems = [
         YONEDA HOTEL GROUP
       </a>
       <nav class="header__nav" id="globalNav" aria-label="グローバルナビゲーション">
-        <ul class="header__nav-item">
-          
+        <ul class="header__nav-list">
+          {navItems.map((item) => (
+            <li class="header__nav-item">
+              <a
+                href={item.href}
+                class:list={[
+                  'header__nav-link',
+                  { 'is-active': currentPath === item.href },
+                ]}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
+      </nav>
+    </div>
+
+    <!-- ========== 右エリア: 施設タブ + アクション ========== -->
+     <div class="header__right">
+
+      <!-- 施設タブ -->
+      <nav class="header__facilities" aria-label="施設一覧">
+        <ul class="header__facilities-list">
+          {facilities.map((facility) => (
+            <li class="header__facilities-item">
+              <a href={facility.href} class="header__facilities-link">
+                {facility.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <!-- SNS アイコン -->
+       
+     </div>
+
+      
+
 
 
 
