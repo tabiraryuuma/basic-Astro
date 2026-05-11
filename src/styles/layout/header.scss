@@ -6,3 +6,41 @@
 // - ナビゲーション
 // - ハンバーガー
 // ========================================
+
+
+// ============================
+// ヘッダーカラー変数
+// ===========================
+$header-text-color: #ffffff;
+$header-text-muted: rgba(255, 255, 255, 0.7);
+$header-border-color: rgba(255, 255, 255, 0.35);
+$header-reserve-bg: #8b7355;
+$header-reserve-hover: #a08666;
+$header-panel-bg: rgba(60, 50, 38, 0.95);
+$header-panel-border: rgba(255, 255, 255, 0.15);
+
+
+// ============================
+// ヘッダー本体
+// ============================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  transition: background-color 0.5s ease;
+    // --------------------------------
+  // インナーラッパー
+  // --------------------------------
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+
+
+
+}

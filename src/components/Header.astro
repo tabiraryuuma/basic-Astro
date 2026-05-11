@@ -1,4 +1,7 @@
 ---
+import Button from '../components/Button.astro';
+
+
 /**
  * Header.astro
  * 左側にロゴ＋グローバルナビ、右側に施設名タブ・SNS・予約ボタン・言語切替・ハンバーガーを配置。
@@ -75,8 +78,38 @@ const facilities = [
       </nav>
 
       <!-- SNS アイコン -->
-       
-     </div>
+       <div class="header__sns">
+        <a 
+          href="https://www.instagram.com/"
+          class="header__sns-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          >
+            <!-- Instagram アイコン（SVG） -->
+             <img src="src/assets/SVG/Instagram.svg" alt="" class="header__sns-icon" />
+           </a>
+
+          <!-- LINE アイコン（SVG） -->
+            <a
+             href="https://line.me/..."
+             class="header__sns-link"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="LINE"
+             >
+             <img src="src/assets/SVG/LINE.svg" alt="" class="header__sns-icon" />
+           
+             <!-- Reserve / 予約 ボタン -->
+             <div class="header__reserve">
+              <a href="/reserve" class="header__reserve-btn" id="reserveBtn">
+              <Button href="#" text="Reserve<span>｜</span>予約"></Button>
+              </a>
+             </div>
+             
+
+        </div>
+      </div>
 
       
 
