@@ -6,9 +6,10 @@ import '../styles/components/_button.scss';
 const { 
   href = "#", 
   text = "ボタン"
-   } = Astro.props;
+  variant = "primary"
+ } = Astro.props;
 ---
 
-<a href={href} class="btn">
+<a href={href} class={`btn btn--${variant}`}>
   <span>{text}</span>
 </a>
