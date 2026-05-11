@@ -1,0 +1,36 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  href?: string;
+}
+ 
+const { title = "カードタイトル", description = "カードの説明文がここに入ります。", href = "#" } = Astro.props;
+---
+
+<a href={href} class="card">
+  <div class="card__content">
+    <h3 class="card__title">{title}</h3>
+    <p class="card__description">{description}</p>
+  </div>
+  <div class="card__arrow">
+    <svg
+      class="card__arrow-icon"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4 10H16M16 10L10 4M16 10L10 16"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+</a>
+ 
+<link rel="stylesheet" href="/Card.css" />
