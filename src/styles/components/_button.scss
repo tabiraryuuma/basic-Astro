@@ -8,19 +8,16 @@
   border: none;
   border-radius: 8rem;
   text-decoration: none;
+  transition: transform 0.3s;
 
-  span {
-    // font-size: 16px;
-    color: #fff;
-  }
-
+  
   // 背景あり
   &--primary {
     background: #9D9087;
     color: #fff;
 
     &:hover{
-      transform: scale(1.2, 1.2);
+      transform: scale(1.05);
     }
   }
 
@@ -31,7 +28,7 @@
     background: transparent;
 
     &:hover{
-      transform: scale(1.2, 1.2);
+      transform: scale(1.05);
     }
   }
 }
