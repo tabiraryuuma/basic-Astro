@@ -1,5 +1,7 @@
 ---
 import Button from '../components/Button.astro';
+import InstagramIcon from '../assets/SVG/Instagram.svg';
+import LineIcon from '../assets/SVG/LINE.svg';
 
 
 /**
@@ -87,8 +89,7 @@ const facilities = [
           aria-label="Instagram"
           >
             <!-- Instagram アイコン（SVG） -->
-             <img src="src/assets/SVG/Instagram.svg" alt="" class="header__sns-icon" />
-           </a>
+             <img src={InstagramIcon.src} alt="" class="header__sns-icon" />           </a>
 
           <!-- LINE アイコン（SVG） -->
             <a
@@ -98,9 +99,10 @@ const facilities = [
              rel="noopener noreferrer"
              aria-label="LINE"
              >
-             <img src="src/assets/SVG/LINE.svg" alt="" class="header__sns-icon" />
-           
-             <!-- Reserve / 予約 ボタン -->
+             <img src={LineIcon.src} alt="" class="header__sns-icon" />           
+            </a>
+             
+            <!-- Reserve / 予約 ボタン -->
              <div class="header__reserve">
               <a href="/reserve" class="header__reserve-btn" id="reserveBtn">
               <Button href="#" text="Reserve<span>｜</span>予約"></Button>
