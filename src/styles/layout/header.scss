@@ -41,12 +41,15 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     justify-content: space-between;
     max-width: 100%;
     margin-inline: auto;
-    // padding-inline: $spacing-xl;
-    // height: $header-height;
+   
     @include mq('max-lg') {
       // height: $header-height-sp;
       // padding-inline: $spacing-md;
     }
+  }
+  .components .header{
+   
+      background-color: #8b7355;
   }
   
 

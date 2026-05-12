@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "sass:meta";
 // ========================================
 // Mixins
 // - breakpoint（レスポンシブ）
@@ -22,7 +23,15 @@ $breakpoints: (
 --------------------------------------------------- */
 // ブレークポイント
 @mixin mq($breakpoint) {
-  @media #{inspect(map-get($breakpoints, $breakpoint))} {
-    @content;
+  @if $breakpoint == 'min-lg' {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'max-lg' {
+    @media (max-width: 1023px) {
+      @content;
+    }
   }
 }
