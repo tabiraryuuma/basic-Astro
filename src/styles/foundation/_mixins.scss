@@ -22,7 +22,7 @@ $breakpoints: (
 --------------------------------------------------- */
 // ブレークポイント
 @mixin mq($breakpoint) {
-  @media #{map-get($breakpoints, $breakpoint)} {
+  @media #{inspect(map-get($breakpoints, $breakpoint))} {
     @content;
   }
 }
