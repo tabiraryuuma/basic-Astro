@@ -1,3 +1,4 @@
+@use "../foundation/variables" as *;
 @use '../foundation/mixins.scss' as *;
 
 img {
@@ -62,7 +63,7 @@ img {
                 display: block;
             }
             .Copyright {
-                font-size: 0.8rem;
+                font-size: 1.2rem;
             }
         }
         #sidebar {
@@ -182,6 +183,7 @@ img {
         #CC-List {
             width: 100%;
             display: block;
+            padding-bottom: 2rem;
             ul {
                 list-style: none;
                 padding: 0;

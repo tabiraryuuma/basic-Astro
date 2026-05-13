@@ -1,5 +1,7 @@
 ---
 import '../styles/layout/footer.scss';
+import InstagramIcon from '../assets/SVG/Instagram.svg';
+import LineIcon from '../assets/SVG/LINE.svg';
 import Button from '../components/Button.astro';
 ---
 
@@ -17,8 +19,8 @@ import Button from '../components/Button.astro';
                         <h1><a href="/">YONEDA HOTEL GROUP</a></h1>
                         <div class="text-icon-button">
                             <ul class="icon">
-                                <li><img src="/SVG/Instagram.svg" alt="instagram"></li>
-                                <li><img src="/SVG/LINE.svg" alt="LINE"></li>
+                                <li><img src={InstagramIcon.src} alt="" class="header__sns-icon" /></li>
+                                <li><img src={LineIcon.src} alt="" class="header__sns-icon" /> </li>
                             </ul>
                             <nav>
                                 <a href="/jp">JP</a>
@@ -28,11 +30,11 @@ import Button from '../components/Button.astro';
                         </div>
                     </div>
                     <div class="item">
-                        <Button href="#">itoshima810</Button>
-                        <Button href="#">itoshima808</Button>
-                        <Button href="#">Tamagawa4</Button>
-                        <Button href="#">Okusu3</Button>
-                        <Button href="#">Reserve<span>｜</span>予約</Button>
+                        <Button text='itoshima810' href="#"></Button>
+                        <Button text='itoshima808' href="#"></Button>
+                        <Button text='Tamagawa4' href="#"></Button>
+                        <Button text='Okusu3' href="#"></Button>
+                        <Button text='Reserve｜予約' href="#"></Button>
                     </div>
                     <div class="Copyright">
                         <p>Copyright &copy; YONEDA HOTEL GROUP All Rights Reserved.</p>
@@ -49,17 +51,17 @@ import Button from '../components/Button.astro';
                         </nav>
                         <h1><a href="/">YONEDA HOTEL GROUP</a></h1>
                         <div class="item-sp">
-                            <Button href="#">itoshima810</Button>
-                            <Button href="#">itoshima808</Button>
-                            <Button href="#">Tamagawa4</Button>
-                            <Button href="#">Okusu3</Button>
-                            <Button href="#">Reserve<span>｜</span>予約</Button>
+                            <Button text='itoshima810' href="#"></Button>
+                            <Button text='itoshima808' href="#"></Button>
+                            <Button text='Tamagawa4' href="#"></Button>
+                            <Button text='Okusu3' href="#"></Button>
+                            <Button text='Reserve｜予約' href="#"></Button>
                         </div>
                         <div class="column-text">
                             <div class="text-icon-button-sp">
                                 <ul class="icon-sp">
-                                    <li><img src="/SVG/Instagram.svg" alt="instagram"></li>
-                                    <li><img src="/SVG/LINE.svg" alt="LINE"></li>
+                                    <li><img src={InstagramIcon.src} alt="" class="header__sns-icon" /></li>
+                                    <li><img src={LineIcon.src} alt="" class="header__sns-icon" /> </li>
                                 </ul>
                             </div>
                             <ul class="text-list">
