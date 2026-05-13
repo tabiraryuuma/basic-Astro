@@ -89,8 +89,8 @@ const facilities = [
           aria-label="Instagram"
           >
             <!-- Instagram アイコン（SVG） -->
-             <img src={InstagramIcon.src} alt="" class="header__sns-icon" />           </a>
-
+             <img src={InstagramIcon.src} alt="" class="header__sns-icon" />           
+            </a>
           <!-- LINE アイコン（SVG） -->
             <a
              href="https://line.me/..."
@@ -101,17 +101,122 @@ const facilities = [
              >
              <img src={LineIcon.src} alt="" class="header__sns-icon" />           
             </a>
-             
+ 
+        </div>
             <!-- Reserve / 予約 ボタン -->
              <div class="header__reserve">
               <a href="/reserve" class="header__reserve-btn" id="reserveBtn">
-              <Button href="#" text="Reserve<span>｜</span>予約"></Button>
+                <Button href="#" text="Reserve<span>｜</span>予約"></Button>
               </a>
+            </div>
+            
+            <!-- 言語切替 -->
+             <div class="header__lang" id="langSwitch">
+              <button
+               type="button"
+               class="header__lang-btn is-active"
+               data-lang="ja"
+               aria-label="日本語に切り替え"
+              >
+               JP
+              </button>
+              <button
+               type="button"
+               class="header__lang-btn"
+               data-lang="en"
+               aria-label="Switch to English"
+              >
+               EU
+              </button>
              </div>
-             
+            </div>
 
-        </div>
+
+  <!-- ==================== SP メニューパネル ==================== -->
+  <div class="header__panel" id="menuPanel">
+    <!-- 閉じるボタン -->
+     <button
+       class:list="header__panel-class"
+       id="panelCloseButton"
+       type="button"
+       aria-label="メニューを閉じる"
+     >
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+     </button>
+
+    <!-- パネル内: 施設ボタン -->
+     <div class="header__panel-facilities">
+      {facilities.map((facility) => (
+       <a href={facility.href} class="header__panel-facility-link">
+         {facility.label}
+        </a>
+        ))}
+     </div>
+     
+     <!-- パネル内: 予約ボタン -->
+      <div class="header__panel-reserve">
+        <a href="/reserve" class="header__panel-reserve-btn">
+          <span>Reserve</span>
+          <span class="header__panel-reserve-divider" aria-hidden="true"></span>
+          <span>予約</span>
+        </a>
       </div>
+    
+ <!------------ パネル内: SNSアイコン ------------>
+       <div class="header__panel-sns">
+        <a 
+          href="https://www.instagram.com/"
+          class="header__panel-sns-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+           >
+            <!-- Instagram アイコン（SVG） -->
+             <img src={InstagramIcon.src} alt="" class="header__sns-icon" />           
+            </a>
+
+          <!-- LINE アイコン（SVG） -->
+            <a
+             href="https://line.me/..."
+             class="header__panel-sns-link"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="LINE"
+             >
+             <img src={LineIcon.src} alt="" class="header__sns-icon" />           
+            </a>
+          </div>
+
+  <!------------ パネル内: ナビリンク ------------>
+    <nav class="header__panel-nav" aria-label="パネルナビゲーション">
+      <ul class="header__panel-nav-list">
+        {navItems.map((item) => (
+        <li class="header__panel-nav-item">
+            <a href={item.href} class="header__panel-nav-link">
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </nav>
+  
+   <!------------ パネル内: フッター情報 ------------>
+   <div class="header__panel-footer">
+    <a href="/hotel-consultation" class="header__panel-footer-cta">
+      ホテルづくりをお考えの方へ
+    </a>
+    <div class="header__panel-footer-info">
+      <p class="header__panel-footer-company">米田建築工房</p>
+      <p class="header__panel-footer-dept">設計部門</p>
+      <p class="header__panel-footer-brand">TRUNK DESIGN OFFICE</p>
+    </div>
+  </div>
+</div>
+
+
+
 
       
 
