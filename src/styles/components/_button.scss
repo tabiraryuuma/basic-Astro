@@ -1,3 +1,6 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -31,6 +34,12 @@
       transform: scale(1.05);
     }
   }
+
+  @include mq('max-lg') {
+    width: 45rem;
+    height: 6rem;
+  }
+
 }
     
   

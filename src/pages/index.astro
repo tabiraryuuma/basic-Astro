@@ -3,8 +3,28 @@ import Layout from '../layouts/Layout.astro';
 // Layout.astro = ページの共通テンプレ（外枠）
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/pages/_index.scss';
+import Button from "../components/Button.astro";
 ---
 
 <Layout>
+  <main>
+
+    <div class="button-group">
+  <Button
+    href="/project/"
+    text="PROJECT 一覧"
+    variant="outline"
+  />
+
+  <Button
+    href="/reserve/"
+    text="Reserve ｜ 予約"
+    variant="primary"
+  />
+</div>
+    <!-- <Button href="/project/" text="PROJECT 一覧" variant="outline" />  -->
+    <!-- <Button href="/Reserve/" text="Reserve ｜ 予約"> -->
+
 
 </Layout>
