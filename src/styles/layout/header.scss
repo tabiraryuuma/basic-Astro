@@ -25,11 +25,11 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
 // ヘッダー本体
 // ============================
 .header {
-  // position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 1;
   transition: background-color 0.5s ease;
   background-color: rgb(194, 194, 194); // ロゴ文字が白のため、一時期背景を変えています
   
@@ -76,5 +76,27 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
      }
   }
 
+  // ============================
+  // SNS アイコン
+  // ============================
+    &__sns {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @include mq('max-lg') {
+      display: none;
+    }
+  }
+
+    &__sns-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: opacity 0.2 ease;
+
+  }
 
 }

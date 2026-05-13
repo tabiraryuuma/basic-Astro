@@ -19,11 +19,16 @@ import Card from '../components/Card.astro';
   <h1>コンポーネント一覧</h1>
 
   <section class="components__block">
-    <h2>Header</h2>
-    <div class="components__preview">
+    <!-- Before -->
+     <div class="components__preview">
+      <Header />
+    </div>
+    <!-- After -->
+     <div class="components__preview components__preview--header">
       <Header />
     </div>
   </section>
+  
 
   <section class="components__block">
     <h2>予約Button</h2>
@@ -47,3 +52,23 @@ import Card from '../components/Card.astro';
   </section>
 
 </main>
+
+<style lang="scss">
+.components {
+  &__preview {
+    &--header {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      :global(.header) {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        z-index: 1 !important;
+      }
+    }
+  }
+}
+</style>
+
