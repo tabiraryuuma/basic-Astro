@@ -103,12 +103,14 @@ const facilities = [
             </a>
  
         </div>
-            <!-- Reserve / 予約 ボタン -->
-             <div class="header__reserve">
-              <a href="/reserve" class="header__reserve-btn" id="reserveBtn">
-                <Button href="#" text="Reserve<span>｜</span>予約"></Button>
-              </a>
-            </div>
+        <!-- Reserve / 予約 ボタン -->
+         <div class="header__reserve">
+          <a href="/reserve" class="header__reserve-btn" id="reserveBtn">
+            <span class="header__reserve-btn-en">Reserve</span>
+            <span class="header__reserve-btn-divider" aria-hidden="true"></span>
+            <span class="header__reserve-btn-ja">予約</span>
+        </a>
+      </div>
             
             <!-- 言語切替 -->
              <div class="header__lang" id="langSwitch">
@@ -157,12 +159,12 @@ const facilities = [
         ))}
      </div>
      
-     <!-- パネル内: 予約ボタン -->
-      <div class="header__panel-reserve">
-        <a href="/reserve" class="header__panel-reserve-btn">
-          <span>Reserve</span>
-          <span class="header__panel-reserve-divider" aria-hidden="true"></span>
-          <span>予約</span>
+   <!-- Reserve / 予約 ボタン -->
+      <div class="header__reserve">
+        <a href="/reserve" class="header__reserve-btn" id="reserveBtn">
+          <span class="header__reserve-btn-en">Reserve</span>
+          <span class="header__reserve-btn-divider" aria-hidden="true"></span>
+          <span class="header__reserve-btn-ja">予約</span>
         </a>
       </div>
     
@@ -221,6 +223,57 @@ const facilities = [
 </header>
 
 
+<script>
+   /**
+   * メニューパネルの開閉処理
+   */
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburgerButton');
+    const closeBth = document.getElementById('panelCloseButton');
+    const panel = document.getElementById('menuPanel');
+    const overlay = document.getElementById('menuOverlay');
+    const header = document.getElementById('siteHeader');
+
+    // どれか1つでも取得できなかった場合、それ以降のJavaScript処理
+    if (!hamburger || !closeBth || !panel || !overlay || !header)return;
+    
+    const openMenu = () => {
+      header.classList.add('is-menu-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeMenu = () => {
+      header.classList.remove('is-menu-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
+    hamburger.addEventListener('click', openMenu);
+    closeBth.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // パネル内ナビリンクをクリックしたらメニューを閉じる
+    panel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
+  });
+
+
+
+  /**
+   * 言語切替ボタンの処理
+   */
+  document.addEventListener('DOMContentLoaded', () => {  
+    const langButtons = document.querySelectorAll('.header__lang-btn')
+    
+    langButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        langButtons.forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+      });
+    });
+  });
+</script>
 
 
 
