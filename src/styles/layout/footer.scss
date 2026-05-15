@@ -40,6 +40,10 @@ img {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    .footer-h1 {
+                        white-space: nowrap;
+                        font-size: clamp(1.8rem, 3vw, 3.2rem);
+                    }
                     a {
                         text-decoration: none;
                     }
@@ -60,6 +64,7 @@ img {
                         }
                     } 
                     nav {
+                        display: flex;
                         justify-content: flex-end;
                     }
                 }
@@ -99,6 +104,8 @@ img {
             }
             .text-list {
                 vertical-align: bottom;
+                font-size: 1.5rem;
+                margin-bottom: 5rem;
                 li {
                     padding-top: 10px;
                 }
