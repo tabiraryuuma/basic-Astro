@@ -1,5 +1,4 @@
 ---
-// src/components/Card.astro
 import '../styles/components/_card.scss';
 
 interface Props {
@@ -17,6 +16,18 @@ const {
   <p class="card__title">{title}</p>
 
   <button class="card__button">
-    <span class="card__arrow">→</span>
+    <svg
+      class="card__arrow"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
   </button>
 </div>
