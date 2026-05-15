@@ -1,3 +1,31 @@
+@charset "UTF-8";
+
+.mainvisual {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mainvisual .logo {
+  width: 10%;
+  position: absolute;
+  top: 59%;
+  left: 45%;
+}
+
+.mainvisual .mv-title {
+  color: #fff;
+  font-weight: normal;
+  font-size: 5rem;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 70%;
+  left: 24%;
+}
+
+
+
+
 .button-group {
   display: flex;
   flex-direction: column;
