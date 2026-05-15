@@ -32,37 +32,41 @@ img {
             display: block;
             margin-right: 8rem;
             .Headline {
-                display: flex;
-                justify-content: space-between;
+                width: 100%;
                 align-items: center;
+                padding-bottom: 2rem;
                 .text-icon-button {
+                    width: 100%;
                     display: flex;
+                    justify-content: space-between;
                     align-items: center;
-                }
-                a {
-                    text-decoration: none;
-                }
-                .icon {
-                    padding: 0;
-                    line-height: 1px;
-                    list-style: none;
-                    display: flex;
-                    li {
-                        display: block;
-                        &:last-child {
-                            padding-left: 1rem;
-                            padding-right: 7rem;
+                    a {
+                        text-decoration: none;
+                    }
+                    .icon {
+                        padding: 0;
+                        line-height: 1px;
+                        list-style: none;
+                        display: flex;
+                        li {
+                            display: block;
+                            &:last-child {
+                                padding-left: 1rem;
+                            }
                         }
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    } 
+                    nav {
+                        justify-content: flex-end;
                     }
-                    img {
-                        width: 30px;
-                        height: 30px;
-                    }
-                } 
+                }
             }
             .item {
                 display: flex;
-                justify-content: space-between;
+                gap: 10px;
                 a {
                     width: 16rem;
                     background: rgb(239, 239, 239);
@@ -81,7 +85,7 @@ img {
                 }
             }
             .Copyright {
-                margin-top: 20rem;
+                margin-top: 16rem;
                 font-size: 1.2rem;
                 vertical-align: bottom;
             }
