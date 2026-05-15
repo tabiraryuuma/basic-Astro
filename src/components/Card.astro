@@ -4,19 +4,19 @@ import '../styles/components/_card.scss';
 
 interface Props {
   title?: string;
-  url?: string;
+  href?: string;
 }
 
 const {
   title = "カードタイトル",
-  url = "#",
-} = Astro.props;
+  href = "#"
+}: Props = Astro.props;
 ---
 
 <div class="card">
   <p class="card__title">{title}</p>
-
-  <button class="card__button">
-    <span class="card__arrow">→</span>
-  </button>
+  <a class="card__button" href={href}>
+    <img class="card__arrow" src="/src/assets/SVG/white-arrow.svg" alt="">
+  </a>  
 </div>
+
