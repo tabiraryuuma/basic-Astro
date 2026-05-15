@@ -1,9 +1,4 @@
-// ========================================
-// Card
-// - 画像
-// - タイトル
-// - テキスト
-// ========================================
+
 .card {
   position: relative;
 
@@ -14,51 +9,63 @@
   border: 0.1rem solid #e7e0d8;
 
   overflow: hidden;
-}
+ 
+  &__title {
+    position: absolute;
 
-.card__title {
-  position: absolute;
+    top: 50%;
+    left: 50%;
 
-  top: 50%;
-  left: 50%;
+    transform: translate(-50%, -50%);
 
-  transform: translate(-50%, -50%);
+    margin: 0;
 
-  color: #b09d8b;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 0.03em;
+    color: #b09d8b;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
 
-  margin: 0;
-}
+  &__button {
+    position: absolute;
+    left: 29.65rem;
+    bottom: 1.5rem;
 
-.card {
-    &__button {
-        position: absolute;
+    transform: translateX(-50%);
 
-        right: 0.6rem;
-        bottom: 1rem;
+    width: 3.7rem;
+    height: 1.7rem;
 
-        width: 3.3rem;
-        height: 1.5rem;
+    border: none;
+    border-radius: 99.9rem;
 
-        border: none;
-        border-radius: 99.9rem;
+    background: #9d8b72;
 
-        background: #9d8b72;
-        color: #ffffff;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    padding: 0;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #8c7a63;
     }
 
-  &__arrow {
-    display: inline-block;
-    transform: translate(0.8rem, 0rem); // 右＆上に移動
+    &:hover .card__arrow {
+      transform: translateX(0.2rem);
+    }
   }
-}
 
-.card__button:hover {
-  opacity: 0.8;
+  &__arrow {
+    width: 1.4rem;
+    height: 1.4rem;
+
+    color: #ffffff;
+
+    transition: transform 0.3s ease;
+  }
 }
