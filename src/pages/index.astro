@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 import '../styles/pages/_index.scss';
 import Button from "../components/Button.astro";
+import Card from '../components/Card.astro';
 ---
 
 <Layout>
@@ -21,6 +22,14 @@ import Button from "../components/Button.astro";
       <Button href="/project/" text="PROJECT 一覧" variant="outline" />
 
       <Button href="/reserve/" text="Reserve ｜ 予約" variant="primary" />
+  </div>
+
+  <div class="card-group">
+    <ul class="card-group-item">
+      <li><Card title="Airbnb" /></li>
+      <li><Card title="Rakuten<br>Oyado" /></li>
+      <li><Card title="Booking.com" /></li>
+    </ul>
   </div>
 
 
