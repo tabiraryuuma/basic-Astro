@@ -34,7 +34,7 @@ img {
             .Headline {
                 width: 100%;
                 align-items: center;
-                padding-bottom: 2rem;
+                padding-bottom: 3rem;
                 .text-icon-button {
                     width: 100%;
                     display: flex;
@@ -86,6 +86,14 @@ img {
                     }
                     &:last-child {
                         width: 26rem;
+                        background: #9D9087;
+                        border: 1px solid #9D9087;
+                        color: #fff;
+                        &:hover {
+                            background: rgb(239, 239, 239);
+                            color: #9D9087;
+                            border: 1px solid #9D9087;
+                        }
                     }
                 }
             }
@@ -161,10 +169,14 @@ img {
             .Headline-sp {
                 display: flex;
                 flex-direction: column;
-                H1 {
+                .footer-h1-sp {
+                    font-size: 2.5rem;
                     text-align: center;
+                    padding: 2rem 0;
                 }
                 nav {
+                    width: 90%;
+                    margin: 0 auto;
                     a {
                         color: #000000;
                     }
@@ -187,6 +199,17 @@ img {
                             border: 1px solid #9D9087;
                             color: #fff;
                         }
+                        &:last-child {
+                        width: 26rem;
+                        background: #9D9087;
+                        border: 1px solid #9D9087;
+                        color: #fff;
+                        &:hover {
+                            background: rgb(239, 239, 239);
+                            color: #9D9087;
+                            border: 1px solid #9D9087;
+                        }
+                    }
                     }
                 }
                 .column-text {
