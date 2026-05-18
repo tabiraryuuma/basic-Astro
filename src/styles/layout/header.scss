@@ -52,7 +52,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
 
 
   // --------------------------------
-  // 
+  // 左エリア
   // --------------------------------
     &__left {
       display: flex;
@@ -89,7 +89,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
 
 
   // ============================
-  // グローバルナビゲーション(右側)
+  // グローバルナビゲーション
   // ============================
     &__nav {
     @include mq('max-lg') {
@@ -145,7 +145,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   
 
   // ============================
-  // (右側)※
+  // 右エリア
   // ============================
   &__right{
     display: flex;
@@ -154,11 +154,10 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     @include mq('max-lg') {
       gap: $spacing-sm;
     }
-    
   }
 
   // ============================
-  // 施設タブ｜
+  // 施設タブ
   // ============================
   &__facilities {
     @include mq('max-lg') {
@@ -196,7 +195,6 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
       border-color: rgba(255, 255, 255, 0.5);
       color: $header-text-color;
     }
-
   }
 
   // ============================
@@ -232,5 +230,358 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     height: 18px;
   }
 
+  // ↑↑↑ ここまでが元のコード ↑↑↑
+  // ↓↓↓ ★★★ ここから全て追加 ★★★ ↓↓↓
 
-}
+
+  // ============================
+  // ★★★ 追加: 予約ボタン
+  // ============================
+  &__reserve {
+    @include mq('max-lg') {
+      display: none;
+    }
+  }
+
+  &__reserve-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    padding: 7px 20px;
+    font-family: $font-family-heading;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+    color: $header-text-color;
+    background-color: $header-reserve-bg;
+    border-radius: 9999px;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    transition: background-color $transition-fast,
+                box-shadow $transition-fast;
+
+    &:hover {
+      background-color: $header-reserve-hover;
+      color: $header-text-color;
+    }
+  }
+
+  &__reserve-btn-en,
+  &__reserve-btn-ja {
+    display: inline-block;
+  }
+
+  &__reserve-btn-divider {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-inline: 10px;
+  }
+
+
+  // ============================
+  // ★★★ 追加: 言語切替
+  // ============================
+  &__lang {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+
+    @include mq('max-lg') {
+      display: none;
+    }
+  }
+
+  &__lang-btn {
+    font-family: $font-family-heading;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-normal;
+    color: $header-text-muted;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: $spacing-xs;
+    letter-spacing: 0.04em;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $header-text-color;
+    }
+
+    &.is-active {
+      color: $header-text-color;
+      font-weight: $font-weight-medium;
+    }
+  }
+
+
+  // ============================
+  // ★★★ 追加: ハンバーガーボタン（SP専用）
+  // ============================
+  &__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
+    padding: 0;
+
+
+  }
+
+  &__hamburger-line {//×のボタン
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $header-text-color;
+    border-radius: 2px;
+    transition: transform $transition-base,
+                opacity $transition-base;
+  }
+
+
+  // ============================
+  // ★★★ 追加: メニューパネル（右からスライド）
+  // ============================
+  &__panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    max-width: 85vw;
+    height: 100vh;
+    height: 100dvh;
+    background-color: $header-panel-bg;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 200;
+    padding: $spacing-3xl $spacing-2xl;
+    overflow-y: auto;
+    transition: right $transition-base;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+
+    @include mq('max-lg') {
+      width: 100%;
+      max-width: 100%;
+      padding: $spacing-2xl $spacing-xl;
+    }
+  }
+
+  // --- パネル閉じるボタン ---
+  &__panel-close {
+    position: absolute;  //△仮
+    top: $spacing-lg;    //△仮
+    right: $spacing-lg;  //△仮
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $header-text-color;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity $transition-fast;
+    z-index: 10;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  // --- パネル内: 施設ボタン ---
+  &__panel-facilities {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: $spacing-xl;
+  }
+
+  &__panel-facility-link {
+    display: block;
+    padding: 14px 20px;
+    font-family: $font-family-heading; //△仮
+    font-size: $font-size-sm;     //△仮
+    font-weight: $font-weight-normal; //△仮
+    color: $header-text-color;
+    text-align: center;
+    letter-spacing: 0.06em;
+    border: 1px solid $header-panel-border;
+    border-radius: 2.6rem;
+    transition: background-color $transition-fast,
+                border-color $transition-fast;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: $header-text-color;
+    }
+  }
+
+  // --- パネル内: 予約ボタン ---
+  &__panel-reserve {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__panel-reserve-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 20px;
+    font-family: $font-family-heading; //△仮
+    font-size: $font-size-sm; //△仮
+    font-weight: $font-weight-medium; //△仮
+    color: $header-text-color; //△仮
+    text-decoration: none;
+    letter-spacing: 0.08em; //△仮
+    background-color: $Background-brown;
+    border-radius: 9999px;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background-color: $header-reserve-hover;
+      color: $header-text-color;
+    }
+  }
+
+  &__panel-reserve-divider { //「’｜’ 縦線の調整」
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-inline: 12px; 
+  }
+
+  // --- パネル内: SNSアイコン ---
+  &__panel-sns {
+    display: flex;
+    justify-content: center;
+    gap: 1px; //△仮
+    color: $Background-white;
+  }
+
+  &__panel-sns-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; //△仮？
+    height: 36px;
+    transition: opacity $transition-fast;
+    &:hover {
+      opacity: 0.6;
+      color: $header-text-color;
+    }
+  }
+
+ //パネル内: ナビリンク（ABOUT・PROJECT・CONTACT）
+  &__panel-nav-list {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    gap: 4px; //△仮
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40rem;//△仮
+  }
+
+  //パネル内: ナビリンク（ABOUT・PROJECT・CONTACT = 詳細）
+  &__panel-nav-link {
+    display: block; 
+    padding: 12px 16px; //△仮
+    font-family: $font-family-heading; //△仮
+    font-size: $font-size-sm; //△仮
+    font-weight: $font-weight-normal; //△仮
+    color: $header-text-color; //△仮
+    
+  }
+
+  
+
+  // --------------------------------
+  // □パネル内: フッター 
+  // （ハンバーガーメニュー内のフッター） 
+  // --------------------------------
+
+  &__panel-footer {
+    padding-top: $spacing-lg;
+    text-align: center;
+  }
+
+  &__panel-footer-cta {
+    display: block;
+    font-size: $font-size-xs; //△仮
+    color: $header-text-muted; //△仮
+    letter-spacing: 0.06em;
+    margin-bottom: $spacing-xl; //△仮
+    transition: color $transition-fast; //△仮
+  }
+
+  &__panel-footer-company {
+    font-family: $font-family-base;
+    font-size: $font-size-xs;
+    color: $header-text-muted;
+   
+    //線(ネガティブマージンで横線を端から端まで伸ばす)
+    margin-top: auto;
+    margin-inline: -$spacing-2xl;
+    padding-inline: $spacing-2xl;
+    border-top: 1px solid $header-panel-border;
+    padding-top: $spacing-lg;
+    text-align: center;
+
+    margin-bottom: 2.5rem; //△仮
+  }
+
+  &__panel-footer-dept {
+    font-family: $font-family-base;
+    font-size: 1.0rem;
+    color: $header-text-muted;
+    margin-bottom: 2px;
+  }
+
+  &__panel-footer-brand {
+    font-family: $font-family-heading;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: $header-text-color;
+    letter-spacing: 0.08em;
+  }
+
+
+
+  // ============================
+  // ★★★ 追加: メニューオープン状態
+  //これが無いとオープンしない
+  // ============================
+  &.is-menu-open {
+    .header__panel {
+      right: 0;
+    }
+
+    .header__overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      pointer-events: auto;
+    }
+
+    .header__hamburger-line {
+      &:nth-child(1) {
+        transform: translateY(3.25px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: translateY(-3.25px) rotate(-45deg);
+      }
+    }
+  }
+
+} 

@@ -131,6 +131,20 @@ const facilities = [
                EN                                         
               </button>
              </div>
+
+      <!-- ★★★ 追加: ハンバーガーボタン ★★★ -->
+      <button
+        class="header__hamburger"
+        id="hamburgerButton"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+      >
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+      <!-- ★★★ 追加ここまで ★★★ -->
+
             </div>
   </div>                                                  
 
@@ -159,14 +173,15 @@ const facilities = [
         ))}
      </div>
      
-   <!-- Reserve / 予約 ボタン -->
-      <div class="header__reserve">
-        <a href="/reserve" class="header__reserve-btn" id="reserveBtn">
-          <span class="header__reserve-btn-en">Reserve</span>
-          <span class="header__reserve-btn-divider" aria-hidden="true"></span>
-          <span class="header__reserve-btn-ja">予約</span>
+   <!-- ★★★ 修正: header__reserve → header__panel-reserve（パネル専用クラス） ★★★ -->
+      <div class="header__panel-reserve">
+        <a href="/reserve" class="header__panel-reserve-btn">
+          <span>Reserve</span>
+          <span class="header__panel-reserve-divider" aria-hidden="true"></span>
+          <span>予約</span>
         </a>
       </div>
+   <!-- ★★★ 修正ここまで ★★★ -->
     
  <!------------ パネル内: SNSアイコン ------------>
        <div class="header__panel-sns">
@@ -223,7 +238,7 @@ const facilities = [
 </header>
 
 
-<script>
+<script is:inline> 
    /**
    * メニューパネルの開閉処理
    */
@@ -273,14 +288,5 @@ const facilities = [
       });
     });
   });
+  
 </script>
-
-
-
-
-
-      
-
-
-
-
