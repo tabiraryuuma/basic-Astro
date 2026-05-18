@@ -230,12 +230,8 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     height: 18px;
   }
 
-  // ↑↑↑ ここまでが元のコード ↑↑↑
-  // ↓↓↓ ★★★ ここから全て追加 ★★★ ↓↓↓
-
-
   // ============================
-  // ★★★ 追加: 予約ボタン
+  // 予約ボタン
   // ============================
   &__reserve {
     @include mq('max-lg') {
@@ -281,7 +277,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
 
 
   // ============================
-  // ★★★ 追加: 言語切替
+  // 言語切替
   // ============================
   &__lang {
     display: flex;
@@ -315,28 +311,35 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     }
   }
 
+    &__language-btn-divider { //『言語切替・縦線』
+    display: inline-block;
+    width: 2px;            //△仮
+    height: 12px;          //△仮
+    background-color: rgba(255, 255, 255, 0.9);
+    
+  }
+
 
   // ============================
-  // ★★★ 追加: ハンバーガーボタン（SP専用）
+  // ハンバーガーボタン（SP専用）
   // ============================
   &__hamburger {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    width: 36px;
-    height: 36px;
+    gap: 5px;     //△仮
+    width: 36px;  //△仮
+    height: 36px; //△仮
     background: none;
     border: none;
     cursor: pointer;
     z-index: 110;
     padding: 0;
 
-
   }
 
-  &__hamburger-line {//×のボタン
+  &__hamburger-line {//「=」のボタン
     display: block;
     width: 20px;
     height: 2px;
@@ -348,17 +351,17 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
 
 
   // ============================
-  // ★★★ 追加: メニューパネル（右からスライド）
+  // メニューパネル（右からスライド）
   // ============================
   &__panel {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 400px;
+    width: 400px;      //△仮
     max-width: 85vw;
     height: 100vh;
     height: 100dvh;
-    background-color: $header-panel-bg;
+    background-color: #e9e5e1;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 200;
@@ -377,6 +380,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   }
 
   // --- パネル閉じるボタン ---
+  //△「バツ」を引き延ばしする
   &__panel-close {
     position: absolute;  //△仮
     top: $spacing-lg;    //△仮
@@ -386,7 +390,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $header-text-color;
+    color: $Background-brown;
     background: none;
     border: none;
     cursor: pointer;
@@ -412,10 +416,10 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     font-family: $font-family-heading; //△仮
     font-size: $font-size-sm;     //△仮
     font-weight: $font-weight-normal; //△仮
-    color: $header-text-color;
+    color: $Background-brown;
     text-align: center;
     letter-spacing: 0.06em;
-    border: 1px solid $header-panel-border;
+    border: 1px solid $Background-brown;
     border-radius: 2.6rem;
     transition: background-color $transition-fast,
                 border-color $transition-fast;
@@ -502,11 +506,10 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     font-family: $font-family-heading; //△仮
     font-size: $font-size-sm; //△仮
     font-weight: $font-weight-normal; //△仮
-    color: $header-text-color; //△仮
+    color: $Background-brown; 
     
   }
 
-  
 
   // --------------------------------
   // □パネル内: フッター 
@@ -521,7 +524,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__panel-footer-cta {
     display: block;
     font-size: $font-size-xs; //△仮
-    color: $header-text-muted; //△仮
+    color: $Background-brown; 
     letter-spacing: 0.06em;
     margin-bottom: $spacing-xl; //△仮
     transition: color $transition-fast; //△仮
@@ -530,13 +533,13 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__panel-footer-company {
     font-family: $font-family-base;
     font-size: $font-size-xs;
-    color: $header-text-muted;
+    color: $Background-brown;
    
     //線(ネガティブマージンで横線を端から端まで伸ばす)
     margin-top: auto;
     margin-inline: -$spacing-2xl;
     padding-inline: $spacing-2xl;
-    border-top: 1px solid $header-panel-border;
+    border-top: 2.5px solid $Background-brown;
     padding-top: $spacing-lg;
     text-align: center;
 
@@ -546,7 +549,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__panel-footer-dept {
     font-family: $font-family-base;
     font-size: 1.0rem;
-    color: $header-text-muted;
+    color: $Background-brown;
     margin-bottom: 2px;
   }
 
@@ -554,14 +557,14 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     font-family: $font-family-heading;
     font-size: $font-size-xs;
     font-weight: $font-weight-medium;
-    color: $header-text-color;
+    color: $Background-brown;
     letter-spacing: 0.08em;
   }
 
 
 
   // ============================
-  // ★★★ 追加: メニューオープン状態
+  // メニューオープン状態
   //これが無いとオープンしない
   // ============================
   &.is-menu-open {
