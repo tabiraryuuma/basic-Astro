@@ -1,37 +1,36 @@
-@charset "UTF-8";
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
 
 .mainvisual {
   position: relative;
   width: 100%;
+
+  .mainvisual-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .mainvisual-logo {
+    width: 10%;
+    position: absolute;
+    top: 59%;
+    left: 45%;
+  }
+
+  .mainvisual-title {
+    color: #fff;
+    font-weight: normal;
+    font-size: 5rem;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
-
-.mainvisual .mainvisual-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.mainvisual .mainvisual-logo {
-  width: 10%;
-  position: absolute;
-  top: 59%;
-  left: 45%;
-}
-
-.mainvisual .mainvisual-title {
-  color: #fff;
-  font-weight: normal;
-  font-size: 5rem;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-
-
 
 .button-group {
   display: flex;
@@ -41,9 +40,17 @@
   margin: 5rem 0;
 }
 
-.card-group .card-group-item{
+.card-group-item {
   display: flex;
-  justify-content: center;
-  gap: 2rem; 
-  margin-bottom: 5rem; 
+  align-items: center;
+  margin-bottom: 5rem;
+  @include mq('max-lg') {
+    flex-direction: column;
+    gap: 2rem;
+  }
+    @include mq('min-lg') {
+    justify-content: center;
+    gap: 3rem;
+  }
 }
+

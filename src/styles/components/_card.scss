@@ -12,14 +12,22 @@
 
 .card {
   position: relative;
-  width: 33rem;
-  height: 12.6rem;
+  // width: 33rem;
+  // height: 12.6rem;
   background-color: #ffffff;
   border: 0.1rem solid #e7e0d8;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  @include mq('max-lg') {
+    width: 65rem;
+    height: 10rem;
+  } 
+   @include mq('min-lg') {
+    width: 33rem;
+    height: 12.6rem;
+   }
 
   &__title {
     font-size: 2rem;
@@ -39,8 +47,14 @@
     justify-content: center;
     align-items: center;
     transition:
-      background-color 0.3s,
-      transform 0.3s;
+    background-color 0.3s,
+    transform 0.3s;
+
+  @include mq('max-lg') {
+    width: 7.3rem;
+    height: 4rem;
+    border-radius: 3rem;
+  }  
 
     &:hover {
       transform: scale(1.05);
