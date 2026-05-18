@@ -5,6 +5,13 @@
 // - 余白
 // ========================================
 
+
+// ============================
+// ヘッダー
+// ============================
+$header-height: 72px;
+$header-height-sp: 60px;
+
 // ============================
 // タイポグラフィ
 // ============================
@@ -29,9 +36,15 @@ $font-weight-bold: 700;
 
 $line-height-tight: 1.25;
 $line-height-base: 1.75;
+
 // Color
 $color-black: #000;
 $color-white: #fff;
+
+// 背景
+$Background-white:#f7f7f5; //ヘッダーの透明背景等
+$Background-brown:#8F8574; //予約ボタン等
+
 
 // Font
 $font-color: #000;
@@ -43,20 +56,24 @@ $line-height-sp: 1.55;
 // ============================
 // スペーシング
 // ============================
-$spacing-xs: 4rem;  
-$spacing-sm: 8rem;   
-$spacing-md: 16rem;     
-$spacing-lg: 24rem;   
-$spacing-xl: 32rem;     
-$spacing-2xl: 48rem;    
-$spacing-3xl: 64rem;    
-$spacing-4xl: 96rem;    
+$spacing-xs: 0.4rem;   // 4px
+$spacing-sm: 0.8rem;   // 8px
+$spacing-md: 1.6rem;   // 16px
+$spacing-lg: 2.4rem;   // 24px
+$spacing-xl: 3.2rem;   // 32px
+$spacing-2xl: 4.8rem;  // 48px
+$spacing-3xl: 6.4rem;  // 64px
+$spacing-4xl: 9.6rem;  // 96px   
+
 
 // ============================
-// ヘッダー
+// ボーダー・角丸
 // ============================
-$header-height: 72px;
-$header-height-sp: 60px;
+$border-radius-sm: 0.6rem;   // 6px
+$border-radius-md: 1.2rem;   // 12px
+$border-radius-lg: 1.6rem;   // 16px
+$border-radius-xl: 2.4rem;   // 24px
+$border-radius-full: 9999px;
 
 // ============================
 // トランジション
