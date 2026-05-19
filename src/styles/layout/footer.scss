@@ -1,6 +1,8 @@
 @use "../foundation/variables" as *;
 @use '../foundation/mixins.scss' as *;
 
+$Background-brown:#8b7355;
+
 img {
     max-width: 100%;
 }
@@ -74,25 +76,25 @@ img {
                 gap: 10px;
                 a {
                     width: 16rem;
-                    background: rgb(239, 239, 239);
+                    background-color: rgb(239, 239, 239);
                     color: #9D9087;
                     border: 1px solid #9D9087;
                     transition: 0.5s;
                     cursor: pointer;
                     &:hover {
-                        background: #9D9087;
-                        border: 1px solid #9D9087;
+                        background-color: $Background-brown;
+                        border: 1px solid $Background-brown;
                         color: #fff;
                     }
                     &:last-child {
                         width: 26rem;
-                        background: #9D9087;
-                        border: 1px solid #9D9087;
+                        background-color: $Background-brown;
+                        border: 1px solid $Background-brown;
                         color: #fff;
                         &:hover {
-                            background: rgb(239, 239, 239);
-                            color: #9D9087;
-                            border: 1px solid #9D9087;
+                            background-color: rgb(239, 239, 239);
+                            color: $Background-brown;
+                            border: 1px solid $Background-brown;
                         }
                     }
                 }
@@ -114,6 +116,10 @@ img {
                 vertical-align: bottom;
                 font-size: 1.5rem;
                 margin-bottom: 5rem;
+                a {
+                    display: inline-block;
+                    line-height: 1;
+                }
                 li {
                     padding-top: 10px;
                 }
@@ -189,25 +195,25 @@ img {
                     gap: 2rem;
                     a {
                         width: 26rem;
-                        background: rgb(239, 239, 239);
-                        color: #9D9087;
-                        border: 1px solid #9D9087;
+                        background-color: rgb(239, 239, 239);
+                        color: $Background-brown;
+                        border: 1px solid $Background-brown;
                         transition: 0.5s;
                         cursor: pointer;
                         &:hover {
-                            background: #9D9087;
-                            border: 1px solid #9D9087;
+                            background-color: $Background-brown;
+                            border: 1px solid $Background-brown;
                             color: #fff;
                         }
                         &:last-child {
                         width: 26rem;
-                        background: #9D9087;
-                        border: 1px solid #9D9087;
+                        background-color: $Background-brown;
+                        border: 1px solid $Background-brown;
                         color: #fff;
                         &:hover {
-                            background: rgb(239, 239, 239);
-                            color: #9D9087;
-                            border: 1px solid #9D9087;
+                            background-color: rgb(239, 239, 239);
+                            color: $Background-brown;
+                            border: 1px solid $Background-brown;
                         }
                     }
                     }
