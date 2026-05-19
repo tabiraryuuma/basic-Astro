@@ -176,14 +176,12 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
 
   &__facilities-link{
     display: block;
-    padding: 6px 16px;
-    font-family: $font-family-heading;
-    font-size: 1.1rem;
-    font-weight: $font-weight-normal;
-    color: $header-text-color;
-    text-decoration: none;
-    background-color: transparent;
-    border: 1px solid $header-border-color;
+    padding: 6px 16px;                   //△仮
+    font-family: $font-family-heading;   //△仮
+    font-size: 1.1rem;                   //△仮
+    font-weight: $font-weight-normal;     //△仮
+    color: $Background-brown;            //△見にくいから調整 
+    background-color: rgba(247, 247, 245, 0.5);    border: 1px solid $header-border-color;
     border-radius: 9999px;
     letter-spacing: 0.04em;
     white-space: nowrap;
@@ -214,9 +212,9 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
-    color: $header-text-color;
+    width: 32px;               //△仮
+    height: 32px;              //△仮
+    color: $header-text-color; //△仮
     transition: opacity $transition-fast;
 
     &:hover{
@@ -243,13 +241,12 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     display: inline-flex;
     align-items: center;
     gap: 0;
-    padding: 7px 20px;
-    font-family: $font-family-heading;
-    font-size: $font-size-xs;
-    font-weight: $font-weight-medium;
-    text-decoration: none;
+    padding: 7px 20px;                 //△仮
+    font-family: $font-family-heading; //△仮
+    font-size: $font-size-xs;          //△仮
+    font-weight: $font-weight-medium;  //△仮
     color: $header-text-color;
-    background-color: $header-reserve-bg;
+    background-color: $Background-brown;
     border-radius: 9999px;
     letter-spacing: 0.06em;
     white-space: nowrap;
@@ -267,7 +264,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     display: inline-block;
   }
 
-  &__reserve-btn-divider {
+  &__reserve-btn-divider { //『｜』縦線の設定
     display: inline-block;
     width: 1px;
     height: 14px;
