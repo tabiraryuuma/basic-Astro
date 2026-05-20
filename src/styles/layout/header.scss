@@ -180,8 +180,9 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     font-family: $font-family-heading;   //△仮
     font-size: 1.1rem;                   //△仮
     font-weight: $font-weight-normal;     //△仮
-    color: $Background-brown;            //△見にくいから調整 
-    background-color: rgba(247, 247, 245, 0.5);    border: 1px solid $header-border-color;
+    color: #6a563b;            //△調整中
+    background-color:rgba(247, 247, 245, 0.5);
+    border: 1px solid $header-border-color;
     border-radius: 9999px;
     letter-spacing: 0.04em;
     white-space: nowrap;
@@ -189,9 +190,9 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
         border-color $transition-fast;
 
     &:hover{
-      background-color: rgba(255, 255, 255, 0.12);
+      background-color: rgba(0, 0, 0, 0.151);
       border-color: rgba(255, 255, 255, 0.5);
-      color: $header-text-color;
+      color: #ffffff;
     }
   }
 
@@ -206,6 +207,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     @include mq('max-lg') {
       display: none;
     }
+
   }
 
     &__sns-link {
@@ -214,7 +216,8 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     justify-content: center;
     width: 32px;               //△仮
     height: 32px;              //△仮
-    color: $header-text-color; //△仮
+    color: #ffffff; //△仮
+    font-weight: 800;
     transition: opacity $transition-fast;
 
     &:hover{
