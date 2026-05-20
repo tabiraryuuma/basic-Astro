@@ -12,8 +12,6 @@
 
 .card {
   position: relative;
-  // width: 33rem;
-  // height: 12.6rem;
   background-color: #ffffff;
   border: 0.1rem solid #e7e0d8;
   display: flex;
@@ -37,11 +35,11 @@
 
   &__button {
     position: absolute;
-    right: 5%;
-    bottom: 10%;
-    width: 3.7rem;
-    height: 1.7rem;
-    border-radius: 7rem;
+    // right: 5%;
+    // bottom: 10%;
+    // width: 3.7rem;
+    // height: 1.7rem;
+    // border-radius: 7rem;
     background-color: #9d8b72;
     display: flex;
     justify-content: center;
@@ -54,6 +52,15 @@
     width: 7.3rem;
     height: 4rem;
     border-radius: 3rem;
+    bottom: 28%;
+    right: 3.5%;
+  }
+  @include mq('min-lg') {
+    width: 3.7rem;
+    height: 1.7rem;
+    border-radius: 7rem;
+    right: 5%;
+    bottom: 10%;
   }  
 
     &:hover {
@@ -70,5 +77,11 @@
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+  }
+
+  .pc-only {
+    @include mq('max-lg') {
+      display: none;
+    }
   }
 }

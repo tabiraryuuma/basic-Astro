@@ -48,7 +48,7 @@
     flex-direction: column;
     gap: 2rem;
   }
-    @include mq('min-lg') {
+  @include mq('min-lg') {
     justify-content: center;
     gap: 3rem;
   }
