@@ -209,7 +209,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     }
 
   }
-
+  
     &__sns-link {
     display: flex;
     align-items: center;
@@ -227,8 +227,8 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   }
 
   &__sns-icon{
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
 
   // ============================
@@ -266,6 +266,14 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__reserve-btn-ja {
     display: inline-block;
   }
+  &__reserve-btn-en{
+    font-size: 1.6rem;
+  }
+  &__reserve-btn-ja{
+    font-size: 1.4rem;
+  }
+
+
 
   &__reserve-btn-divider { //『｜』縦線の設定
     display: inline-block;
@@ -357,20 +365,24 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     position: fixed;
     top: 0;
     right: -100%;
-    width: 400px;      //△仮
+    width: 435px;      //△仮
     max-width: 85vw;
     height: 100vh;
     height: 100dvh;
+    // backdrop-filter: blur(20px);
+    // -webkit-backdrop-filter: blur(20px);
     background-color: #e9e5e1;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     z-index: 200;
-    padding: $spacing-3xl $spacing-2xl;
+    padding-top: 6.4rem;
+    padding-right: 4.8rem;
+    padding-left: 4.8rem;
+    padding-bottom: 5.5rem;
+    margin: 0;
     overflow-y: auto;
     transition: right $transition-base;
     display: flex;
     flex-direction: column;
-    gap: $spacing-xl;
+    gap: 13.5px;
 
     @include mq('max-lg') {
       width: 100%;
@@ -406,23 +418,28 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__panel-facilities {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: $spacing-xl;
+    gap: 13.5px;
+    margin-top: 4.3rem;
   }
 
   &__panel-facility-link {
     display: block;
-    padding: 14px 20px;
-    font-family: $font-family-heading; //△仮
-    font-size: $font-size-sm;     //△仮
+    font-size: $font-size-sm;     
     font-weight: $font-weight-normal; //△仮
     color: $Background-brown;
     text-align: center;
-    letter-spacing: 0.06em;
     border: 1px solid $Background-brown;
     border-radius: 2.6rem;
     transition: background-color $transition-fast,
-                border-color $transition-fast;
+    border-color $transition-fast;
+
+    @include mq('max-lg') {
+      padding: 14px 20px;
+    }
+    @include mq('min-lg'){
+      padding: 14px 20px;
+      margin: 0 31px;
+    }
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.08);
@@ -435,6 +452,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__panel-reserve {
     display: flex;
     justify-content: center;
+    font-family: 'Avenir Roman'
   }
 
   &__panel-reserve-btn {
@@ -442,16 +460,18 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 14px 20px;
-    font-family: $font-family-heading; //△仮
-    font-size: $font-size-sm; //△仮
-    font-weight: $font-weight-medium; //△仮
-    color: $header-text-color; //△仮
-    text-decoration: none;
-    letter-spacing: 0.08em; //△仮
+    color: $header-text-color; 
     background-color: $Background-brown;
     border-radius: 9999px;
     transition: background-color $transition-fast;
+
+    @include mq('max-lg') {
+      padding: 14px 20px;
+    }
+    @include mq('min-lg'){
+      padding: 14px 20px;
+      margin: 0 31px;
+    }
 
     &:hover {
       background-color: $header-reserve-hover;
@@ -473,14 +493,17 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     justify-content: center;
     gap: 1px; //△仮
     color: $Background-white;
+    margin-bottom: 15px;
   }
 
   &__panel-sns-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px; //△仮？
+    width: 31px; 
     height: 36px;
+    padding: 0;
+    margin-top: 60px;
     transition: opacity $transition-fast;
     &:hover {
       opacity: 0.6;
@@ -493,21 +516,19 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     display: flex;  
     flex-direction: column;
     align-items: center;
-    gap: 4px; //△仮
+    gap: 4px; 
     margin: 0;
     padding: 0;
-    margin-bottom: 40rem;//△仮
+    margin-bottom: 37.6rem;
   }
 
   //パネル内: ナビリンク（ABOUT・PROJECT・CONTACT = 詳細）
   &__panel-nav-link {
     display: block; 
     padding: 12px 16px; //△仮
-    font-family: $font-family-heading; //△仮
-    font-size: $font-size-sm; //△仮
-    font-weight: $font-weight-normal; //△仮
+    font-family: 'Avenir Roman'; 
+    font-size: $font-size-sm;
     color: $Background-brown; 
-    
   }
 
 
@@ -521,25 +542,26 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     text-align: center;
   }
 
-  &__panel-footer-cta {
+  //ホテルづくりをお考えの方へ
+  &__panel-footer-cta { 
     display: block;
-    font-size: $font-size-xs; //△仮
+    font-size: 14px; 
+    font-family: 'Raleway', sans-serif;
     color: $Background-brown; 
-    letter-spacing: 0.06em;
-    margin-bottom: $spacing-xl; //△仮
-    transition: color $transition-fast; //△仮
+    margin-bottom: 2rem; 
+    transition: color $transition-fast;
   }
 
   &__panel-footer-company {
-    font-family: $font-family-base;
-    font-size: $font-size-xs;
+    font-family: 'Raleway', sans-serif;
+    font-size: $font-size-sm;
     color: $Background-brown;
    
     //線(ネガティブマージンで横線を端から端まで伸ばす)
     margin-top: auto;
     margin-inline: -$spacing-2xl;
     padding-inline: $spacing-2xl;
-    border-top: 2.5px solid $Background-brown;
+    border-top: .5px solid $Background-brown;
     padding-top: $spacing-lg;
     text-align: center;
 
@@ -547,18 +569,17 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   }
 
   &__panel-footer-dept {
-    font-family: $font-family-base;
-    font-size: 1.0rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
     color: $Background-brown;
-    margin-bottom: 2px;
+    padding: 0;
+    margin: 0;
   }
 
   &__panel-footer-brand {
-    font-family: $font-family-heading;
-    font-size: $font-size-xs;
-    font-weight: $font-weight-medium;
+    font-family: 'Avenir Roman'; 
+    font-size: $font-size-sm;
     color: $Background-brown;
-    letter-spacing: 0.08em;
   }
 
 
