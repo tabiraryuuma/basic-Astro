@@ -150,9 +150,11 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__right{
     display: flex;
     align-items: center;
-    gap: $spacing-lg;
     @include mq('max-lg') {
       gap: $spacing-sm;
+    }
+    @include mq('min-lg') {
+      gap: 1.2rem;
     }
   }
 
@@ -202,10 +204,14 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     &__sns {
     display: flex;
     align-items: center;
-    gap: 4px;
+    
 
     @include mq('max-lg') {
       display: none;
+    }  
+
+    @include mq('min-lg') {
+      gap: 1.5px;
     }
 
   }
@@ -225,10 +231,10 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     }
   }
 
-  &__sns-icon{
-    width: 20px;
-    height: 20px;
-  }
+    &__sns-icon{
+      width: 20px;
+      height: 20px;
+    }
 
   // ============================
   // 予約ボタン
@@ -243,18 +249,13 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     display: inline-flex;
     align-items: center;
     gap: 0;
-    padding: 7px 20px;                 //△仮
-    font-family: $font-family-heading; //△仮
-    font-size: $font-size-xs;          //△仮
-    font-weight: $font-weight-medium;  //△仮
+    padding: 3px 15px;                 
     color: $header-text-color;
     background-color: $Background-brown;
     border-radius: 9999px;
-    letter-spacing: 0.06em;
     white-space: nowrap;
     transition: background-color $transition-fast,
                 box-shadow $transition-fast;
-
     &:hover {
       background-color: $header-reserve-hover;
       color: $header-text-color;
@@ -264,9 +265,11 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__reserve-btn-en,
   &__reserve-btn-ja {
     display: inline-block;
+    font-family: 'Avenir Roman'
   }
   &__reserve-btn-en{
     font-size: 1.6rem;
+    font-weight: 300;
   }
   &__reserve-btn-ja{
     font-size: 1.4rem;
@@ -419,6 +422,18 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     flex-direction: column;
     gap: 13.5px;
     margin-top: 4.3rem;
+
+    @include mq('max-lg') {
+    margin-top: 4.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 24rem;
+  }
+
+
   }
 
   &__panel-facility-link {
@@ -451,7 +466,6 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__panel-reserve {
     display: flex;
     justify-content: center;
-    font-family: 'Avenir Roman'
   }
 
   &__panel-reserve-btn {
@@ -466,7 +480,11 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
 
     @include mq('max-lg') {
       padding: 14px 20px;
+      margin: auto;
+      width: 100%;
+      max-width: 24rem;
     }
+    
     @include mq('min-lg'){
       padding: 14px 20px;
       margin: 0 31px;
