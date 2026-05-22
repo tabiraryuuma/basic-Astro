@@ -13,16 +13,19 @@ const {
 }: Props = Astro.props;
 ---
 
-<div class="card">
+
+<a class="card" href={href}>
   <div class="card__content">
     <p class="card__title" set:html={title}></p>
   </div>
 
-     <!-- 右下のボタンエリア -->
-  <div class="card__button-area">
-    <a class="card__btn" href={href}>
+   <div class="card__button-area">
+    <div class="card__btn">
       <img class="card__btn-icon" src="/src/assets/SVG/white-arrow.svg" alt="">
-    </a>
+    </div>
   </div>
-</div>
+</a>
+
+ 
+
 
