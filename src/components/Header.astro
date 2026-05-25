@@ -3,14 +3,13 @@ import Button from '../components/Button.astro';
 import InstagramIcon from '../assets/SVG/Instagram.svg';
 import LineIcon from '../assets/SVG/LINE_1.svg';
 import LineIcon2 from '../assets/SVG/LINE_2.svg';
+import hamburgermenu from '../assets/SVG/hamburger.svg';
 import "../styles/style.scss";
 /**
  * Header.astro
  * 左側にロゴ＋グローバルナビ、右側に施設名タブ・SNS・予約ボタン・言語切替・ハンバーガーを配置。
  * ※ スタイルは header.scss で管理
  */
- 
-
 /** このロゴ使います宣伝 */
 interface Props {
   currentPath?: string;
@@ -150,9 +149,7 @@ const facilities = [
         <span class="header__hamburger-line"></span>
         <span class="header__hamburger-line"></span>
       </button>
-      <!-- ★★★ 追加ここまで ★★★ -->
-
-            </div>
+    </div>
   </div>                                                  
 
 
@@ -165,11 +162,29 @@ const facilities = [
        type="button"
        aria-label="メニューを閉じる"
      >
-       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
+      <img src={hamburgermenu.src} alt="" class="header__sns-icon"/>
+
      </button>
+     <!-- 言語切替 -->
+      <div class="header__panel-lang" id="langSwitch">
+        <button
+        type="button"
+        class="header__lang-btn is-active"
+        data-lang="ja"
+        aria-label="日本語に切り替え"
+        >
+        JP
+      </button>
+      <span class="header__language-btn-divider" aria-hidden="true"></span>
+      <button
+      type="button"
+      class="header__lang-btn"
+      data-lang="en"
+      aria-label="Switch to English"
+      >
+      EN                                         
+    </button>
+  </div>
 
     <!-- パネル内: 施設ボタン -->
      <nav class="header__panel-facilities">
