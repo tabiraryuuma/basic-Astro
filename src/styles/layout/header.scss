@@ -57,7 +57,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     &__left {
       display: flex;
       align-items: center;
-      gap: $spacing-2xl;
+      gap: 2.2rem;
       
       @include mq('max-lg') {
         gap: $spacing-md;
@@ -157,6 +157,131 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
       gap: 1.2rem;
     }
   }
+
+
+
+  // ============================
+  // 言語切替
+  // ============================
+  &__lang {
+    display: none;
+
+    @include mq('max-lg') {
+      display: none;
+     }
+     
+    @include mq('min-lg') {
+      display: flex;
+      align-items: center;
+      gap: $spacing-xs;
+     }
+  }
+
+  // --- EN言語 (__lang-btn-en)---
+  &__lang-btn-en {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color $transition-fast;
+
+    @include mq('max-lg') {
+      color: $Background-brown;
+     }
+
+    @include mq('min-lg') {
+      font-size: 1.8rem;
+      width: 20px;
+      height: 19px;
+      
+      padding-top: 0;
+      padding-right: 3.4rem;
+      padding-left: 0;
+      padding-bottom: 0;
+
+      color: #ffffff;
+     }
+
+
+    &:hover {
+      color: $header-text-color;
+    }
+    &.is-active {
+      font-weight: $font-weight-medium;
+    }
+  }
+
+    //『言語切替・縦線』
+    &__language-btn-divider { 
+    display: inline-block;
+    width: 0.2px;            //△仮
+    height: 12px;          //△仮
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0;
+    margin: 0 10px 0 12px;
+  
+  }
+
+  // --- パネル内: 言語-En (PC版：表示｜SP版非表示) ---
+  &__panel-lang{
+    @include mq('max-lg') {
+      display: block;
+     }
+     @include mq('min-lg') {
+      display: none;
+    }
+  }
+  
+  &__lang-btn-ja {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color $transition-fast;
+    @include mq('max-lg') {
+      color: $Background-brown;
+     }
+    @include mq('min-lg') {
+      padding: $spacing-xs;
+      color: #ffffff;
+      font-size: 1.8rem;
+      width: 20px;
+      height: 19px;
+
+      padding-top: 0;
+      padding-right: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+
+
+     }
+    &:hover {
+      color: $header-text-color;
+    }
+    &.is-active {
+      font-weight: $font-weight-medium;
+    }
+  }
+    &__language-btn-divider { //『言語切替・縦線』
+    display: inline-block;
+    width: 2px;            //△仮
+    height: 12px;          //△仮
+    background-color: rgba(255, 255, 255, 0.9);
+    
+  }
+  // --- パネル内: 言語-Ja (PC版：表示｜SP版非表示) ---
+  &__panel-lang{
+    @include mq('max-lg') {
+      display: block;
+     }
+     @include mq('min-lg') {
+      display: none;
+    }
+  }
+
+  
+
+
+
+
 
   // ============================
   // 施設タブ
@@ -372,69 +497,6 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     margin-inline: 12px; 
   }
 
-
-  // ============================
-  // 言語切替
-  // ============================
-  &__lang {
-    display: none;
-
-    @include mq('max-lg') {
-      display: none;
-     }
-     
-    @include mq('min-lg') {
-      display: flex;
-      align-items: center;
-      gap: $spacing-xs;
-     }
-  }
-
-  &__lang-btn {
-    font-family: $font-family-heading;
-    font-size: $font-size-xs;
-    font-weight: $font-weight-normal;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: $spacing-xs;
-    letter-spacing: 0.04em;
-    transition: color $transition-fast;
-    
-    @include mq('max-lg') {
-      color: $Background-brown;
-     }
-
-    @include mq('min-lg') {
-      color: #ffffff;
-     }
-
-    &:hover {
-      color: $header-text-color;
-    }
-
-    &.is-active {
-      font-weight: $font-weight-medium;
-    }
-  }
-    &__language-btn-divider { //『言語切替・縦線』
-    display: inline-block;
-    width: 2px;            //△仮
-    height: 12px;          //△仮
-    background-color: rgba(255, 255, 255, 0.9);
-    
-  }
-  
-  // --- パネル内: 言語 ---
-  &__panel-lang{
-    @include mq('max-lg') {
-      display: block;
-     }
-
-     @include mq('min-lg') {
-      display: none;
-    }
-  }
 
 
   // ============================
