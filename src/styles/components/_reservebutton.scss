@@ -20,10 +20,10 @@
       height: 6rem;
     }
     @include mq('min-lg') {
-      width: 30rem;
+      width: 30.1rem;
       height: 4rem;
     } 
-  }
+
 
   &-en, &-ja {
     display: inline-block;
@@ -31,17 +31,32 @@
   }
 
   &-en {
-   font-size: 1.6rem
+    @include mq('max-lg') {
+      font-size: 3.3rem
+    }
+    @include mq('min-lg') {
+      font-size: 2.1rem
+    }
   }
   
   &-ja {
-    font-size: 1.4rem;
+    @include mq('max-lg') {
+      font-size: 2.8rem;
+    }
+    @include mq('min-lg') {
+      font-size: 1.8rem;
+    }
   }
 
   &-divider {
     display: inline-block;
-    width: 1px;
-    height: 14px;
-    background-color: rgba(255, 255, 255, 0.4);
-    margin-inline: 10px;
+    @include mq('max-lg') {
+      margin-left: 35px;
+      margin-right: 21px;
+    }
+    @include mq('min-lg') {
+      margin-left: 20px;
+      margin-right: 15px;
+    }
   }
+}
