@@ -1,0 +1,47 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.reserve-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8rem;
+  text-decoration: none;
+  background: $Background-brown;
+  color: #fff;
+  transition: transform 0.3s;
+  &:hover{
+      transform: scale(1.05);
+    }
+  
+  @include mq('max-lg') {
+      width: 45rem;
+      height: 6rem;
+    }
+    @include mq('min-lg') {
+      width: 30rem;
+      height: 4rem;
+    } 
+  }
+
+  &-en, &-ja {
+    display: inline-block;
+    font-family: 'Avenir Roman'
+  }
+
+  &-en {
+   font-size: 1.6rem
+  }
+  
+  &-ja {
+    font-size: 1.4rem;
+  }
+
+  &-divider {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-inline: 10px;
+  }
