@@ -1,37 +1,70 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 // Layout.astro = ページの共通テンプレ（外枠）
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-import '../styles/pages/_index.scss';
+import "../styles/pages/_index.scss";
 import Button from "../components/Button.astro";
-import Card from '../components/Card.astro';
+import Card from "../components/Card.astro";
 ---
 
 <Layout>
   <main>
     <div class="mainvisual">
-      <img class="mainvisual-image" src="/src/assets/image/top/top-mainvisual-1.webp" alt="リトリートプロジェクトのメインビジュアル">
+      <img
+        class="mainvisual-image"
+        src="/src/assets/image/top/top-mainvisual-1.webp"
+        alt="リトリートプロジェクトのメインビジュアル"
+      />
       <div class="mainvisual-logo">
-        <img src="/src/assets/image/top/designoffice.svg" alt="">
+        <img src="/src/assets/image/top/designoffice.svg" alt="" />
       </div>
       <h1 class="mainvisual-title">RETREAT PROJECT</h1>
     </div>
 
-    <div class="button-group">
-      <Button href="/project/" text="PROJECT 一覧" variant="outline" />
+    <!-- <div class="button-group">
+      <Button href="/project/" text="PROJECT 一覧" variant="transparent" />
 
-      <Button href="/reserve/" text="Reserve ｜ 予約" variant="primary" />
-  </div>
-
-
+      <Button href="/about/" text="ABOUT" variant="brown" />
+    </div> -->
 
 
+    <div class="top-1">
+      <div class="pc-only">
+        <div class="mainvisual-top1">
+          <div class="mainvisual2">
+            <div class="Project">
+              <h2>PROJECT</h2>
+              <div class="button-group">
+                <Button
+                  href="/project/"
+                  text="PROJECT 一覧"
+                  variant="transparent"
+                />
 
-  
-
+                <Button href="/about/" text="Reserve｜予約" variant="brown" />
+              </div>
+            </div>
+            <div class="Movie">
+              <h2>MOVIE</h2>
+            </div>
+          </div>
+          <div class="mainvisual1">
+            <div class="heading">
+              <h1>ただ泊まるだけではない、<br />記憶に残るひとときを。</h1>
+            </div>
+            <div class="gradation">
+              <p>
+                時間とともに表情を変える空間の中で、<br
+                />気持ちがゆるやかにほどけていく。<br
+                />日常から少し離れ、ただ過ぎゆく時を愉しむ。<br
+                />その場所ごとに込めた思いと心地よさが溶け合う、<br
+                />くつろぎの滞在をお楽しみください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-    
-
-
 </Layout>
