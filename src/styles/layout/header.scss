@@ -88,6 +88,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   }
 
 
+  
   // ============================
   // グローバルナビゲーション
   // ============================
@@ -144,6 +145,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   }
   
 
+
   // ============================
   // 右エリア
   // ============================
@@ -164,8 +166,6 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   // 言語切替
   // ============================
   &__lang {
-    display: none;
-
     @include mq('max-lg') {
       display: none;
      }
@@ -183,11 +183,9 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     border: none;
     cursor: pointer;
     transition: color $transition-fast;
-
     @include mq('max-lg') {
       color: $Background-brown;
      }
-
     @include mq('min-lg') {
       font-size: 1.8rem;
       width: 20px;
@@ -197,10 +195,8 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
       padding-right: 3.4rem;
       padding-left: 0;
       padding-bottom: 0;
-
       color: #ffffff;
      }
-
 
     &:hover {
       color: $header-text-color;
@@ -213,12 +209,11 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     //『言語切替・縦線』
     &__language-btn-divider { 
     display: inline-block;
-    width: 0.2px;            //△仮
-    height: 12px;          //△仮
+    width: 0.2px;            
+    height: 12px;          
     background-color: rgba(255, 255, 255, 0.9);
     padding: 0;
     margin: 0 10px 0 12px;
-  
   }
 
   // --- パネル内: 言語-En (PC版：表示｜SP版非表示) ---
@@ -240,7 +235,6 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
       color: $Background-brown;
      }
     @include mq('min-lg') {
-      padding: $spacing-xs;
       color: #ffffff;
       font-size: 1.8rem;
       width: 20px;
@@ -250,8 +244,6 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
       padding-right: 0;
       padding-left: 0;
       padding-bottom: 0;
-
-
      }
     &:hover {
       color: $header-text-color;
@@ -278,9 +270,6 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   }
 
   
-
-
-
 
 
   // ============================

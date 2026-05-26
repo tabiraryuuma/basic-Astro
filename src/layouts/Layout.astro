@@ -28,10 +28,17 @@ const {
   <head>
     <!-- 文字化け防止 -->
     <meta charset="UTF-8" />
-		
     <!-- スマホ・タブレット対応の基本設定 -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- リセットCSS（※ブラウザ間のズレをきれいに整える） -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    
+    <!-- ファビコン：ブラウザのタブに表示されるアイコン -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.svg" />
 
+    <!-- ページタイトル -->
+    <title>{title}</title>
     <!-- ページの説明文：検索結果やSNS表示で使われることがあります -->
     <meta name="description" content={description} />
 
@@ -39,13 +46,6 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-
-    <!-- ファビコン：ブラウザのタブに表示されるアイコン -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.svg" />
-
-    <!-- ページタイトル -->
-    <title>{title}</title>
   </head>
 
   <body>
