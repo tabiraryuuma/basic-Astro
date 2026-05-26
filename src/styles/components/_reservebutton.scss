@@ -2,7 +2,9 @@
 @use "../foundation/mixins" as *;
 
 .reserve-btn {
-  display: inline-flex;
+  width: 100%;
+  display: flex;
+  // display: inline-flex;
   justify-content: center;
   align-items: center;
   border: none;
@@ -15,12 +17,14 @@
       transform: scale(1.05);
     }
   
-  @include mq('max-lg') {
-      width: 45rem;
-      height: 6rem;
-    }
+    @include mq('max-lg') {
+      max-width: 45rem;
+     // width: 45rem;
+     height: 6rem;
+   }
     @include mq('min-lg') {
-      width: 30.1rem;
+      max-width: 30.1rem;
+      // width: 30.1rem;
       height: 4rem;
     } 
 
