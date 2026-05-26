@@ -279,15 +279,30 @@ const facilities = [
     const openMenu = () => {
       header.classList.add('is-menu-open');
       hamburger.setAttribute('aria-expanded', 'true');
+       hamburger.setAttribute('aria-label', 'メニューを閉じる');
       document.body.style.overflow = 'hidden';
     };
     const closeMenu = () => {
       header.classList.remove('is-menu-open');
       hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'メニューを開く');
       document.body.style.overflow = '';
     };
 
-    hamburger.addEventListener('click', openMenu);
+    const toggleMenu = () => {
+      if (header.classList.contains('is-menu-open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    };
+
+
+    // クリックで開くだけ|閉じるのはパネル内の別ボタン
+    // hamburger.addEventListener('click', openMenu);
+
+    // クリックで開く／閉じるを切り替え|同じボタンで開閉できる
+    hamburger.addEventListener('click', toggleMenu)
     closeBth.addEventListener('click', closeMenu);
     overlay.addEventListener('click', closeMenu);
 
