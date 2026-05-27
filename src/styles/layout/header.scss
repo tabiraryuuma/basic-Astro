@@ -101,9 +101,21 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     
     @include mq('max-lg') {
       width: 20px;
+      &:nth-child(1) {
+       top: calc(50% - 4px);
+      }
+      &:nth-child(2) {
+        top: calc(50% + 4px);
+      }
     }
     @include mq('min-lg'){
       width: 22px;
+      &:nth-child(1) {
+       top: calc(50% - 5px);
+      }
+      &:nth-child(2) {
+        top: calc(50% + 4px);
+      }
     }
     
   }
