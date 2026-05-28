@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.41 22.77">
+  <defs>
+    <style>
+      .header__lang-svg-en {
+        fill: #f7f7f5;
+        font-family: AvenirNext-Regular, 'Avenir Next';
+        font-size: 1.8rem;
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <g id="_ヘッダー" data-name="ヘッダー">
+    <text class="cls-1" transform="translate(0 15.37)"><tspan x="0" y="3">EN</tspan></text>
+  </g>
+</svg>
