@@ -3,8 +3,8 @@
 
 .reserve-btn {
   width: 100%;
-  display: flex;
-  // display: inline-flex;
+  // display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border: none;
@@ -32,7 +32,7 @@
   
  &-en, &-ja {
     display: inline-block;
-    font-family:  "Raleway", "Yu Gothic", "YuGothic", "游ゴシック体", sans-serif;
+    font-family: "Raleway", "Yu Gothic", "YuGothic", "游ゴシック体", sans-serif;
   }
 
   &-en {

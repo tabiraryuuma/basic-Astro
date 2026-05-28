@@ -3,8 +3,8 @@
 
 .btn {
   width: 100%;
-  display: flex;
-  // display: inline-flex;
+  // display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   // padding: 1.5rem 10rem;  
@@ -26,7 +26,7 @@
   // 背景色あり
   &--brown {
     font-size: 2rem;
-    font-family: sans-serif;
+    font-family: "Raleway", "Yu Gothic", "YuGothic", "游ゴシック体", sans-serif;
     background: $Background-brown;
     // background:  #8b7355;
     color: #fff;
@@ -37,7 +37,7 @@
   // 背景色なし
   &--transparent {
     font-size: 1.6rem;
-    font-family: 'Avenir Roman', sans-serif;
+    font-family: "Raleway", "Yu Gothic", "YuGothic", "游ゴシック体", sans-serif;
     background: transparent;
     border: 1px solid #000;
     color: #000;
