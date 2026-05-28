@@ -29,11 +29,10 @@ img {
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
   max-width: 125rem;
   margin: 0 auto;
   padding: 10rem 10rem;
+  overflow: hidden;
 }
 
 #main {
@@ -44,23 +43,23 @@ footer {
   .pc-main {
     display: flex;
     justify-content: space-between;
-    width: 105rem;
+    gap: 8rem;
+    max-width: 105rem;
+    width: 100%;
   }
 
   .upco-flex {
-    width: 70%;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 350px;
 
-    .up {
-      .Headline {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        padding-bottom: 2rem;
-      }
+    .Headline {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      padding-bottom: 2rem;
+
 
       .text-icon-button {
         width: 100%;
@@ -79,7 +78,6 @@ footer {
         line-height: 1px;
         list-style: none;
         display: flex;
-        margin-right: auto;
 
         li {
           display: block;
@@ -87,7 +85,7 @@ footer {
           height: 30px;
 
           &:first-child {
-            margin-left: 10rem;
+            margin-left: 5rem;
           }
 
           &:last-child {
@@ -100,88 +98,92 @@ footer {
           height: 100%;
         }
       }
+    }
 
-      nav {
-        white-space: nowrap;
+    .item {
+      display: flex;
+      gap: 10px;
+      white-space: nowrap;
+      margin-bottom: auto;
+
+      a {
+        width: 16rem;
+        background: rgb(239, 239, 239);
+        color: #9D9087;
+        border: 1px solid #9D9087;
+        transition: 0.5s;
+        padding: 2rem 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $Background-brown;
+          border: 1px solid $Background-brown;
+          color: #fff;
+        }
+
+        &:last-child {
+          width: 26rem;
+          background-color: $Background-brown;
+          border: 1px solid $Background-brown;
+          color: #fff;
+
+          &:hover {
+            background-color: rgb(239, 239, 239);
+            color: $Background-brown;
+            border: 1px solid $Background-brown;
+          }
+        }
       }
     }
-  }
-}
 
-.item {
-  display: flex;
-  gap: 10px;
-  white-space: nowrap;
-
-  a {
-    width: 16rem;
-    background: rgb(239, 239, 239);
-    color: #9D9087;
-    border: 1px solid #9D9087;
-    transition: 0.5s;
-    padding: 2rem 1rem;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $Background-brown;
-      border: 1px solid $Background-brown;
-      color: #fff;
-    }
-
-    &:last-child {
-      width: 26rem;
-      background-color: $Background-brown;
-      border: 1px solid $Background-brown;
-      color: #fff;
-
-      &:hover {
-        background-color: rgb(239, 239, 239);
-        color: $Background-brown;
-        border: 1px solid $Background-brown;
-      }
+    .Copyright {
+      font-size: 1.2rem;
+      vertical-align: bottom;
     }
   }
-}
 
-.Copyright {
-  font-size: 1.2rem;
-  vertical-align: bottom;
-}
 
-.TC-List {
-  display: flex;
-  height: 350px;
-  flex-direction: column;
-  justify-content: space-between;
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .text-list {
-    vertical-align: bottom;
-
-    li {
+  .Language {
+    nav {
       padding-top: 10px;
+      display: flex;
     }
   }
 
-  .Company-List {
-    li {
-      width: 210px;
-      display: block;
-      border-bottom: 1px solid black;
-      padding: 15px 0;
 
-      &:nth-child(2) {
-        padding: 25px 0;
+  .TC-List {
+    display: flex;
+    height: 350px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .text-list {
+      vertical-align: bottom;
+
+      li {
+        padding-top: 10px;
+      }
+    }
+
+    .Company-List {
+      li {
+        width: 210px;
+        display: block;
+        border-bottom: 1px solid black;
+        padding: 15px 0;
+
+        &:nth-child(2) {
+          padding: 25px 0;
+        }
       }
     }
   }
 }
-
-
 
 @media (max-width :1023px) {
   img {
