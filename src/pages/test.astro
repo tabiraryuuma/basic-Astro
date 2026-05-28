@@ -4,24 +4,30 @@ import Layout from "../layouts/Layout.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 import "../styles/pages/_index.scss";
+import "../styles/pages/test.scss";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import ReserveButton from "../components/ReserveButton.astro";
 ---
 
-<Layout>
+<Layout title = "テスト", description = "これはテストです" >
   <main>
     <div class="mainvisual">
-      <img
-        class="mainvisual-image"
-        src="/src/assets/image/top/top-mainvisual-1.webp"
-        alt="リトリートプロジェクトのメインビジュアル"
-      />
-      <div class="mainvisual-logo">
+      <ul class="mainvisual__fade-img">
+        <li><img src="/src/assets/image/top/top-mainvisual-1.webp" alt=""></li>
+        <li><img src="/src/assets/image/top/top-mainvisual-2.webp" alt=""></li>
+        <li><img src="/src/assets/image/top/top-mainvisual-3.webp" alt=""></li>
+        <li><img src="/src/assets/image/top/top-mainvisual-4.webp" alt=""></li>
+        <li><img src="/src/assets/image/top/top-mainvisual-5.webp" alt=""></li>
+        <li><img src="/src/assets/image/top/top-mainvisual-6.webp" alt=""></li>
+      </ul>
+      <div class="mainvisual__logo">
         <img src="/src/assets/image/top/designoffice.svg" alt="" />
       </div>
-      <h1 class="mainvisual-title">RETREAT PROJECT</h1>
-    </div>
+      <h1 class="mainvisual__title">RETREAT PROJECT</h1>
+    </div>  
+
+    
 
     <!-- <div class="button-group">
       <Button href="/project/" text="PROJECT 一覧" variant="transparent" />
@@ -30,7 +36,7 @@ import ReserveButton from "../components/ReserveButton.astro";
     </div> -->
 
 
-    <div class="top-1">
+    <!-- <div class="top-1">
       <div class="pc-only">
         <div class="mainvisual-top1">
           <div class="mainvisual2">
@@ -64,6 +70,6 @@ import ReserveButton from "../components/ReserveButton.astro";
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </main>
 </Layout>
