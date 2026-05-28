@@ -255,32 +255,40 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__lang-svg  {
     fill: currentColor;
     font-family: AvenirNext-Regular, 'Avenir Next';
+     width: 20px;
+    height: 19px;
 
-    @include mq('min-lg') {
-      width: 20px;
-      height: 19px;
-    }
   }
 
-  // --- EN言語 (__lang-btn-en)---
+  // --- 言語 ---
   &__lang-btn {
     background: none;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
-    color: rgba(255, 255, 255, 0.4);
-    transition: color $transition-fast;
-    &.is-active {color: #ffffff;}
+    
+    @include mq('max-lg') {
+      color: rgba(73, 60, 60, 0.4);
+      transition: color $transition-fast;
+      &.is-active {color:$Background-brown}
+    }
+
+    @include mq('min-lg') {
+      color: rgba(255, 255, 255, 0.4);
+      transition: color $transition-fast;
+      &.is-active {color: #ffffff;}
+    }
   }
+
     //『言語切替・縦線』
     &__language-btn-divider { 
     display: inline-block;
     padding: 0;
     
     @include mq('max-lg') {
-      width: 0.2px;            
-      height: 12px;          
+      width: 1px;            
+      height: 17px;          
       background-color: $Background-brown;
       margin: 0 10px 0 12px; //△仮
     }
@@ -298,7 +306,8 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   // --- パネル内: 言語 (PC版：表示｜SP版非表示) ---
   &__panel-lang{
     @include mq('max-lg') {
-      display: block;
+      display: flex;
+      margin: auto 0;
      }
      @include mq('min-lg') {
       display: none;
