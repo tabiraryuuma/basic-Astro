@@ -248,11 +248,10 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
      }
      
     @include mq('min-lg') {
-      display: flex;  //△仮） 削除してもいい。
-      align-items: center;
-      gap: $spacing-xs;
-     }
+      display: flex;  align-items: center;
+    }
   }
+  &__lang-svg text {fill: #ffffff; font-family: AvenirNext-Regular, 'Avenir Next';}
 
   // --- EN言語 (__lang-btn-en)---
   &__lang-btn-en {
@@ -260,27 +259,17 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     border: none;
     cursor: pointer;
     transition: color $transition-fast;
+    display: flex;
+    align-items: center;
     @include mq('max-lg') {
       color: $Background-brown;
      }
     @include mq('min-lg') {
-      font-size: 1.8rem;
-      width: 20px;
-      height: 19px;
-      
-      padding-top: 0;
-      padding-right: 3.4rem;
-      padding-left: 0;
-      padding-bottom: 0;
-      color: #ffffff;
+      width: 24px;
+      height: 50px;
+      padding: 0;
      }
-
-    &:hover {
-      color: $header-text-color;
-    }
-    &.is-active {
-      font-weight: $font-weight-medium;
-    }
+    &:hover {color: $header-text-color;}
   }
 
     //『言語切替・縦線』
@@ -299,10 +288,10 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     width: 0.2px;            
     height: 12px;          
     background-color: rgba(255, 255, 255, 0.9);
-    margin: 0 10px 0 12px;   //△仮
-     }
-
+    margin: 0 15px 0 14px;
+    padding: 0;
   }
+}
   
   // --- jA言語 (__lang-btn-ja)---
   &__lang-btn-ja {
@@ -310,25 +299,17 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     border: none;
     cursor: pointer;
     transition: color $transition-fast;
-    @include mq('max-lg') {
-      color: $Background-brown;
-     }
+
     @include mq('min-lg') {
-      color: #ffffff;
-      font-size: 1.8rem;
       width: 20px;
       height: 19px;
-
-      padding-top: 0;
-      padding-right: 0;
-      padding-left: 0;
-      padding-bottom: 0;
+      padding: 0;
+      margin-left: 19px;
+      padding: 0;
      }
+
     &:hover {
       color: $header-text-color;
-    }
-    &.is-active {
-      font-weight: $font-weight-medium;
     }
   }
 
@@ -583,13 +564,8 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   &__panel {
     position: fixed;
     top: 0;
-    right: -435px;
-    width: 435px;      //△仮
-    max-width: 85vw;
     height: 100vh;
-    height: 100dvh;
-    // backdrop-filter: blur(20px);
-    // -webkit-backdrop-filter: blur(20px);
+
     background-color: #e9e5e1;
     z-index: 200;
     padding-top: 6.4rem;
@@ -604,12 +580,16 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     flex-direction: column;
     gap: 13.5px;
 
-
     @include mq('max-lg') {
       width: 100%;
       max-width: 100%;
       padding: $spacing-2xl $spacing-xl;
       right: -100%;
+    }
+    @include mq('min-lg'){
+      right: -435px;
+      width: 435px;      
+      max-width: 85vw;
     }
   }
 
