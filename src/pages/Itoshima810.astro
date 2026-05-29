@@ -1,20 +1,26 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import "../styles/style.scss";
 
 import Card from '../components/Card.astro';
 import Button from '../components/Button.astro';
+import itoshima from '../assets/image/itoshima810/mainvisual.webp';
 ---
+<Layout>
 <section class="itoshima810" id="site-itoshima810">
   <div class="itoshima810__content">
 
     <div class="itoshima810__mainvisual">
-      <img src= alt="" class="header__sns-icon"/>
-    </div>
+            <img
+        class="mainvisual-image"
+        src="{itoshima.src}"
+        alt="リトリートプロジェクトのメインビジュアル"
+      />
+      <img src={itoshima.src} alt="" class="header__sns-icon"/></div>
 
     <div class="itoshima810__logo">
       <img src="" alt="">
     </div>
-
-
   </div>
 </section>
+</Layout>
