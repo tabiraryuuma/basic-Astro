@@ -41,8 +41,8 @@ footer {
   // display: block;
 
   .pc-main {
+    position: relative;
     display: flex;
-    justify-content: space-between;
     gap: 8rem;
     max-width: 105rem;
     width: 100%;
@@ -144,6 +144,8 @@ footer {
 
 
   .Language {
+    position: absolute;
+    right: 29rem;
     nav {
       padding-top: 10px;
       display: flex;
