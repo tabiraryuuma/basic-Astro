@@ -200,7 +200,14 @@ const facilities = [
     </button>
   </div>
 
-    <!-- パネル内: 施設ボタン -->
+  <!-- パネル内:YONEDA HOTEL GROUP -->
+  <div class="header__left">
+    <a href="/" class="header__panel-logo" id="headerLogo">
+      YONEDA HOTEL GROUP
+    </a>
+  </div>
+
+  <!-- パネル内: 施設ボタン -->
      <nav class="header__panel-facilities">
       {facilities.map((facility) => (
        <a href={facility.href} class="header__panel-facility-link">
@@ -209,7 +216,7 @@ const facilities = [
         ))}
      </nav>
      
-   <!-- ★★★ 修正: header__reserve → header__panel-reserve（パネル専用クラス） ★★★ -->
+     <!-- パネル専用クラス -->
       <div class="header__panel-reserve">
         <a href="/reserve" class="header__panel-reserve-btn">
             <span class="header__reserve-btn-en">Reserve</span>
@@ -217,60 +224,58 @@ const facilities = [
             <span class="header__reserve-btn-ja">予約</span>
         </a>
       </div>
-   <!-- ★★★ 修正ここまで ★★★ -->
-    
- <!------------ パネル内: SNSアイコン ------------>
-       <div class="header__panel-sns">
+      <!------------ パネル内: SNSアイコン ------------>
+      <div class="header__panel-sns">
         <a 
-          href="https://www.instagram.com/"
-          class="header__panel-sns-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-           >
-            <!-- Instagram アイコン（SVG） -->
-             <img src={InstagramIcon.src} alt="" class="header__sns-icon" />           
-            </a>
-          <!-- LINE アイコン（SVG） -->
-            <a
-             href="https://line.me/..."
-             class="header__panel-sns-link"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="LINE"
-             >
-             <img src={LineIcon.src} alt="" class="header__sns-icon"/>       
-            </a>
-          </div>
-
-  <!------------ パネル内: ナビリンク ------------>
-    <nav class="header__panel-nav" aria-label="パネルナビゲーション">
-      <ul class="header__panel-nav-list">
-        {navItems.map((item) => (
-        <li class="header__panel-nav-item">
-            <a href={item.href} class="header__panel-nav-link">
-              {item.label}
-            </a>
+        href="https://www.instagram.com/"
+        class="header__panel-sns-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        >
+        <!-- Instagram アイコン（SVG） -->
+         <img src={InstagramIcon.src} alt="" class="header__sns-icon" />           
+        </a>
+        <!-- LINE アイコン（SVG） -->
+         <a
+         href="https://line.me/..."
+         class="header__panel-sns-link"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="LINE"
+         >
+         <img src={LineIcon.src} alt="" class="header__sns-icon"/>       
+        </a>
+      </div>
+      
+      <!------------ パネル内: ナビリンク ------------>
+      <nav class="header__panel-nav" aria-label="パネルナビゲーション">
+        <ul class="header__panel-nav-list">
+          {navItems.map((item) => (
+          <li class="header__panel-nav-item">
+          <a href={item.href} class="header__panel-nav-link">
+          {item.label}
+          </a>
           </li>
-        ))}
-      </ul>                                               
-      </nav>
-  
-   <!------------ パネル内: フッター情報 ------------>
-   <div class="header__panel-footer">
-    <a href="/hotel-consultation" class="header__panel-footer-cta">
-      ホテルづくりをお考えの方へ
-    </a>
-    <div class="header__panel-footer-info">
-      <p class="header__panel-footer-company">米田建築工房</p>
-      <p class="header__panel-footer-dept">設計部門</p>
-      <p class="header__panel-footer-brand">TRUNK DESIGN OFFICE</p>
-    </div>
-  </div>
- </div>
-   <!-- オーバーレイ -->
-  <div class="header__overlay" id="menuOverlay"></div>
-</header>
+          ))}
+          </ul>                                               
+        </nav>
+        
+        <!------------ パネル内: フッター情報 ------------>
+        <div class="header__panel-footer">
+          <a href="/hotel-consultation" class="header__panel-footer-cta">
+            ホテルづくりをお考えの方へ
+          </a>
+          <div class="header__panel-footer-info">
+            <p class="header__panel-footer-company">米田建築工房</p>
+            <p class="header__panel-footer-dept">設計部門</p>
+            <p class="header__panel-footer-brand">TRUNK DESIGN OFFICE</p>
+          </div>
+        </div>
+      </div>
+      <!-- オーバーレイ -->
+       <div class="header__overlay" id="menuOverlay"></div>
+  </header>
 
 
 <script is:inline> 
@@ -322,7 +327,6 @@ const facilities = [
       link.addEventListener('click', closeMenu);
     });
   });
-
 
 
   /**
