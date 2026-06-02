@@ -153,7 +153,60 @@
       }
     }
 
-    .Movie {}
+    .Movie {
+      padding-bottom: 60rem;
+
+      nav {
+        display: flex;
+        justify-content: center;
+
+        ul {
+          color: white;
+          list-style: none;
+
+
+          &:nth-child(1) {
+            li {
+              display: flex;
+              justify-content: center;
+
+              &:nth-child(1) {
+                width: 350px;
+                height: 200px;
+                border-radius: 25px;
+                background-image: url('../image/1-movie-1.webp');
+                background-size: cover;
+              }
+
+              img {
+                align-items: center;
+                width: 50px;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            li {
+              display: flex;
+              justify-content: center;
+
+              &:nth-child(1) {
+                width: 350px;
+                height: 200px;
+                border-radius: 25px;
+                background-image: url('../image/1-movie-2.webp');
+                background-size: cover;
+              }
+
+              img {
+                align-items: center;
+                width: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .mainvisual1 {
