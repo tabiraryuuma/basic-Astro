@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 // Layout.astro = ページの共通テンプレ（外枠）
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-import "../styles/pages/_index.scss";
+// import "../styles/pages/_index.scss";
 import "../styles/pages/test.scss";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
@@ -14,8 +14,12 @@ import ReserveButton from "../components/ReserveButton.astro";
   <main>
     <div class="mainvisual">
       <ul class="mainvisual__fade-img">
-        <li><img src="/src/assets/image/top/top-mainvisual-1.webp" alt=""></li>
-        <li><img src="/src/assets/image/top/top-mainvisual-2.webp" alt=""></li>
+        <li>
+          <picture>
+            <source srcset="/src/assets/image/top/top-mainvisual-1sp.webp" media="(max-width: 1023px)">
+            <img src="/src/assets/image/top/top-mainvisual-1.webp" alt="">
+          </picture>
+        </li> 
         <li><img src="/src/assets/image/top/top-mainvisual-3.webp" alt=""></li>
         <li><img src="/src/assets/image/top/top-mainvisual-4.webp" alt=""></li>
         <li><img src="/src/assets/image/top/top-mainvisual-5.webp" alt=""></li>
@@ -24,52 +28,11 @@ import ReserveButton from "../components/ReserveButton.astro";
       <div class="mainvisual__logo">
         <img src="/src/assets/image/top/designoffice.svg" alt="" />
       </div>
-      <h1 class="mainvisual__title">RETREAT PROJECT</h1>
+      <p class="mainvisual__title"><span>RETREAT</span><span class=".pc">&nbsp;&nbsp;</span><span>PROJECT</span></p>
     </div>  
 
     
 
-    <!-- <div class="button-group">
-      <Button href="/project/" text="PROJECT 一覧" variant="transparent" />
-
-      <Button href="/about/" text="ABOUT" variant="brown" />
-    </div> -->
-
-
-    <!-- <div class="top-1">
-      <div class="pc-only">
-        <div class="mainvisual-top1">
-          <div class="mainvisual2">
-            <div class="Project">
-              <h2>PROJECT</h2>
-              <div class="button-group">
-                <Button
-                  href="/project/"
-                  text="PROJECT 一覧"
-                  variant="transparent" />
-                <ReserveButton />                
-              </div>
-            </div>
-            <div class="Movie">
-              <h2>MOVIE</h2>
-            </div>
-          </div>
-          <div class="mainvisual1">
-            <div class="heading">
-              <h1>ただ泊まるだけではない、<br />記憶に残るひとときを。</h1>
-            </div>
-            <div class="gradation">
-              <p>
-                時間とともに表情を変える空間の中で、<br
-                />気持ちがゆるやかにほどけていく。<br
-                />日常から少し離れ、ただ過ぎゆく時を愉しむ。<br
-                />その場所ごとに込めた思いと心地よさが溶け合う、<br
-                />くつろぎの滞在をお楽しみください。
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+    
   </main>
 </Layout>
