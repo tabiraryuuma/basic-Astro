@@ -58,17 +58,24 @@
   
   &__logo {
     position: absolute;
-    // top: 65rem;
     bottom: 30%;
-    left: 45%;
-    // transform: translate(-50%);
-    // z-index: 99;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    @include mq('max-lg') {
+      width: 18rem;
+    }
+    @include mq('min-lg') {
+      width: 15rem;
+    }
   }
 
    &__logo img {
-    width: 50%;
-    height: auto;    
+    width: 100%;
+    height: auto;
+    display: block;      
   }
+
 
   &__title {
     color: #fff;
@@ -82,19 +89,21 @@
     left: 50%;
     z-index: 99;
     transform: translate(-50%);
-    .pc {
-      display: none;
-    }
     @include mq('max-lg') {
       flex-direction: column;
       align-items: center;
       font-size: 5rem;
-      
+      .margin {
+        margin-right: 0;
+      }      
     }
     @include mq('min-lg') {
       // display: flex;
       justify-content: center;
       font-size: 5rem;
+      .margin {
+        margin-right: 2rem;
+      }
     }
   }
 }
