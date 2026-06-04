@@ -1,0 +1,79 @@
+@use "../foundation/variables"as *;
+@use "../foundation/mixins"as *;
+
+.itoshima810{
+
+  &__content{
+  position: relative;
+  }
+
+  &__logo{
+    position: absolute;
+    width: 13%;
+    top: 74%;
+    left: 42.5%;
+    margin: 0 auto;
+}
+
+&__Villa-Resort{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #949494;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+}
+
+&__title{
+  color: #ffffff;    //△仮
+  padding: 0;
+  margin-bottom: 50px;  //△仮
+}
+
+&__catch{
+  padding: 0;
+  margin-bottom: 5%;
+}
+
+&__Villa-Resort-text{
+  color: aqua; //△仮
+  margin-bottom: 50px;
+}
+
+&__reservation-button{
+  width: 100%;
+  display: contents;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
