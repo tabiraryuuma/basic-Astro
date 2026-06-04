@@ -1,26 +1,74 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/style.scss";
+import "../styles/pages/Itoshima810.scss";
 
 import Card from '../components/Card.astro';
-import Button from '../components/Button.astro';
-import itoshima from '../assets/image/itoshima810/mainvisual.webp';
----
+import ReserveButton from '../components/ReserveButton.astro';---
 <Layout>
-<section class="itoshima810" id="site-itoshima810">
-  <div class="itoshima810__content">
+  <main>
+    <section class="itoshima810" id="site-itoshima810">
+      <div class="itoshima810__content">
+        <div class="itoshima810__mainvisual">
+          <img
+          class="hero__image"
+          src="/src/assets/image/Itoshima810/Itoshima810mv-Daytlme.webp"        
+          data-day-src="/src/assets/image/Itoshima810/Itoshima810mv-Daytlme.webp"
+          data-night-src="/src/assets/image/Itoshima810/Itoshima810mv-NIGHTTIME.webp"
+          alt="メインビジュアル"
+          />
+        <div class="itoshima810__logo">
+          <img 
+          src="/src/assets/SVG/itoshima810.svg" 
+          alt="itoshima810のロゴ">
+        </div>
+    </section>
 
-    <div class="itoshima810__mainvisual">
-            <img
-        class="mainvisual-image"
-        src="{itoshima.src}"
-        alt="リトリートプロジェクトのメインビジュアル"
+   <section class="itoshima810__Villa-Resort">
+    
+    <h1 class="itoshima810__title">
+      思い思いの時間を過ごす、
+      <br>
+      集うホテル。
+    </h1>
+
+    <!-- △画像は仮です。 -->
+    <h1 class="itoshima810__catch">
+      <img
+      class="itoshima810__hero-title"
+      src="/src/assets/image/Itoshima810/itoshima810_1.svg"
+      alt="itoshima810 Villa＆Resort"
       />
-      <img src={itoshima.src} alt="" class="header__sns-icon"/></div>
+    </h1>
 
-    <div class="itoshima810__logo">
-      <img src="" alt="">
+    <p class="itoshima810__Villa-Resort-text">
+      大人数でも、ゆったりとくつろげる。
+      <br>
+      のびやかな余白が心をほどく、糸島のヴィラリゾート。
+    </p>
+
+    <div class="itoshima810__reservation-button">
+      <ReserveButton/>    
     </div>
-  </div>
-</section>
+   </section>
+   
+   <div class="itoshima810__visual">
+    <img
+    class="hero__imagee"
+    src="/src/assets/image/Itoshima810/2Itoshima810-Daytlme.webp"
+    data-day-src="/src/assets/image/Itoshima810/2Itoshima810-Daytlme.webp"
+    data-night-src="/src/assets/image/Itoshima810/2Itoshima810-NIGHTTIME.webp"
+    alt="メインビジュアル"
+    />
+    
+    
+    
+    </div>
+
+
+
+
+</main>
+
+
 </Layout>
