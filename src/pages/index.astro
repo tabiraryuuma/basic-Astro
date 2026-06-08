@@ -83,17 +83,19 @@ import ReserveButton from "../components/ReserveButton.astro";
 
     <section id="mainvisual-top2">
       <section class="media">
-        <h2>MEDIA</h2>
-        <nav>
-          <ul>
-            <li></li>
-            <li>掲載雑誌名</li>
-          </ul>
-          <ul>
-            <li></li>
-            <li>掲載雑誌名</li>
-          </ul>
-        </nav>
+        <div class="text-area">
+          <h2>MEDIA</h2>
+          <nav>
+            <ul>
+              <li></li>
+              <li>掲載雑誌名</li>
+            </ul>
+            <ul>
+              <li></li>
+              <li>掲載雑誌名</li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
       <section class="STAY-in-DESIGN">
@@ -154,27 +156,34 @@ import ReserveButton from "../components/ReserveButton.astro";
           </div>
         </div>
 
-        <h1>STAY in DESIGN.</h1>
-        <p>
-          produced by<br /><img
-            src="/src/assets/image/top/designoffice.svg"
-            alt=""
-          />
-        </p>
-        <p class="short-sentence">
-          設計事務所ならではの視点で、デザイン性と居心地の良さ、<span class="br"
-          ></span>そして日常から少し離れる非日常感を大切にしています。
-        </p>
-        <nav>
-          <ul>
-            <li>
-              <Button href="/about/" text="ABOUT" variant="transparent" />
-            </li>
-            <li>
-              <a href="#"><p>ホテルづくりをお考えの方へ</p><p>&gt;</p></a>
-            </li>
-          </ul>
-        </nav>
+        <div class="text-area">
+          <h1>STAY in DESIGN.</h1>
+          <p>
+            produced by<br /><img
+              src="/src/assets/image/top/designoffice.svg"
+              alt=""
+            />
+          </p>
+          <p class="short-sentence pc-only">
+            設計事務所ならではの視点で、デザイン性と居心地の良さ、<span
+              class="br"
+            ></span>そして日常から少し離れる非日常感を大切にしています。
+          </p>
+          <p class="short-sentence sp-only">
+            設計事務所ならではの視点で、<br />デザイン性と居心地の良さ、<br
+            />そして日常から少し離れる<br />非日常感を大切にしています。
+          </p>
+          <nav>
+            <ul>
+              <li>
+                <Button href="/about/" text="ABOUT" variant="transparent" />
+              </li>
+              <li>
+                <a href="#"><p>ホテルづくりをお考えの方へ</p><p>&gt;</p></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <img class="" src="" alt="" />
       </section>
     </section>
