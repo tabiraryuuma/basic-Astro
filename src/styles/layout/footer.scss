@@ -107,10 +107,11 @@ footer {
       margin-bottom: auto;
 
       a {
+        min-width: auto;
         width: 16rem;
         background: rgb(239, 239, 239);
-        color: #9D9087;
-        border: 1px solid #9D9087;
+        color: $Background-brown;
+        border: 1px solid $Background-brown;
         transition: 0.5s;
         padding: 2rem 1rem;
         cursor: pointer;
@@ -146,6 +147,7 @@ footer {
   .Language {
     position: absolute;
     right: 29rem;
+
     nav {
       padding-top: 10px;
       display: flex;
