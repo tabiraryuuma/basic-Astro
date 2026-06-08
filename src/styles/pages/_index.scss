@@ -56,6 +56,9 @@
 //   }
 // }
 
+
+$Background-brown: #8b7355;
+
 .text-area {
   width: 39rem;
   margin: 0 auto;
@@ -148,13 +151,13 @@
               &:nth-child(1) {
                 align-items: center;
                 background-color: rgb(239, 239, 239);
-                color: #9D9087
+                color: $Background-brown
               }
 
               &:nth-child(2) {
                 align-items: center;
                 background-color: rgb(239, 239, 239);
-                color: #9D9087
+                color: $Background-brown
               }
             }
           }
@@ -181,8 +184,6 @@
 
     .Movie {
       padding-bottom: 60rem;
-
-      h2 {}
 
       nav {
         display: flex;
@@ -282,6 +283,7 @@
     h2 {
       text-align: center;
       padding-bottom: 2rem;
+      color: $Background-brown;
     }
 
     nav {
@@ -306,6 +308,7 @@
 
           &:nth-child(2) {
             padding-top: 20px;
+            color: $Background-brown;
           }
         }
       }
@@ -354,7 +357,7 @@
 
     .text-area {
       h1 {
-        color: #9D9087;
+        color: $Background-brown;
         text-align: center;
         margin-bottom: 150px;
         font-size: 45px;
@@ -362,7 +365,7 @@
 
       p {
         text-align: center;
-        color: #9D9087;
+        color: $Background-brown;
 
         img {
           padding-top: 25px;
@@ -399,15 +402,15 @@
               padding: 5rem 0;
 
               a {
-                background-color: #9D9087;
-                border: #9D9087;
+                background-color: $Background-brown;
+                border: $Background-brown;
                 color: #fff;
               }
             }
 
             &:nth-child(2) {
               margin: 0 auto;
-              border-bottom: #9D9087 solid 1px;
+              border-bottom: $Background-brown solid 1px;
               width: 26rem;
 
               a {
