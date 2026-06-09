@@ -257,7 +257,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   // ====================================================================================
   &__lang {
     @include mq('max-lg') {
-      display: none;
+      display: flex;  align-items: center;
      }
      
     @include mq('min-lg') {

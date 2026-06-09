@@ -83,8 +83,8 @@ import '../styles/components/_ImageSwitcher.scss';
       
       images.forEach((img) => {
         const newSrc = isNight
-        ? img.dataset.nightSrc
-        : img.dataset.daySrc;
+         ? img.dataset.nightSrc
+         : img.dataset.daySrc;
         if (newSrc) {
           img.src = newSrc;
         }

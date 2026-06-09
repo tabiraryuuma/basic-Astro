@@ -10,7 +10,7 @@
 
 // PC版　= min-lg（1024px以上）
 // SP版 = max-lg（1023px以下）
-//使い方の例： @include mq('max-lg'):ソースコード
+//使い方の例： @include mq('max-lg'):{ソースコード}
 $breakpoints: (
   'min-lg': (min-width: 1024px),
   'max-lg': (max-width: 1023px),
