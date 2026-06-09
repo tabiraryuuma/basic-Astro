@@ -43,13 +43,14 @@ footer {
   .pc-main {
     position: relative;
     display: flex;
+    justify-content: space-between;
     gap: 8rem;
     max-width: 105rem;
     width: 100%;
   }
 
   .upco-flex {
-    min-width: 0;
+    width: 76rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -101,37 +102,51 @@ footer {
     }
 
     .item {
-      display: flex;
-      gap: 10px;
       white-space: nowrap;
       margin-bottom: auto;
+      max-width: 100%;
 
-      a {
-        min-width: auto;
-        width: 16rem;
-        background: rgb(239, 239, 239);
-        color: $Background-brown;
-        border: 1px solid $Background-brown;
-        transition: 0.5s;
-        padding: 2rem 1rem;
-        cursor: pointer;
+      ul {
+        display: flex;
+        justify-content: space-between;
 
-        &:hover {
-          background-color: $Background-brown;
-          border: 1px solid $Background-brown;
-          color: #fff;
-        }
+        li {
+          width: 16%;
 
-        &:last-child {
-          width: 26rem;
-          background-color: $Background-brown;
-          border: 1px solid $Background-brown;
-          color: #fff;
-
-          &:hover {
-            background-color: rgb(239, 239, 239);
+          a {
+            display: block;
+            background: rgb(239, 239, 239);
             color: $Background-brown;
             border: 1px solid $Background-brown;
+            transition: 0.5s;
+            padding: 1rem 0;
+            border-radius: 50px;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $Background-brown;
+              border: 1px solid $Background-brown;
+              color: #fff;
+
+            }
+          }
+
+          &:last-child {
+            width: 30%;
+            margin-left: 1rem;
+
+            a {
+              background-color: $Background-brown;
+              border: 1px solid $Background-brown;
+              color: #fff;
+
+              &:hover {
+                background-color: rgb(239, 239, 239);
+                color: $Background-brown;
+                border: 1px solid $Background-brown;
+              }
+            }
           }
         }
       }
@@ -247,35 +262,50 @@ footer {
       }
 
       .item-sp {
-        width: auto;
+        width: 28rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;
 
-        a {
-          width: 26rem;
-          background-color: rgb(239, 239, 239);
-          color: $Background-brown;
-          border: 1px solid $Background-brown;
-          transition: 0.5s;
-          cursor: pointer;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
 
-          &:hover {
-            background-color: $Background-brown;
-            border: 1px solid $Background-brown;
-            color: #fff;
-          }
+          li {
 
-          &:last-child {
-            width: 26rem;
-            background-color: $Background-brown;
-            border: 1px solid $Background-brown;
-            color: #fff;
-
-            &:hover {
-              background-color: rgb(239, 239, 239);
+            a {
+              display: block;
+              background: rgb(239, 239, 239);
               color: $Background-brown;
               border: 1px solid $Background-brown;
+              transition: 0.5s;
+              padding: 1rem 0;
+              border-radius: 50px;
+              text-align: center;
+              cursor: pointer;
+
+              &:hover {
+                background-color: $Background-brown;
+                border: 1px solid $Background-brown;
+                color: #fff;
+
+              }
+            }
+
+            &:last-child {
+
+              a {
+                background-color: $Background-brown;
+                border: 1px solid $Background-brown;
+                color: #fff;
+
+                &:hover {
+                  background-color: rgb(239, 239, 239);
+                  color: $Background-brown;
+                  border: 1px solid $Background-brown;
+                }
+              }
             }
           }
         }
@@ -291,7 +321,7 @@ footer {
 
         .icon-sp {
           display: flex;
-          margin-top: 4rem;
+          margin-top: 5rem;
           justify-content: center;
           line-height: 1px;
           list-style: none;
