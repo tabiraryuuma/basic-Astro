@@ -16,10 +16,10 @@
     background: $Background-brown;
     color: #fff;
     z-index: 99;
-    transition: transform 0.3s;
-  &:hover{
-      transform: scale(1.05);
-    }
+  //   transition: transform 0.3s;
+  // &:hover{
+  //     transform: scale(1.05);
+  //   }
   }
   @include mq('min-lg') {
     display: none;
