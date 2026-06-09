@@ -48,7 +48,16 @@
   display: contents;
 }
 
+&__visual {
+  margin-bottom: 25px; //■仮
+}
 
+&__switcher{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 
 
 

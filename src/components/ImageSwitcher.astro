@@ -54,40 +54,43 @@ import '../styles/components/_ImageSwitcher.scss';
   document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('switchInput') as HTMLInputElement;
     const label = document.getElementById('switchLabel');
-    if (!input || !label)return;
+    
+    if (!input || !label) return;
 
-    input.addEventListener('change', () => {
+  // 夜画像を先読み
+  document.querySelectorAll<HTMLImageElement>('[data-night-src]')
+    .forEach((img) => {
+      const nightSrc = img.dataset.nightSrc;
+
+      if (nightSrc) {
+        const preload = new Image();
+        preload.src = nightSrc;
+      }
+    });
+     input.addEventListener('change', () => {
       const isNight = input.checked;
-
-      // body に .is-night クラスを切り替え
-      document.body.classList.toggle('is-night', isNight)
-
-      // ラベルテキストを切り替え
+      document.body.classList.toggle('is-night', isNight);
       label.textContent = isNight ? 'NIGHTTIME' : 'DAYTIME';
 
-      // 画像切り替え処理
       switchImages(isNight);
+
     });
   });
 
   /** data-day-src / data-night-src を元に全画像の src を切り替える */
-  function switchImages(isNight: boolean):void {
+  function switchImages(isNight: boolean): void {
     const images = document.querySelectorAll<HTMLImageElement>('[data-day-src]');
-
+      
       images.forEach((img) => {
-        const newSrc = isNight ? img.dataset.nightSrc : img.dataset.daySrc;
-
-        if(newSrc && newSrc !== img.src) {
-          img.style.opacity = '0';
-          setTimeout(() => {
-            img.src = newSrc;
-            img.style.opacity = '1';
-          },200);
+        const newSrc = isNight
+        ? img.dataset.nightSrc
+        : img.dataset.daySrc;
+        if (newSrc) {
+          img.src = newSrc;
         }
-     });
-    }
+      });
+  }
 </script>
-<style lang="scss">
   
 
 
