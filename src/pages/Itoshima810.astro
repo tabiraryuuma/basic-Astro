@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/style.scss";
 import "../styles/pages/Itoshima810.scss";
+import ImageSwitcher from '../components/ImageSwitcher.astro';
 
 import Card from '../components/Card.astro';
 import ReserveButton from '../components/ReserveButton.astro';---
@@ -54,17 +55,17 @@ import ReserveButton from '../components/ReserveButton.astro';---
    
    <div class="itoshima810__visual">
     <img
-    class="hero__imagee"
+    class="itoshima810__imagee"
     src="/src/assets/image/Itoshima810/2Itoshima810-Daytlme.webp"
     data-day-src="/src/assets/image/Itoshima810/2Itoshima810-Daytlme.webp"
     data-night-src="/src/assets/image/Itoshima810/2Itoshima810-NIGHTTIME.webp"
     alt="メインビジュアル"
     />
-    
-    
-    
     </div>
 
+    <div class="itoshima810__switcher">
+      <ImageSwitcher />
+    </div>
 
 
 
