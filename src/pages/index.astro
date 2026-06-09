@@ -7,6 +7,7 @@ import "../styles/pages/_index.scss";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import ReserveButton from "../components/ReserveButton.astro";
+import ReserveButtonFix from "../components/ReserveButtonFix.astro";
 ---
 
 <Layout>
@@ -22,15 +23,10 @@ import ReserveButton from "../components/ReserveButton.astro";
       </div>
       <h1 class="mainvisual-title">RETREAT PROJECT</h1>
     </div>
-
-    <!-- <div class="button-group">
-      <Button href="/project/" text="PROJECT 一覧" variant="transparent" />
-
-      <Button href="/about/" text="ABOUT" variant="brown" />
-    </div> -->
+    <ReserveButtonFix />
 
     <section id="mainvisual-top1">
-      <section class="mainvisual2">
+      <div class="mainvisual2">
         <div class="Project">
           <h2>PROJECT</h2>
           <nav class="item">
@@ -65,8 +61,8 @@ import ReserveButton from "../components/ReserveButton.astro";
             </ul>
           </nav>
         </div>
-      </section>
-      <section class="mainvisual1">
+      </div>
+      <div class="mainvisual1">
         <h1 class="heading">
           ただ泊まるだけではない、<br />記憶に残るひとときを。
         </h1>
@@ -78,27 +74,26 @@ import ReserveButton from "../components/ReserveButton.astro";
           />その場所ごとに込めた思いと心地よさが溶け合う、<br
           />くつろぎの滞在をお楽しみください。
         </p>
-      </section>
+      </div>
     </section>
 
     <section id="mainvisual-top2">
-      <section class="media">
+      <div class="media">
         <div class="text-area">
           <h2>MEDIA</h2>
-          <nav>
-            <ul>
-              <li></li>
-              <li>掲載雑誌名</li>
-            </ul>
-            <ul>
-              <li></li>
-              <li>掲載雑誌名</li>
-            </ul>
-          </nav>
-        </div>
-      </section>
 
-      <section class="STAY-in-DESIGN">
+          <ul>
+            <li></li>
+            <li>掲載雑誌名</li>
+          </ul>
+          <ul>
+            <li></li>
+            <li>掲載雑誌名</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="STAY-in-DESIGN">
         <div class="scroll-infinity">
           <div class="scroll-infinity__wrap">
             <ul class="scroll-infinity__list scroll-infinity__list--left">
@@ -173,19 +168,18 @@ import ReserveButton from "../components/ReserveButton.astro";
             設計事務所ならではの視点で、<br />デザイン性と居心地の良さ、<br
             />そして日常から少し離れる<br />非日常感を大切にしています。
           </p>
-          <nav>
-            <ul>
-              <li>
-                <Button href="/about/" text="ABOUT" variant="transparent" />
-              </li>
-              <li>
-                <a href="#"><p>ホテルづくりをお考えの方へ</p><p>&gt;</p></a>
-              </li>
-            </ul>
-          </nav>
+
+          <ul>
+            <li>
+              <Button href="/about/" text="ABOUT" variant="transparent" />
+            </li>
+            <li>
+              <a href="#"><p>ホテルづくりをお考えの方へ</p><p>&gt;</p></a>
+            </li>
+          </ul>
         </div>
         <img class="" src="" alt="" />
-      </section>
+      </div>
     </section>
   </main>
 </Layout>
