@@ -21,25 +21,26 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    background-color: #949494;
+    background-color: #e9e5e1;
     padding-top: 100px;
     padding-bottom: 100px;
   }
   
   &__title {
-    color: #ffffff;    //△仮
+    font-size: 3.2rem;
+    color:$Background-brown;    //△仮
     padding: 0;
-    margin-bottom: 50px;  //△仮
+    margin-bottom: 69px;  //△仮
     }
     
     &__catch {
       padding: 0;
-      margin-bottom: 5%;
+      margin-bottom: 75px;
     }
     
     &__Villa-Resort-text {
-      color: aqua; //△仮
-      margin-bottom: 50px;
+      color: $Background-brown; //△仮
+      margin-bottom: 65px;
     }
     
     &__reservation-button {
@@ -57,30 +58,8 @@
       justify-content: center;
       margin-bottom: 50px;
     }
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+  .gallery-layout__item{
+    display: grid;
+  }
