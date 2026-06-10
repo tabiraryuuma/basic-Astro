@@ -90,6 +90,7 @@
     pointer-events: none;
     transition: color 0.3s ease;
     align-items: center;
+    
 
     svg{
       display: block;
@@ -98,7 +99,7 @@
   
   /* 太陽アイコン（左側に配置） */
   .switch__icon--day{
-    left: 5px;
+    left: 6px;
     color: rgba(255, 255, 255, 0.85);
   }
   
