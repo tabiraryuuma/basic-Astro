@@ -71,7 +71,7 @@ footer {
 
       .footer-h1 {
         white-space: nowrap;
-        font-size: clamp(1.8rem, 3vw, 3.2rem);
+        font-size: 32px;
       }
 
       .icon {
@@ -116,6 +116,7 @@ footer {
           a {
             display: block;
             background: rgb(239, 239, 239);
+            font-size: 14px;
             color: $Background-brown;
             border: 1px solid $Background-brown;
             transition: 0.5s;
@@ -186,18 +187,24 @@ footer {
 
       li {
         padding-top: 10px;
+        font-size: 14px;
       }
     }
 
     .Company-List {
       li {
-        width: 210px;
+        font-size: 14px;
+        width: 192px;
         display: block;
         border-bottom: 1px solid black;
         padding: 15px 0;
 
         &:nth-child(2) {
           padding: 25px 0;
+        }
+
+        span {
+          font-size: 11px;
         }
       }
     }
