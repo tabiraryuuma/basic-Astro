@@ -116,7 +116,7 @@
               justify-content: center;
 
               &:nth-child(1) {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url('../../assets/image/Itoshima\ 810/4d-day5.webp');
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url('../../assets/image/top/1-project-1.webp');
                 background-position: center;
                 background-size: cover;
 
@@ -127,7 +127,7 @@
               }
 
               &:nth-child(2) {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url('#');
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url('../../assets/image/top/1-project-2.webp');
                 background-position: center;
                 background-size: cover;
 
@@ -447,11 +447,10 @@
   }
 
   #mainvisual-top1 {
-    min-height: 305rem;
+    min-height: 386rem;
 
     .mainvisual2 {
       width: 100%;
-      height: 265rem;
       top: 40.5rem;
       background-position: -8rem;
 
