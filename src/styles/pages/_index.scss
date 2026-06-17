@@ -399,7 +399,9 @@
       }
 
       .short-sentence.sp-only {
-        font-size: 16px;
+        padding: 30px 0 50px 0;
+        font-size: 20px;
+        line-height: 2;
       }
 
 
@@ -659,22 +661,24 @@
           font-size: 32px;
         }
 
-        nav {
-          padding-bottom: 120px;
+        ul {
+          width: 39rem;
+          margin: 0;
+          list-style: none;
+          text-align: center;
 
-          ul {
-            margin: 0;
-            list-style: none;
-            text-align: center;
+          li {
+            &:nth-child(1) {
+              padding: 1rem 0;
 
-            li {
-              &:nth-child(1) {
-                padding: 50px 0;
-
-                a {
-                  width: 200px;
-                }
+              a {
+                width: 30rem;
+                height: 4rem;
               }
+            }
+
+            &:nth-child(2) {
+              font-size: 18px;
             }
           }
         }
