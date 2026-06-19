@@ -1,16 +1,23 @@
 @use "../foundation/variables"as *;
 @use "../foundation/mixins"as *;
 
+.l-container {
+  max-width: 125rem;
+  width: 100%;
+  padding: 0 10rem;
+  margin: 0 auto;
+}
+
 .itoshima808 {
   &__content{
   position: relative;
   width: 100%;
-    @include mq('max-lg') {
-      height: 100vh;
-    }
-    @include mq('min-lg') {
-      height: auto;
-    }
+    // @include mq('max-lg') {
+    //   height: 100vh;
+    // }
+    // @include mq('min-lg') {
+    //   height: auto;
+    // }
   }
 
   &__mainvisual img {
@@ -27,4 +34,42 @@
     left: 50%;
     transform: translate(-50%);
   }
+
+
+  &__concept {    
+    background-color: #e9e5e1;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10rem 0;
+
+    }
+
+    
+    &__title {
+      font-size: 3.2rem;
+      font-weight: 300;
+      color: #928572;
+      letter-spacing: 0.3em;
+      margin-bottom: 69px;
+    }
+  }
+
+  
+
+  
+
+
+
+
+
 }
+
+
+
+
+
+
