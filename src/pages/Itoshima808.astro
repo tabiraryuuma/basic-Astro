@@ -15,10 +15,11 @@ import ReserveButtonFix from "../components/ReserveButtonFix.astro";
   <main>
     <div class="itoshima808__content">
       <div class="itoshima808__mainvisual">
-        <picture>
+        <img src="/src/assets/image/Itoshima808/Itoshima808-movie-short.webp" alt="Itoshima808ショート動画">
+        <!-- <picture>
           <source srcset="/src/assets/image/Itoshima808/Itoshima808-movie-shortsp.webp" media="(max-width: 1023px)">
           <img src="/src/assets/image/Itoshima808/Itoshima808-movie-short.webp" alt="Itoshima808ショート動画">
-        </picture>
+        </picture> -->
       </div>
       <div class="itoshima808__logo">
         <img src="/src/assets/SVG/Itoshima808-1.svg" alt="">
@@ -26,6 +27,30 @@ import ReserveButtonFix from "../components/ReserveButtonFix.astro";
     </div>
 
     <ReserveButtonFix />
+
+    <section class="itoshima808__concept">
+      <div class="itoshima808__concept__content l-container">
+        <h2 class="itoshima808__concept__title">
+          海と空を、<br class="sp-only">独り占めする滞在。
+        </h2>
+
+        <h1 class="itoshima808__concept__catch">
+          <img
+          class="itoshima810__hero-title"
+          src="src/assets/image/Itoshima810/itoshima810-Villa-Resort.svg" alt="">
+        </h1>
+
+        <p class="itoshima808__concept__text">
+          絶景が日常を遠ざける。<br>
+          心地よさに身を委ねる、<br class="sp-only">
+          糸島のグランドビュー。
+        </p>
+
+        <div class="itoshima808__reservation-button">
+          <ReserveButton />    
+        </div>       
+      </div>
+    </section>
 
 
 
