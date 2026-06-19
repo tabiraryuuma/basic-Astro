@@ -1,16 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
 // Layout.astro = ページの共通テンプレ（外枠）
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
 // import "../styles/pages/_index.scss";
 import "../styles/pages/Itoshima808.scss";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import ReserveButton from "../components/ReserveButton.astro";
+import ReserveButtonFix from "../components/ReserveButtonFix.astro";
 ---
 
 <Layout title = "Itoshima808", description = "これはItoshima808のぺーじです">
+
+  <main>
+    <div class="itoshima808__content">
+      <div class="itoshima808__mainvisual">
+        <picture>
+          <source srcset="/src/assets/image/Itoshima808/Itoshima808-movie-shortsp.webp" media="(max-width: 1023px)">
+          <img src="/src/assets/image/Itoshima808/Itoshima808-movie-short.webp" alt="Itoshima808ショート動画">
+        </picture>
+      </div>
+      <div class="itoshima808__logo">
+        <img src="/src/assets/SVG/Itoshima808-1.svg" alt="">
+      </div>
+    </div>
+
+    <ReserveButtonFix />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  </main>
 
 
 
