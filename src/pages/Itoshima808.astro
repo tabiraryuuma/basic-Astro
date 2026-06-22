@@ -8,6 +8,7 @@ import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import ReserveButton from "../components/ReserveButton.astro";
 import ReserveButtonFix from "../components/ReserveButtonFix.astro";
+import ImageSwitcher from "../components/ImageSwitcher.astro";
 ---
 
 <Layout title = "Itoshima808", description = "これはItoshima808のぺーじです">
@@ -50,6 +51,56 @@ import ReserveButtonFix from "../components/ReserveButtonFix.astro";
           <ReserveButton />    
         </div>       
       </div>
+    </section>
+
+    <section class="itoshima808__day-night">
+      <div class="itoshima808__visual">
+        <img class="itoshima810__villa-inner" src="/src/assets/image/Itoshima808/Itoshima808-day-1.webp"
+          data-day-src="/src/assets/image/Itoshima808/Itoshima808-day-1.webp"
+          data-night-src="/src/assets/image/Itoshima808/Itoshima808-night-1.webp"
+          alt="メインビジュアル">
+      </div>
+
+      <div class="itoshima808__switcher">
+        <ImageSwitcher />
+      </div>
+
+      <div class="itoshima808__villa">
+        <div class="villa-top">
+          <div class="villa-top__text">
+            <img class="villa-top__text__logo" src="/src/assets/SVG/itoshima810_1.svg" alt="">
+            <p>特徴的な三角形の外観が印象的な、海を望むヴィラ。<br>寝室やバルコニーから広がる景色が、<br>
+              滞在の時間そのものを特別なものに変えていきます。
+            </p>
+            <p>バルコニーとつながるリビングに、<br>心地よい風が通り抜ける。<br>
+              無駄を削ぎ落としたコンパクトな設えに、<br>必要な設備を丁寧に整えました。
+            </p>
+            <p>南国植物に囲まれたプライベートガーデンで<br>焚き火を囲み、静かに語らうひととき。<br>
+              波の音を聴きながら、まどろみの中へ。<br>心が満たされる、贅沢なひとときをお過ごしください。
+            </p>            
+          </div>
+          <div class="villa-top__img">
+            <img src="/src/assets/image/Itoshima808/Itoshima808-day-2.webp" alt="">
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </section>
 
 
