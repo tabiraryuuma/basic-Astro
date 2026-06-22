@@ -61,123 +61,106 @@
 
   }
 
-  &__visual {
-    margin-bottom: 25px; //■仮
+  // &__visual {
+  //   margin-bottom: 25px; //■仮
 
-  }
+  // }
 
 
-  // ---------------------------------------------------------
-  // ドグルスイッチ
-  // ---------------------------------------------------------
-  &__switcher {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
+  
+
+
 }
 
 
 
-  // ---------------------------------------------------------
-  // Itoshima810見出し＋テキスト＋右画像＋左画像
-  // ---------------------------------------------------------
+
+
 
   .villa-block{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    padding: 60px 0px;
-    background-color: aqua;
+    //-------------- 全体 --------------
+    color: #e2c3a5;            //△仮
+    background-color:#928572;  //△仮
+    position: relative;
+    width: 100%;
+    margin-inline: auto; 
 
-    //①タイトル＋テキスト
-    &__content{
-      grid-column: 1 / 2 ;
-      grid-row: 1 / 3 ;
-      align-items: start;
-
-      padding-top: 60px; // ← これでタイトルの開始位置を下げる
-      text-align: center;
-      max-width: 380px;
-      margin: 0 auto;
-    }
-    &__title {
-      display: block;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      letter-spacing: 0.15em;
-      margin-bottom: 24px;
-    }
-    &__text {
-      font-style: 0.8rem;
-      line-height: 2;
-      color: #555;
+    @include mq('min-lg') {
+      max-width: 112rem; //全体のmax-width
+      padding-inline: 10rem; //全体を真ん中にする
     }
 
-    // 画像共通
-    &__img {
+    //-------------- ここまで全体 --------------
+
+
+    // ---------------------------------------------------------
+    // ドグルスイッチ
+    // ---------------------------------------------------------
+    &__switcher {
       display: flex;
-      align-items: flex-start; // 上揃え
-      gap: 1px;
-
-    img {
-      width: 100%;
-      object-fit: cover;
-      display: block;
+      align-items: center;
+      justify-content: center;
+      padding-top: 50px;
+      margin-bottom: 50px;
     }
-  }
-    
-    &__label {
-      writing-mode: vertical-rl;
-      font-size: 15px;
-      letter-spacing: 0.12em;
-      color: #999;
-      flex-shrink: 0; // ← ラベルが縮まないように
+
+    &__img{
+      position: relative;
+      display: block flex;
+      width: fit-content;
+
+      @include mq('min-lg') {
+        gap: 1.2rem;
+      }
+
       
-      &--private {
-        align-self: flex-end; // 下揃え
-        margin-bottom: 8px;   // 微調整
+    }
+
+    &__text{
+      position: absolute;
+      inset-inline-start: 3rem;
+      flex-direction: column;
+      align-items: flex-end;
+      width: fit-content;
+    }
+    &__text-desc{
+      font-size: 1.5rem;
+      line-height: 2.1111111111;
+      margin-block-start: 12.5rem;
+    }
+
+
+    &__wrap{
+      display: block flex;
+      flex-wrap: wrap;
+      margin-inline-start: 12rem;
+    }
+
+    &__m-01{
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      margin-inline-start: auto;
+      
+      
+      @include mq('min-lg') {
+        inset-inline-end: -43.5rem;
       }
-      &--engawa {
-        align-self: flex-start; // 上揃え
-        margin-top: 8px;
+    }
+
+    &__m-02 {
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      margin-inline-start: auto;
+      
+      
+      @include mq('min-lg') {
+        inset-inline-start: -36.2rem;
       }
     }
-
-
-    // ② PRIVATE GARDEN（右上・大）
-    &__img--primary {
-      width: 55%;
-      margin-left: auto;
-
-
-      grid-column: 2 / 3 ;
-      grid-row: 1 / 2 ;
-      align-items: start;
-    }
-    // ③ ENGAWA（左下・小）
-    &__img--secondary {
-      width: 55%;         // ← 左の画像の幅
-      margin-right: auto;
-
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-      margin-top: -40px;  // ← contentに少し重ねる
-      align-self: start;
-    }
-    // ④ LIVING ROOM（右下・大）
-    &__img--living {
-      grid-column: 2 / 3;
-      grid-row: 2 / 4;
-      margin-top: 16px;
-      align-self: start;
-    }
-    
-
-
-
-
-
-
 
   }
+
+
+
+
+
