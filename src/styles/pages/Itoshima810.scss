@@ -61,10 +61,10 @@
 
   }
 
-  &__visual {
-    margin-bottom: 25px; //■仮
+  // &__visual {
+  //   margin-bottom: 25px; //■仮
 
-  }
+  // }
 
 
   
@@ -74,19 +74,35 @@
 
 
 
-  // ---------------------------------------------------------
-  // ドグルスイッチ
-  // ---------------------------------------------------------
-  .switcher {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
+
+
 
   .villa-block{
-    color: #e2c3a5;
-    background-color:#928572;
+    //-------------- 全体 --------------
+    color: #e2c3a5;            //△仮
+    background-color:#928572;  //△仮
+    position: relative;
+    width: 100%;
+    margin-inline: auto; 
+
+    @include mq('min-lg') {
+      max-width: 112rem; //全体のmax-width
+      padding-inline: 10rem; //全体を真ん中にする
+    }
+
+    //-------------- ここまで全体 --------------
+
+
+    // ---------------------------------------------------------
+    // ドグルスイッチ
+    // ---------------------------------------------------------
+    &__switcher {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 50px;
+      margin-bottom: 50px;
+    }
 
     &__img{
       position: relative;
@@ -96,12 +112,51 @@
       @include mq('min-lg') {
         gap: 1.2rem;
       }
+
       
     }
 
+    &__text{
+      position: absolute;
+      inset-inline-start: 3rem;
+      flex-direction: column;
+      align-items: flex-end;
+      width: fit-content;
+    }
+    &__text-desc{
+      font-size: 1.5rem;
+      line-height: 2.1111111111;
+      margin-block-start: 12.5rem;
+    }
 
 
+    &__wrap{
+      display: block flex;
+      flex-wrap: wrap;
+      margin-inline-start: 12rem;
+    }
 
+    &__m-01{
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      margin-inline-start: auto;
+      
+      
+      @include mq('min-lg') {
+        inset-inline-end: -43.5rem;
+      }
+    }
+
+    &__m-02 {
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      margin-inline-start: auto;
+      
+      
+      @include mq('min-lg') {
+        inset-inline-start: -36.2rem;
+      }
+    }
 
   }
 
