@@ -53,9 +53,33 @@
       font-size: 3.2rem;
       font-weight: 300;
       color: #928572;
+      text-align: center;
       letter-spacing: 0.3em;
       margin-bottom: 69px;
     }
+
+    &__catch {
+      margin-bottom: 4.7rem;
+    }
+
+    &__text {
+      // font-size: 1.8rem;
+      font-weight: 300;
+      color: #928572;
+      text-align: center;
+      margin-bottom: 6.5rem;
+    }
+  }
+
+  &__visual {
+    margin-bottom: 2.5rem;
+  }
+
+  &__switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
   }
 
   
