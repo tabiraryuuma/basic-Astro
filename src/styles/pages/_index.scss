@@ -416,9 +416,14 @@
       }
 
       .short-sentence.sp-only {
-        padding: 30px 0 50px 0;
+        padding-top: 6rem;
         font-size: 20px;
-        line-height: 2;
+        line-height: 1;
+
+        .br {
+          display: block;
+          height: 32px;
+        }
       }
 
 
@@ -476,41 +481,45 @@
   }
 
   #mainvisual-top1 {
-    min-height: 270rem;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url('/src/assets/image/top/top-1-sp.webp');
-    background-size: cover;
+    background-size: auto;
+    background-position: center;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
 
     .mainvisual2 {
-      margin-top: 8rem;
-      height: 201rem;
+      // margin-top: 8rem;
+      position: unset;
       background-image: none;
       justify-content: flex-start;
+      height: auto;
 
       .Project {
         .item {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding-bottom: 3rem;
-          gap: 15px;
+          padding-bottom: 4.3rem;
+          gap: 20px;
 
           ul {
             &:nth-child(1) {
-              gap: 15px;
+              gap: 20px;
 
               li {
-                width: 180px;
-                height: 250px;
+                width: 247px;
+                height: 316px;
               }
             }
 
             &:nth-child(2) {
               padding-left: 0px;
-              gap: 15px;
+              gap: 20px;
 
               li {
-                width: 180px;
-                height: 250px;
+                width: 247px;
+                height: 316px;
               }
             }
           }
@@ -528,7 +537,8 @@
             height: auto;
             padding: 0;
             font-size: 20px;
-            width: 28rem;
+            width: 30.1rem;
+            height: 4rem;
             margin-bottom: 0;
 
             &:first-child {
@@ -621,10 +631,9 @@
     }
 
     .mainvisual1 {
-      height: 85rem;
-      background-position: -18rem;
-      justify-content: unset;
+      height: auto;
       background-image: none;
+      position: unset;
 
       .heading {
         height: 350px;
@@ -700,7 +709,7 @@
 
           li {
             &:nth-child(1) {
-              padding: 1rem 0;
+              padding-bottom: 1rem;
 
               a {
                 width: 30rem;
