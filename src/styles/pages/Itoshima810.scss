@@ -78,9 +78,16 @@
 
 
   .villa-block{
-    //-------------- 全体 --------------
-    color: #e2c3a5;            //△仮
-    background-color:#928572;  //△仮
+    //----------------------------------------
+    // -- 全体 --
+    background-color:#66ff00;  //△仮
+    :global(body.is-night .villa-block) & {
+      background-color: #e9e5e1;
+    }
+
+
+    //----------------------------------------
+    &__Outer{
     position: relative;
     width: 100%;
     margin-inline: auto; 
@@ -89,13 +96,12 @@
       max-width: 112rem; //全体のmax-width
       padding-inline: 10rem; //全体を真ん中にする
     }
+    }
 
-    //-------------- ここまで全体 --------------
 
 
     // ---------------------------------------------------------
     // ドグルスイッチ
-    // ---------------------------------------------------------
     &__switcher {
       display: flex;
       align-items: center;
@@ -103,6 +109,7 @@
       padding-top: 50px;
       margin-bottom: 50px;
     }
+    // ---------------------------------------------------------
 
     &__img{
       position: relative;
@@ -110,10 +117,8 @@
       width: fit-content;
 
       @include mq('min-lg') {
-        gap: 1.2rem;
+        gap: 0.9rem;
       }
-
-      
     }
 
     &__text{
@@ -136,6 +141,18 @@
       margin-inline-start: 12rem;
     }
 
+    //-----------------------------------
+    //画像の初期値
+    &__photo-inr img{
+      position: absolute;
+      display: block flow-root;
+      width: 100%;
+      height: 100%;
+    }
+    //------------------------------------
+
+
+    //画像一枚目
     &__m-01{
       flex-direction: row-reverse;
       align-items: flex-end;
@@ -143,21 +160,25 @@
       
       
       @include mq('min-lg') {
-        inset-inline-end: -43.5rem;
+        inset-inline-end: -49.2rem;
+        width: 78.7rem;
+        height: 62.2rem; //高さ調べる
       }
     }
+    &__m-01 figcaption{
+      writing-mode:vertical-rl;
+    }
 
+    //画像二枚目
     &__m-02 {
-      flex-direction: row-reverse;
-      align-items: flex-end;
-      margin-inline-start: auto;
-      
-      
+
       @include mq('min-lg') {
-        inset-inline-start: -36.2rem;
+        inset-inline-start: -61.2rem;
       }
     }
-
+    &__m-02 figcaption{
+      writing-mode:vertical-rl;
+    }
   }
 
 
