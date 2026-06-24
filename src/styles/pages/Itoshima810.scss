@@ -74,17 +74,13 @@
 
 
 
-
-
-
   .villa-block{
     //----------------------------------------
-    // -- 全体 --
-    background-color:#66ff00;  //△仮
-    :global(body.is-night .villa-block) & {
-      background-color: #e9e5e1;
+    // -- villa-blockの全体 --
+    background-color:#eae5e0;  //△仮
+     body.is-night & {
+      background-color:#928572;
     }
-
 
     //----------------------------------------
     &__Outer{
@@ -173,14 +169,14 @@
     &__m-02 {
 
       @include mq('min-lg') {
-        inset-inline-start: -61.2rem;
+        inset-inline-start: -61.3rem;
       }
     }
     &__m-02 figcaption{
       writing-mode:vertical-rl;
     }
   }
-
+  
 
 
 
