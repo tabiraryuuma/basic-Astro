@@ -59,7 +59,7 @@
 
 .text-area {
   @include mq('max-lg') {
-    width: 41rem;
+    width: 45rem;
     margin: 0 auto;
   }
 
@@ -415,23 +415,24 @@
       }
 
       .short-sentence {
+        font-size: 22px;
         padding: 60px 0 88px 0;
         margin: 0;
 
         .br {
           display: block;
-          height: 20px;
+          height: 32px;
         }
       }
 
       .short-sentence.sp-only {
-        padding-top: 6rem;
-        font-size: 20px;
+        padding: 6.8rem 0 0 0;
+        font-size: 32px;
         line-height: 1;
 
         .br {
           display: block;
-          height: 32px;
+          height: 30px;
         }
       }
 
@@ -472,7 +473,7 @@
 
     .bottom-image {
       width: 192rem;
-      height: 50rem;
+      height: 50.2rem;
       object-fit: cover;
     }
   }
@@ -724,29 +725,47 @@
         }
 
         p {
+          span {
+            font-size: 28px;
+          }
+
           img {
             height: auto;
           }
         }
 
         ul {
-          width: 39rem;
-          margin: 0;
+          width: auto;
+          margin: 12rem auto 0 auto;
           list-style: none;
           text-align: center;
 
           li {
             &:nth-child(1) {
-              padding-bottom: 1rem;
+              padding-bottom: 2rem;
 
               a {
-                width: 30rem;
-                height: 4rem;
+                width: 45rem;
+                height: 6rem;
+
+                span {
+                  font-size: 32px;
+                }
               }
             }
 
             &:nth-child(2) {
               font-size: 18px;
+              margin-bottom: 13.8rem;
+
+              a {
+                padding: 3.5rem 0;
+                width: auto;
+              }
+
+              p {
+                font-size: 30px;
+              }
             }
           }
         }
