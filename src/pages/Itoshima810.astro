@@ -5,10 +5,11 @@ import "../styles/pages/Itoshima810.scss";
 import ImageSwitcher from '../components/ImageSwitcher.astro';
 
 import Card from '../components/Card.astro';
-import ReserveButton from '../components/ReserveButton.astro';---
+import ReserveButton from '../components/ReserveButton.astro';
+---
+
 <Layout>
   <main>
-
     <section class="itoshima810" id="site-itoshima810">
       <div class="itoshima810__content">
         <div class="itoshima810__mainvisual">
@@ -62,84 +63,82 @@ import ReserveButton from '../components/ReserveButton.astro';---
     alt="メインビジュアル"
     />
     </div>
+    
 
 
+    <section class="villa" id="villa-section">
+      <div class="villa__switcher">
+        <ImageSwitcher />
+      </div>
 
-    <section class="villa-block">
-      <div class="villa-block__Outer">
-        <div class="villa-block__switcher">
-          <ImageSwitcher />
-        </div>
-        
-        <div class="villa-block__contest">
-          <h2 class="villa-block__title">
-            <img src="src/assets/image/Itoshima810/itoshima810.svg"
-            width="500" 
-            alt=""
-            >
-          </h2>
-
-          <div class="villa-block__text">
-            <p class="villa-block__text-desc">
-              糸島の自然に囲まれた、広々とした敷地に佇む一棟。
-              <br>
-              季節の移ろいを肌で感じるプライベートガーデン。
-              <br>
-              <br>
-              大人数でもゆったりくつろげる、
-              <br>
-              空間に合わせてデザイン家具を設えたリビングで
-              <br>
-              穏やかな時間をお過ごしください。
-              <br>
-            </p>
-          </div>
+      <div class="villa__upper" id="villa-upper">
+        <div class="villa__content" id="villa-content">
+          <h1 class="villa__title">ITOSHIMA<span class="villa__title-num">810</span></h1>
+          <div class="villa__text">
+              <p>
+                糸島の自然に囲まれた、広々とした敷地に佇む一棟。<br>
+                季節の移ろいを肌で感じるプライベートガーデン。
+              </p>
+              
+              <p>
+                大人数でもゆったりくつろげる、<br>
+                空間に合わせてデザイン家具を設えたリビングで<br>
+                穏やかな時間をお過ごしください。
+              </p>
+              
+              <p>
+                にぎやかな語らいも、静けさも、<br>
+                すべてが心地よく流れていく。<br>
+                大切な人たちと集い、過ごすためのホテルです
+              </p>
+            </div>
         </div>
         
         
-        <div class="villa-block__wrap">
-          <figure class="villa-block__img villa-block__m-01">
-            <img 
-            src="src/assets/image/Itoshima810/3Itoshima810-Daytlme.webp" 
-            width="690"
-            height="670"
-            alt=" "
-
-            decoding="auto"
-            data-day-src="src/assets/image/Itoshima810/3Itoshima810-Daytlme.webp"  
-            data-night-src="src/assets/image/Itoshima810/3Itoshima810-NIGHTTIME.webp" 
-            />
-            <figcaption>PRIVATE GARDEN</figcaption>
-          </figure>
-          
-          <figure class="villa-block__img villa-block__m-02">
-            <img 
-            src="src/assets/image/Itoshima810/4Itoshima810-Daytlme.webp" 
-            width="337"
-            height="448"
-            alt=" "
-            decoding="auto"
+        <figure class="villa__figure villa__figure--01" id="figure-01">            <img 
+          src="src/assets/image/Itoshima810/3Itoshima810-Daytlme.webp" 
+          width="690"
+          height="670"
+          alt=" "
+          loading="lazy"
+          decoding="auto"
+          data-day-src="src/assets/image/Itoshima810/3Itoshima810-Daytlme.webp"  
+          data-night-src="src/assets/image/Itoshima810/3Itoshima810-NIGHTTIME.webp" 
+          />
+          <figcaption class="villa__caption">PRIVATE GARDEN</figcaption>
+        </figure>
+      </div>
+      
+      
+      
+      <div class="villa__lower" id="villa-lower">
+         <figure class="villa__figure villa__figure--02" id="figure-02">
+          <img 
+          src="src/assets/image/Itoshima810/4Itoshima810-Daytlme.webp" 
+          width="380"
+          height="448"
+          alt=" "
+          decoding="auto"
             data-day-src="src/assets/image/Itoshima810/4Itoshima810-Daytlme.webp"  
             data-night-src="src/assets/image/Itoshima810/4Itoshima810-NIGHTTIME.webp" 
             />    
-        <figcaption>ENGAWA</figcaption>
-      </figure>
+            <figcaption class="villa__caption">ENGAWA</figcaption>
+          </figure>
 
-      <figure class="villa-block__img villa-block__m-03">
-          <img 
-          src="src/assets/image/Itoshima810/5Itoshima810-Daytlme.webp" 
-          width="1100"
-          height="733"
-          alt=" "
-          decoding="auto"
-        
-          data-day-src="src/assets/image/Itoshima810/5Itoshima810-Daytlme.webp"  
-          data-night-src="src/assets/image/Itoshima810/5Itoshima810-NIGHTTIME.webp" 
-          />
-        <figcaption>LIVING ROOM</figcaption>
-      </figure>
-      </div>
-      
+         
+          <figure class="villa__figure villa__figure--03" id="figure-03">
+            <img 
+            src="src/assets/image/Itoshima810/5Itoshima810-Daytlme.webp" 
+            width="1100"
+            height="733"
+            alt=" "
+            decoding="auto"
+            data-day-src="src/assets/image/Itoshima810/5Itoshima810-Daytlme.webp"  
+            data-night-src="src/assets/image/Itoshima810/5Itoshima810-NIGHTTIME.webp" 
+            />
+            <figcaption class="villa__caption">LIVING ROOM</figcaption>
+          </figure>
+        </div>
     </section>
 
 
