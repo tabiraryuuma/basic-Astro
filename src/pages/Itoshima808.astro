@@ -9,13 +9,21 @@ import Card from "../components/Card.astro";
 import ReserveButton from "../components/ReserveButton.astro";
 import ReserveButtonFix from "../components/ReserveButtonFix.astro";
 import ImageSwitcher from "../components/ImageSwitcher.astro";
+
+// 画像パーツ（Imageコンポーネント）を読み込む
+import { Image } from 'astro:assets';
+
+// 使いたい画像を1枚ずつ名前をつけてインポートする
+// (書き方: import [好きな名前] from '[画像がある場所へのパス]';)
+import mainvisual from '../assets/images/Itoshima808/Itoshima808-movie-short.webp';
 ---
 
-<Layout title = "Itoshima808", description = "これはItoshima808のぺーじです">
+<Layout title = "Itoshima808", description = "これはItoshima808のページです">
 
   <main>
     <div class="itoshima808__content">
       <div class="itoshima808__mainvisual">
+        <!-- <Image src= {mainvisual} alt="Itoshima808ショート動画" width={1920} /> -->
         <img src="/src/assets/image/Itoshima808/Itoshima808-movie-short.webp" alt="Itoshima808ショート動画">
         <!-- <picture>
           <source srcset="/src/assets/image/Itoshima808/Itoshima808-movie-shortsp.webp" media="(max-width: 1023px)">
