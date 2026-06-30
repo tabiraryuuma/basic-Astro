@@ -1,3 +1,10 @@
+# 下記のインストールしてください
+npm install --save-dev chokidar-cli
+
+npm ls chokidar-cli
+その後、「npm run watch-images」が使えるか確認お願いします。
+
+
 # 自動監視したい場合
 ※ npm run dev とは別のターミナルで実行してください。
 ※ npm run dev を停止していても実行できます。
@@ -18,8 +25,8 @@ import * as 場所名 from "使用するフォルダーのパス";
 
 例）
 import * as Top from "../assets/image/top";
-import * as Itoshima810 from "../assets/image/itoshima810";
-import * as Itoshima808 from "../assets/image/itoshima808";
+import * as Itoshima810 from "../assets/image/Itoshima810";
+import * as Itoshima808 from "../assets/image/Itoshima808";
 import * as CommonIcons from "../assets/SVG";
 
 ---------
