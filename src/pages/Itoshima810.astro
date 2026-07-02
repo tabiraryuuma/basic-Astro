@@ -3,9 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/style.scss";
 import "../styles/pages/Itoshima810.scss";
 import ImageSwitcher from '../components/ImageSwitcher.astro';
-
-import Card from '../components/Card.astro';
 import ReserveButton from '../components/ReserveButton.astro';
+
+import * as ImagesItoshima810 from "../assets/image/Itoshima810";
+import * as CommonIcons from "../assets/SVG";
+
+
 ---
 
 <Layout>
@@ -15,13 +18,16 @@ import ReserveButton from '../components/ReserveButton.astro';
         <div class="itoshima810__mainvisual">
           <img
           class="hero__image"
-          src="/src/assets/image/Itoshima810/Itoshima810mv-Daytlme.webp"        
+          src={ImagesItoshima810.Itoshima810mvDaytlme.src}       
           alt="メインビジュアル"
           />
+        </div>
         <div class="itoshima810__logo">
           <img 
-          src="/src/assets/SVG/itoshima810.svg" 
-          alt="itoshima810のロゴ">
+          src={CommonIcons.Itoshima810.src}       
+          alt="itoshima810のロゴ"
+          />
+        </div>
       </div>
     </section>
 
@@ -37,7 +43,7 @@ import ReserveButton from '../components/ReserveButton.astro';
     <h1 class="itoshima810__catch">
       <img
       class="itoshima810__hero-title"
-      src="src/assets/image/Itoshima810/itoshima810-Villa-Resort.svg"
+      src={ImagesItoshima810.Itoshima810VillaResort.src}       
       alt="itoshima810 Villa＆Resort"
       />
     </h1>
@@ -57,9 +63,9 @@ import ReserveButton from '../components/ReserveButton.astro';
    <div class="itoshima810__visual">
     <img
     class="itoshima810__villa-inner"
-    src="/src/assets/image/Itoshima810/2Itoshima810-Daytlme.webp"
-    data-day-src="/src/assets/image/Itoshima810/2Itoshima810-Daytlme.webp"
-    data-night-src="/src/assets/image/Itoshima810/2Itoshima810-NIGHTTIME.webp"
+    src={ImagesItoshima810.Image2Itoshima810Daytlme.src}       
+    data-day-src={ImagesItoshima810.Image2Itoshima810Daytlme.src}   
+    data-night-src={ImagesItoshima810.Image2Itoshima810NIGHTTIME.src}  
     alt="メインビジュアル"
     />
     </div>
@@ -70,40 +76,41 @@ import ReserveButton from '../components/ReserveButton.astro';
       <div class="villa__switcher">
         <ImageSwitcher />
       </div>
-
+      
       <div class="villa__upper" id="villa-upper">
         <div class="villa__content" id="villa-content">
           <h1 class="villa__title">ITOSHIMA<span class="villa__title-num">810</span></h1>
           <div class="villa__text">
-              <p>
-                糸島の自然に囲まれた、広々とした敷地に佇む一棟。<br>
-                季節の移ろいを肌で感じるプライベートガーデン。
-              </p>
-              
-              <p>
-                大人数でもゆったりくつろげる、<br>
-                空間に合わせてデザイン家具を設えたリビングで<br>
-                穏やかな時間をお過ごしください。
-              </p>
-              
-              <p>
-                にぎやかな語らいも、静けさも、<br>
-                すべてが心地よく流れていく。<br>
-                大切な人たちと集い、過ごすためのホテルです
-              </p>
-            </div>
-        </div>
-        
-        
-        <figure class="villa__figure villa__figure--01" id="figure-01">            <img 
-          src="src/assets/image/Itoshima810/3Itoshima810-Daytlme.webp" 
+            <p>
+              糸島の自然に囲まれた、広々とした敷地に佇む一棟。<br>
+              季節の移ろいを肌で感じるプライベートガーデン。
+            </p>
+            
+            <p>
+              大人数でもゆったりくつろげる、<br>
+              空間に合わせてデザイン家具を設えたリビングで<br>
+              穏やかな時間をお過ごしください。
+            </p>
+
+            <p>
+              にぎやかな語らいも、静けさも、<br>
+              すべてが心地よく流れていく。<br>
+              大切な人たちと集い、過ごすためのホテルです
+            </p>
+          </div>
+         </div>
+         
+         
+         <figure class="villa__figure villa__figure--01" id="figure-01">            
+          <img 
+          src={ImagesItoshima810.Image3Itoshima810Daytlme.src}       
           width="690"
           height="670"
           alt=" "
           loading="lazy"
           decoding="auto"
-          data-day-src="src/assets/image/Itoshima810/3Itoshima810-Daytlme.webp"  
-          data-night-src="src/assets/image/Itoshima810/3Itoshima810-NIGHTTIME.webp" 
+          data-day-src={ImagesItoshima810.Image3Itoshima810Daytlme.src}  
+          data-night-src={ImagesItoshima810.Image3Itoshima810NIGHTTIME.src}
           />
           <figcaption class="villa__caption">PRIVATE GARDEN</figcaption>
         </figure>
@@ -112,33 +119,32 @@ import ReserveButton from '../components/ReserveButton.astro';
       
       
       <div class="villa__lower" id="villa-lower">
-         <figure class="villa__figure villa__figure--02" id="figure-02">
+        <figure class="villa__figure villa__figure--02" id="figure-02">
           <img 
-          src="src/assets/image/Itoshima810/4Itoshima810-Daytlme.webp" 
+          src={ImagesItoshima810.Image4Itoshima810Daytlme.src}       
           width="380"
           height="448"
           alt=" "
           decoding="auto"
-            data-day-src="src/assets/image/Itoshima810/4Itoshima810-Daytlme.webp"  
-            data-night-src="src/assets/image/Itoshima810/4Itoshima810-NIGHTTIME.webp" 
-            />    
-            <figcaption class="villa__caption">ENGAWA</figcaption>
-          </figure>
-
-         
-          <figure class="villa__figure villa__figure--03" id="figure-03">
-            <img 
-            src="src/assets/image/Itoshima810/5Itoshima810-Daytlme.webp" 
-            width="1100"
-            height="733"
-            alt=" "
-            decoding="auto"
-            data-day-src="src/assets/image/Itoshima810/5Itoshima810-Daytlme.webp"  
-            data-night-src="src/assets/image/Itoshima810/5Itoshima810-NIGHTTIME.webp" 
-            />
-            <figcaption class="villa__caption">LIVING ROOM</figcaption>
-          </figure>
-        </div>
+          data-day-src={ImagesItoshima810.Image4Itoshima810Daytlme.src} 
+          data-night-src={ImagesItoshima810.Image4Itoshima810NIGHTTIME.src}
+          />    
+          <figcaption class="villa__caption">ENGAWA</figcaption>
+        </figure>
+        
+        <figure class="villa__figure villa__figure--03" id="figure-03">
+          <img 
+          src={ImagesItoshima810.Image5Itoshima810Daytlme.src}       
+          width="1100"
+          height="733"
+          alt=" "
+          decoding="auto"
+          data-day-src={ImagesItoshima810.Image5Itoshima810Daytlme.src}   
+          data-night-src={ImagesItoshima810.Image5Itoshima810NIGHTTIME.src}  
+          />
+          <figcaption class="villa__caption">LIVING ROOM</figcaption>
+        </figure>
+      </div>
     </section>
 
 
