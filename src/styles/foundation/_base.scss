@@ -8,10 +8,10 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&family=Shippori+Mincho:wght@400;700&display=swap');
-@font-face {
-  font-family: 'Avenir Roman';
-  src: url('/src/assets/fonts/Avenir-Roman.otf') format('opentype');
-}
+// @font-face {
+//   font-family: 'Avenir Roman';
+//   src: url('/src/assets/fonts/Avenir-Roman.otf') format('opentype');
+// }
 
 html {
   font-size: 62.5%; /* 1rem = 10px（チームルール） */
