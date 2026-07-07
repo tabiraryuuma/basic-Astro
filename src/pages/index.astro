@@ -8,6 +8,9 @@ import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import ReserveButton from "../components/ReserveButton.astro";
 import ReserveButtonFix from "../components/ReserveButtonFix.astro";
+
+import * as Top from "../assets/image/top";
+import * as CommonIcons from "../assets/SVG";
 ---
 
 <Layout>
@@ -101,7 +104,7 @@ import ReserveButtonFix from "../components/ReserveButtonFix.astro";
       </ul>
 
       <div class="mainvisual__logo">
-        <img src="/src/assets/image/top/designoffice.svg" alt="" />
+        <img src={Top.Designoffice.src} alt="" />
       </div>
       <p class="mainvisual__catchphrase">
         <span class="margin">RETREAT</span>PROJECT
@@ -120,12 +123,12 @@ import ReserveButtonFix from "../components/ReserveButtonFix.astro";
             <ul>
               <li>
                 <a href="/Itoshima810/"
-                  ><img src="/src/assets/SVG/itoshima810.svg" alt="" /></a
+                  ><img src={CommonIcons.Itoshima810.src} alt="" /></a
                 >
               </li>
               <li>
                 <a href="/Itoshima808/"
-                  ><img src="/src/assets/SVG/Itoshima808-1.svg" alt="" /></a
+                  ><img src={CommonIcons.Itoshima8081.src} alt="" /></a
                 >
               </li>
             </ul>
@@ -147,11 +150,11 @@ import ReserveButtonFix from "../components/ReserveButtonFix.astro";
           <h2 class="Mt-h2">MOVIE</h2>
           <nav>
             <ul>
-              <li><img src="/src/assets/SVG/動画再生アイコン.svg" /></li>
+              <li><img src={CommonIcons.動画再生アイコン.src} /></li>
               <li>itoshima810 VILLA & RESORT</li>
             </ul>
             <ul>
-              <li><img src="/src/assets/SVG/動画再生アイコン.svg" /></li>
+              <li><img src={CommonIcons.動画再生アイコン.src} /></li>
               <li>Itoshima808 GRAND VIEW VILLA</li>
             </ul>
           </nav>
@@ -193,54 +196,54 @@ import ReserveButtonFix from "../components/ReserveButtonFix.astro";
         <div class="scroll-infinity__wrap">
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-1.webp" />
+              <img src={Top.Image2Slide1.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-2.webp" />
+              <img src={Top.Image2Slide2.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-3.webp" />
+              <img src={Top.Image2Slide3.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-4.webp" />
+              <img src={Top.Image2Slide4.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-5.webp" />
+              <img src={Top.Image2Slide5.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-6.webp" />
+              <img src={Top.Image2Slide6.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-7.webp" />
+              <img src={Top.Image2Slide7.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-8.webp" />
+              <img src={Top.Image2Slide8.src} />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-1.webp" />
+              <img src={Top.Image2Slide1.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-2.webp" />
+              <img src={Top.Image2Slide2.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-3.webp" />
+              <img src={Top.Image2Slide3.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-4.webp" />
+              <img src={Top.Image2Slide4.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-5.webp" />
+              <img src={Top.Image2Slide5.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-6.webp" />
+              <img src={Top.Image2Slide6.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-7.webp" />
+              <img src={Top.Image2Slide7.src} />
             </li>
             <li class="scroll-infinity__item">
-              <img src="/src/assets/image/top/2-slide-8.webp" />
+              <img src={Top.Image2Slide8.src} />
             </li>
           </ul>
         </div>
@@ -250,10 +253,7 @@ import ReserveButtonFix from "../components/ReserveButtonFix.astro";
         <h1>STAY in DESIGN.</h1>
         <p>
           <span
-            >produced by<br /><img
-              src="/src/assets/image/top/designoffice.svg"
-              alt=""
-            />
+            >produced by<br /><img src={Top.Designoffice.src} alt="" />
           </span>
         </p>
         <p class="short-sentence pc-only">
@@ -276,11 +276,7 @@ import ReserveButtonFix from "../components/ReserveButtonFix.astro";
           </li>
         </ul>
       </div>
-      <img
-        class="bottom-image"
-        src="/src/assets/image/top/2-about.webp"
-        alt=""
-      />
+      <img class="bottom-image" src={Top.Image2About.src} alt="" />
     </div>
   </section>
 </Layout>
