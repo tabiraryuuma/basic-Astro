@@ -1,17 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-// Layout.astro = ページの共通テンプレ（外枠）
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
 import "../styles/pages/index02.scss";
+
+// 部品のインポート
 import Button from "../components/Button.astro";
-import Card from "../components/Card.astro";
 import ReserveButton from "../components/ReserveButton.astro";
 import ReserveButtonFix from "../components/ReserveButtonFix.astro";
 
 // 画像のインポート
 import * as TopTest from "../assets/image/top";
-import * as CommonIcons from "../assets/SVG";
+
 ---
 
 <Layout title = "TOPテスト", description = "これはＴＯＰページのテストです" >
