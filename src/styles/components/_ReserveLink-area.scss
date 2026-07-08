@@ -139,12 +139,10 @@ $Background-brown :#928572;
 			width: 100%;
 
 			@include mq('max-lg') {
-				width: 65rem;
 				height: 10rem;
 			}
 
 			@include mq('min-lg') {
-				width: 33rem;
 				height: 12.6rem;
 				cursor: pointer;
 			}
