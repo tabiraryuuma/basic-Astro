@@ -120,21 +120,6 @@ $Background-brown :#928572;
 		@include mq ('max-lg') {
 			flex-direction: column;
 		}
-	}
-
-	&__Card-area {
-		width: 100%;
-		display: flex;
-		padding-bottom: 6rem;
-
-		@include mq ('min-lg') {
-			justify-content: center;
-			gap: 1.5rem;
-		}
-
-		@include mq ('max-lg') {
-			flex-direction: column;
-		}
 
 		a {
 			@include mq ('max-lg') {
