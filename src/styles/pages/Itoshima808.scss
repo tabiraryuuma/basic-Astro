@@ -90,8 +90,14 @@
       display: flex;
       justify-content: space-between;
 
+      &__text {
+        width: 70%;
+        margin-left: 10rem;
+      }
+
       &__img {
-        margin-left: 1rem;
+        width: 30%;
+        margin-left: 5rem;
       }
       &__img img {
         width: 100%;
