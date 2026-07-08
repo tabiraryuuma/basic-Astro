@@ -670,8 +670,19 @@
               gap: 23px;
 
               li {
-                width: 273px;
-                height: 350px;
+                &:nth-child(1) {
+                  a {
+                    width: 273px;
+                    height: 350px;
+                  }
+                }
+
+                &:nth-child(2) {
+                  a {
+                    width: 273px;
+                    height: 350px;
+                  }
+                }
               }
             }
 
