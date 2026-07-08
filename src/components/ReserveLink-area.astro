@@ -1,15 +1,106 @@
 ---
-import Card from "./Card.astro";
+// import Card from "./Card.astro";
 import "../styles/components/_ReserveLink-area.scss";
 
+// interface Props {
+// 	text?: string;
+// }
+
+// const { text } = Astro.props;
 interface Props {
 	text?: string;
+	title?: string;
+	href?: string;
 }
 
-const { text } = Astro.props;
+const {
+	text = "テキスト",
+	title = "カードタイトル",
+	href = "#",
+}: Props = Astro.props;
 ---
 
 <div id="Reserve-Block" class="Reserve-Site-area">
+	<div class="Reserve-Site-area__text">
+		<p class="Reserve-Site-area__decoration">Reserve｜予約</p>
+	</div>
+	<p class="Reserve-Site-area__text-2">
+		<span class="Reserve-Site-area__pc-only"
+			>{text} のご予約は下記リンク、予約サイトより。</span
+		>
+		<span class="Reserve-Site-area__sp-only"
+			>{text} のご予約は<br />下記リンク、予約サイトより。</span
+		>
+		<span class="Reserve-Site-area__br">詳細は各サイトにてご確認ください。</span
+		>
+	</p>
+	<ul class="Reserve-Site-area__Card-area">
+		<li>
+			<a class="Reserve-Site-area__Card-area__card" href={href}>
+				<div class="Reserve-Site-area__Card-area__card__content">
+					<p
+						class="Reserve-Site-area__Card-area__card__title"
+						set:html={title}
+					/>
+				</div>
+
+				<div class="Reserve-Site-area__Card-area__card__button-area">
+					<div class="Reserve-Site-area__Card-area__card__btn">
+						<img
+							class="Reserve-Site-area__Card-area__card__btn-icon"
+							src="/src/assets/SVG/white-arrow.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</li>
+
+		<li>
+			<a class="Reserve-Site-area__Card-area__card" href={href}>
+				<div class="Reserve-Site-area__Card-area__card__content">
+					<p
+						class="Reserve-Site-area__Card-area__card__title"
+						set:html={title}
+					/>
+				</div>
+
+				<div class="Reserve-Site-area__Card-area__card__button-area">
+					<div class="Reserve-Site-area__Card-area__card__btn">
+						<img
+							class="Reserve-Site-area__Card-area__card__btn-icon"
+							src="/src/assets/SVG/white-arrow.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</li>
+
+		<li>
+			<a class="Reserve-Site-area__Card-area__card" href={href}>
+				<div class="Reserve-Site-area__Card-area__card__content">
+					<p
+						class="Reserve-Site-area__Card-area__card__title"
+						set:html={title}
+					/>
+				</div>
+
+				<div class="Reserve-Site-area__Card-area__card__button-area">
+					<div class="Reserve-Site-area__Card-area__card__btn">
+						<img
+							class="Reserve-Site-area__Card-area__card__btn-icon"
+							src="/src/assets/SVG/white-arrow.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<!-- <div id="Reserve-Block" class="Reserve-Site-area">
 	<div class="Reserve-Site-area__text">
 		<p class="Reserve-Site-area__decoration">Reserve｜予約</p>
 	</div>
@@ -34,4 +125,4 @@ const { text } = Astro.props;
 			<Card href="#" title="Booking.com" />
 		</li>
 	</ul>
-</div>
+</div> -->

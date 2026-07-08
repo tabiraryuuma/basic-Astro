@@ -1,17 +1,18 @@
 ---
-import '../styles/components.scss';
-import '../styles/style.scss';
-import '../styles/layout/header.scss';
+import "../styles/components.scss";
+import "../styles/style.scss";
+import "../styles/layout/header.scss";
 
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Button from '../components/Button.astro';
-import ReserveButton from '../components/ReserveButton.astro';
-import Card from '../components/Card.astro';
-import ImageSwitcher from '../components/ImageSwitcher.astro';
-import ReserveButtonFix from '../components/ReserveButtonFix.astro';
-
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/Button.astro";
+import ReserveButton from "../components/ReserveButton.astro";
+import Card from "../components/Card.astro";
+import ImageSwitcher from "../components/ImageSwitcher.astro";
+import ReserveButtonFix from "../components/ReserveButtonFix.astro";
+import ReserveLinkArea from "../components/ReserveLink-area.astro";
 ---
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,20 +20,18 @@ import ReserveButtonFix from '../components/ReserveButtonFix.astro';
 </head>
 
 <main class="components">
-
   <h1>コンポーネント一覧</h1>
 
   <section class="components__block">
     <h2>Header</h2>
-     <div class="components__preview">
+    <div class="components__preview">
       <Header />
     </div>
     <!-- After -->
-     <div class="components__preview components__preview--header">
+    <div class="components__preview components__preview--header">
       <Header />
     </div>
   </section>
-  
 
   <section class="components__block">
     <h2>予約Button（ReserveButton.astro）</h2>
@@ -63,7 +62,7 @@ import ReserveButtonFix from '../components/ReserveButtonFix.astro';
     </div>
   </section>
 
-    <section class="components__block">
+  <section class="components__block">
     <h2>ドグルrururururuスイッチ</h2>
     <div class="components__preview">
       <ImageSwitcher />
@@ -77,25 +76,30 @@ import ReserveButtonFix from '../components/ReserveButtonFix.astro';
     </div>
   </section>
 
+  <section class="components__block">
+    <h2>予約リンクエリア</h2>
+    <div class="components__preview">
+      <ReserveLinkArea />
+    </div>
+  </section>
 </main>
 
 <style lang="scss">
-.components {
-  &__preview {
-    &--header {
-      position: relative;
-      z-index: 0;
-      overflow: hidden;
-      :global(.header) {
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        width: 100% !important;
-        z-index: 1 !important;
-        background-color: #8b7355;  //コンポーネント一覧のみ背景
+  .components {
+    &__preview {
+      &--header {
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        :global(.header) {
+          position: relative !important;
+          top: auto !important;
+          left: auto !important;
+          width: 100% !important;
+          z-index: 1 !important;
+          background-color: #8b7355; //コンポーネント一覧のみ背景
+        }
       }
     }
   }
-}
 </style>
-
