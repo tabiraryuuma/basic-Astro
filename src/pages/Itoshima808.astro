@@ -1,21 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-// Layout.astro = ページの共通テンプレ（外枠）
 
-// import "../styles/pages/_index.scss";
 import "../styles/pages/Itoshima808.scss";
-import Button from "../components/Button.astro";
-import Card from "../components/Card.astro";
+
+// 画像のインポート
+import * as ImagesItoshima808 from "../assets/image/Itoshima808";
+import * as CommonIcons from "../assets/SVG";
+import * as ImagesItoshima810 from "../assets/image/Itoshima810";
+
+// 部品のインポート
 import ReserveButton from "../components/ReserveButton.astro";
 import ReserveButtonFix from "../components/ReserveButtonFix.astro";
 import ImageSwitcher from "../components/ImageSwitcher.astro";
 
-// 画像パーツ（Imageコンポーネント）を読み込む
-import { Image } from 'astro:assets';
-
-// 使いたい画像を1枚ずつ名前をつけてインポートする
-// (書き方: import [好きな名前] from '[画像がある場所へのパス]';)
-import mainvisual from '../assets/images/Itoshima808/Itoshima808-movie-short.webp';
 ---
 
 <Layout title = "Itoshima808", description = "これはItoshima808のページです">
@@ -23,15 +20,18 @@ import mainvisual from '../assets/images/Itoshima808/Itoshima808-movie-short.web
   <main>
     <div class="itoshima808__content">
       <div class="itoshima808__mainvisual">
-        <!-- <Image src= {mainvisual} alt="Itoshima808ショート動画" width={1920} /> -->
-        <img src="/src/assets/image/Itoshima808/Itoshima808-movie-short.webp" alt="Itoshima808ショート動画">
-        <!-- <picture>
-          <source srcset="/src/assets/image/Itoshima808/Itoshima808-movie-shortsp.webp" media="(max-width: 1023px)">
-          <img src="/src/assets/image/Itoshima808/Itoshima808-movie-short.webp" alt="Itoshima808ショート動画">
-        </picture> -->
+         <img
+          class="hero__image"
+          src={ImagesItoshima808.Itoshima808MovieShort.src}       
+          alt="Itoshima808ショート動画"
+          />        
       </div>
       <div class="itoshima808__logo">
-        <img src="/src/assets/SVG/Itoshima808-1.svg" alt="">
+        <img
+          class="hero__image"
+          src={CommonIcons.Itoshima8081.src}       
+          alt="Itoshima808ロゴ"
+          />          
       </div>
     </div>
 
@@ -45,8 +45,10 @@ import mainvisual from '../assets/images/Itoshima808/Itoshima808-movie-short.web
 
         <h1 class="itoshima808__concept__catch">
           <img
-          class="itoshima810__hero-title"
-          src="src/assets/image/Itoshima810/itoshima810-Villa-Resort.svg" alt="">
+          class="itoshima808__hero-title"
+          src={ImagesItoshima810.Itoshima810VillaResort.src}       
+          alt=""
+          />        
         </h1>
 
         <p class="itoshima808__concept__text">
@@ -63,10 +65,13 @@ import mainvisual from '../assets/images/Itoshima808/Itoshima808-movie-short.web
 
     <section class="itoshima808__day-night">
       <div class="itoshima808__visual">
-        <img class="itoshima810__villa-inner" src="/src/assets/image/Itoshima808/Itoshima808-day-1.webp"
-          data-day-src="/src/assets/image/Itoshima808/Itoshima808-day-1.webp"
-          data-night-src="/src/assets/image/Itoshima808/Itoshima808-night-1.webp"
-          alt="メインビジュアル">
+        <img
+          class="itoshima808__villa-inner"
+          src={ImagesItoshima808.Itoshima808Day1.src} 
+          data-day-src={ImagesItoshima808.Itoshima808Day1.src} 
+          data-night-src={ImagesItoshima808.Itoshima808Night1.src}  
+          alt="メインビジュアル"
+          />        
       </div>
 
       <div class="itoshima808__switcher">
@@ -78,7 +83,12 @@ import mainvisual from '../assets/images/Itoshima808/Itoshima808-movie-short.web
         <div class="villa-top">
 
           <div class="villa-top__text">
-            <img class="villa-top__text__logo" src="/src/assets/SVG/itoshima810_1.svg" alt="">
+            <img
+              class="villa-top__text__logo"
+              src={CommonIcons.Itoshima8101.src}
+              alt=""
+              />
+            
             <p>特徴的な三角形の外観が印象的な、海を望むヴィラ。<br>寝室やバルコニーから広がる景色が、<br>
               滞在の時間そのものを特別なものに変えていきます。
             </p>
@@ -92,10 +102,12 @@ import mainvisual from '../assets/images/Itoshima808/Itoshima808-movie-short.web
 
           <div class="villa-top__img">
             <figure>
-              <img src="/src/assets/image/Itoshima808/Itoshima808-day-2.webp" 
-                data-day-src="/src/assets/image/Itoshima808/Itoshima808-day-2.webp"
-                data-night-src="/src/assets/image/Itoshima808/Itoshima808-night-2.webp"
-                alt="">            
+              <img
+                src={ImagesItoshima808.Itoshima808Day2.src}
+                data-day-src={ImagesItoshima808.Itoshima808Day2.src}
+                data-night-src={ImagesItoshima808.Itoshima808Night2.src}              
+                alt="" 
+                />            
               <figcaption>KITCHEN</figcaption>
             </figure>
           </div>
