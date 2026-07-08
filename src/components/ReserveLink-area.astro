@@ -9,13 +9,17 @@ import "../styles/components/_ReserveLink-area.scss";
 // const { text } = Astro.props;
 interface Props {
 	text?: string;
-	title?: string;
+	title1?: string;
+	title2?: string;
+	title3?: string;
 	href?: string;
 }
 
 const {
 	text = "テキスト",
-	title = "カードタイトル",
+	title1 = "カードタイトル",
+	title2 = "カードタイトル",
+	title3 = "カードタイトル",
 	href = "#",
 }: Props = Astro.props;
 ---
@@ -40,7 +44,7 @@ const {
 				<div class="Reserve-Site-area__Card-area__card__content">
 					<p
 						class="Reserve-Site-area__Card-area__card__title"
-						set:html={title}
+						set:html={title1}
 					/>
 				</div>
 
@@ -61,7 +65,7 @@ const {
 				<div class="Reserve-Site-area__Card-area__card__content">
 					<p
 						class="Reserve-Site-area__Card-area__card__title"
-						set:html={title}
+						set:html={title2}
 					/>
 				</div>
 
@@ -82,7 +86,7 @@ const {
 				<div class="Reserve-Site-area__Card-area__card__content">
 					<p
 						class="Reserve-Site-area__Card-area__card__title"
-						set:html={title}
+						set:html={title3}
 					/>
 				</div>
 
