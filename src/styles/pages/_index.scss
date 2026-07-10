@@ -180,7 +180,7 @@
 
 .text-area {
   @include mq('max-lg') {
-    width: 45rem;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -579,7 +579,7 @@
 
       .short-sentence.sp-only {
         padding: 6.8rem 0 0 0;
-        font-size: 32px;
+        font-size: 24px;
         line-height: 1;
 
         .br {
@@ -672,15 +672,15 @@
               li {
                 &:nth-child(1) {
                   a {
-                    width: 273px;
-                    height: 350px;
+                    width: 18rem;
+                    height: 30rem;
                   }
                 }
 
                 &:nth-child(2) {
                   a {
-                    width: 273px;
-                    height: 350px;
+                    width: 18rem;
+                    height: 30rem;
                   }
                 }
               }
@@ -691,8 +691,19 @@
               gap: 23px;
 
               li {
-                width: 273px;
-                height: 350px;
+                &:nth-child(1) {
+                  a {
+                    width: 18rem;
+                    height: 30rem;
+                  }
+                }
+
+                &:nth-child(2) {
+                  a {
+                    width: 18rem;
+                    height: 30rem;
+                  }
+                }
               }
             }
           }
@@ -710,7 +721,7 @@
             height: auto;
             padding: 0;
             font-size: 32px;
-            width: 45rem;
+            width: 30rem;
             height: 6rem;
             margin-bottom: 0;
 
@@ -761,8 +772,8 @@
                 justify-content: center;
 
                 &:nth-child(1) {
-                  width: 474px;
-                  height: 267px;
+                  width: 30rem;
+                  height: 20rem;
                   margin: 0 auto;
                   border-radius: 10px;
                   background-image: none;
@@ -787,8 +798,8 @@
 
                 &:nth-child(1) {
                   margin: 0 auto;
-                  width: 474px;
-                  height: 267px;
+                  width: 30rem;
+                  height: 20rem;
                   border-radius: 10px;
                   background-image: none;
                   background-size: cover;
@@ -860,8 +871,8 @@
             justify-content: center;
 
             &:nth-child(1) {
-              width: 47.4rem;
-              height: 26.7rem;
+              width: 35rem;
+              height: 20rem;
               margin: 0 auto;
             }
 
@@ -884,7 +895,7 @@
 
         h1 {
           margin-bottom: 12rem;
-          font-size: 52px;
+          font-size: 45px;
         }
 
         p {
@@ -908,11 +919,11 @@
               padding-bottom: 2rem;
 
               a {
-                width: 45rem;
+                width: 30rem;
                 height: 6rem;
 
                 span {
-                  font-size: 32px;
+                  font-size: 24px;
                 }
               }
             }
@@ -923,11 +934,10 @@
 
               a {
                 padding: 3.5rem 0;
-                width: auto;
               }
 
               p {
-                font-size: 30px;
+                font-size: 18px;
               }
             }
           }
