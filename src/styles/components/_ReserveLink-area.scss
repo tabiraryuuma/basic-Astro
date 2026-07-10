@@ -2,6 +2,7 @@
 @use "../foundation/mixins"as *;
 
 .Reserve-Site-area {
+	$Background-orangebrown: #aa7930;
 	border-bottom: 1px solid $Background-brown;
 	margin: 0 auto;
 
@@ -34,10 +35,19 @@
 		font-size: 1.8rem;
 		line-height: 1;
 		padding: 1rem;
-		background-color: $Background-brown;
-		border: 1px solid $Background-brown;
-		border-radius: 50px;
 		color: #fff;
+
+		&--brown {
+			background-color: $Background-brown;
+			border: 1px solid $Background-brown;
+			border-radius: 50px;
+		}
+
+		&--orangebrown {
+			background-color: $Background-orangebrown;
+			border: 1px solid $Background-orangebrown;
+			border-radius: 50px;
+		}
 
 		@include mq ('min-lg') {
 			text-align: center;
