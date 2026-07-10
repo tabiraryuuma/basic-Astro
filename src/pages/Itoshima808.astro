@@ -78,18 +78,13 @@ import ImageSwitcher from "../components/ImageSwitcher.astro";
         <ImageSwitcher />
       </div>
 
-      <div class="itoshima808__villa">
-               <!-- トップ -->
-        <div class="villa-top">
+      <!-- Villa（KITCHEN・BED ROOM・PRIVATE GARDEN） -->
 
-          <div class="villa-top__text">
-            <img
-              class="villa-top__text__logo"
-              src={CommonIcons.Itoshima8101.src}
-              alt=""
-              />
-            
-            <p>特徴的な三角形の外観が印象的な、海を望むヴィラ。<br>寝室やバルコニーから広がる景色が、<br>
+      <div class="itoshima808__villa">
+
+        <div class="itoshima808__villa__text">
+          <h2 class="">ITOSHIMA808</h2>
+          <p>特徴的な三角形の外観が印象的な、海を望むヴィラ。<br>寝室やバルコニーから広がる景色が、<br>
               滞在の時間そのものを特別なものに変えていきます。
             </p>
             <p>バルコニーとつながるリビングに、<br>心地よい風が通り抜ける。<br>
@@ -97,12 +92,26 @@ import ImageSwitcher from "../components/ImageSwitcher.astro";
             </p>
             <p>南国植物に囲まれたプライベートガーデンで<br>焚き火を囲み、静かに語らうひととき。<br>
               波の音を聴きながら、まどろみの中へ。<br>心が満たされる、贅沢なひとときをお過ごしください。
-            </p>            
-          </div>
+            </p>
+        </div>
 
-          <div class="villa-top__img">
+        <div class="itoshima808__villa__imgtop">
+          <div class="itoshima808__villa__imgtop__item itoshima808__villa__imgtop__item--left">
             <figure>
               <img
+                class="itoshima808__villa__imgtop__left"
+                src={ImagesItoshima808.Itoshima808Day3.src}
+                data-day-src={ImagesItoshima808.Itoshima808Day3.src}
+                data-night-src={ImagesItoshima808.Itoshima808Night3.src}              
+                alt="" 
+                />            
+              <figcaption>BED ROOM</figcaption>
+            </figure>
+          </div>
+          <div class="itoshima808__villa__imgtop__item itoshima808__villa__imgtop__item--right">
+            <figure>
+              <img
+                class="itoshima808__villa__imgtop__right"
                 src={ImagesItoshima808.Itoshima808Day2.src}
                 data-day-src={ImagesItoshima808.Itoshima808Day2.src}
                 data-night-src={ImagesItoshima808.Itoshima808Night2.src}              
@@ -110,13 +119,7 @@ import ImageSwitcher from "../components/ImageSwitcher.astro";
                 />            
               <figcaption>KITCHEN</figcaption>
             </figure>
-          </div>
-        </div>
-
-
-
-
-
+          </div>                          
       </div>
 
 
