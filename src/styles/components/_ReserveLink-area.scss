@@ -2,7 +2,7 @@
 @use "../foundation/mixins"as *;
 
 .Reserve-Site-area {
-	$Background-orangebrown: #aa7930;
+	$Background-orangebrown: #baa377;
 	border-bottom: 1px solid $Background-brown;
 	margin: 0 auto;
 
@@ -32,7 +32,8 @@
 
 	&__decoration {
 
-		font-size: 1.8rem;
+		display: flex;
+		align-items: center;
 		line-height: 1;
 		padding: 1rem;
 		color: #fff;
@@ -49,13 +50,34 @@
 			border-radius: 50px;
 		}
 
+		.span-1 {
+			display: block;
+			padding-left: 1.5rem;
+			font-size: 3.3rem;
+		}
+
+		.span-2 {
+			display: block;
+			width: 2px;
+			background-color: #f7f7f5;
+			height: 3rem;
+			margin: 0 2.3rem 0 2.1rem;
+		}
+
+		.span-3 {
+			display: block;
+			font-size: 2.8rem;
+		}
+
 		@include mq ('min-lg') {
+			font-size: 1.8rem;
 			text-align: center;
 			position: relative;
 			width: 30rem;
 		}
 
 		@include mq ('max-lg') {
+			font-size: 3rem;
 			width: 100%;
 			text-align: left;
 		}
@@ -64,7 +86,7 @@
 	&__text-2 {
 
 		text-align: center;
-		font-size: 1.8rem;
+		font-size: 2.4rem;
 		color: $Background-brown;
 
 		@include mq ('min-lg') {
@@ -74,9 +96,10 @@
 		}
 
 		@include mq ('max-lg') {
+			line-height: 1;
 			text-align: left;
-			padding-top: 1rem;
-			padding-bottom: 2rem;
+			padding-top: 1.8rem;
+			padding-bottom: 2.5rem;
 		}
 	}
 
@@ -93,19 +116,21 @@
 
 		@include mq ('max-lg') {
 			display: block;
+
 		}
 	}
 
 	&__br {
-		padding-top: 1rem;
+		padding-top: 1.2rem;
 		opacity: 0.8;
+		display: block;
 
 		@include mq ('min-lg') {
 			font-size: 1rem;
 		}
 
 		@include mq ('max-lg') {
-			font-size: 1.6rem;
+			font-size: 2rem;
 		}
 	}
 
@@ -137,7 +162,7 @@
 			@include mq('max-lg') {
 				width: 100%;
 				height: 10rem;
-				margin-bottom: 15px;
+				margin-bottom: 2rem;
 			}
 
 			@include mq('min-lg') {
@@ -151,7 +176,7 @@
 			}
 
 			&__title {
-				font-size: 2rem;
+				font-size: 3rem;
 				color: #b09d8b;
 				text-align: center;
 			}
