@@ -251,7 +251,7 @@
     inline-size: 25%;               // ★ %で伸縮対応
     max-inline-size: 38rem;         // ★ 上限（380px相当）
     margin-inline-start: 3.3%;        // ★ 左端からの隙間
-    margin-block-start: -4rem;      // ★ ネガティブマージンで上部と重ねる
+    margin-block-start: -7rem;      // ★ ネガティブマージンで上部と重ねる
     z-index: 1;
     .villa__caption {
       inset-inline-end: 0;
