@@ -94,7 +94,7 @@
     align-self: center;
     margin-block-start: 0rem;
     margin-block-end: 0.8rem;
-    padding-inline-start: 25rem;// △仮
+    // padding-inline-start: 25rem;
   }
   // ---------------------------------------------------------   
   
@@ -130,16 +130,15 @@
     letter-spacing: 0.09em;
     line-height: 1.2;
     color: #3a3a3a;
-    margin-block-end: 4rem;
     @include mq('max-lg') {
-      font-size: 7.5rem;           // △仮
+      font-size: 1.8rem;           // △仮
       font-weight: 300;           // △仮
-      margin-block-end: 2rem;    // △仮
+      margin-block-end: 8rem;    // △仮
     }
     @include mq('min-lg') {
-      font-size: 7.5rem;            // △仮
+      font-size: 8.6rem;            // △仮
       font-weight: 300;             // △仮
-      margin-inline-start: -15rem;  // △仮
+      margin-inline-start: -31.1rem;  // △仮
     }
     &-num {
       font-weight: 400;
@@ -156,11 +155,16 @@
       line-height: 2;
     }
     @include mq('min-lg') {
-      font-size: 1.8rem; // △仮
+      font-size: 1.8rem;
+      max-width: 432px;
+      margin-inline-start: -13.5rem;
+      margin-block-start: 6.9rem;
     }
+
     p + p {
       margin-block-start: 1.5em;
     }
+
   }
   
   /* ============================================
@@ -201,11 +205,16 @@
   .villa__figure--01 {
     flex-grow: 0;
     flex-shrink: 0;
-    inline-size: 55%;               // ★ %で伸縮対応
-    max-inline-size: 79rem;         // ★ 上限（790px相当）
+    inset-inline-end: 5.4rem;
     margin-inline-start: auto;      // ★ 右端へ寄せる
     margin-inline-end: 0;
     z-index: 1;
+    
+    
+    @include mq('max-lg') {
+      inline-size: 50%;
+      inset-inline-end: -4.5rem;
+    }
 
     .villa__caption,
     .hero__caption {
