@@ -22,12 +22,15 @@ const {
 	href1 = "#",
 	href2 = "#",
 	href3 = "#",
-	variant = "brown",
+	variant = "Neutral",
 }: Props = Astro.props;
 ---
 
-<div id="Reserve-Block" class="Reserve-Site-area">
-	<div class="Reserve-Site-area__text">
+<div
+	id="Reserve-Block"
+	class={`Reserve-Site-area Reserve-Site-area--${variant}`}
+>
+	<div class={`Reserve-Site-area__text Reserve-Site-area__text--${variant}`}>
 		<p
 			class={`Reserve-Site-area__decoration Reserve-Site-area__decoration--${variant}`}
 		>

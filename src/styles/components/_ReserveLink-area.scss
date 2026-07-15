@@ -3,8 +3,15 @@
 
 .Reserve-Site-area {
 	$Background-orangebrown: #baa377;
-	border-bottom: 1px solid $Background-brown;
 	margin: 0 auto;
+
+	&--Neutral {
+		border-bottom: 1px solid $Background-brown;
+	}
+
+	&--night-change {
+		border-bottom: 1px solid $Background-white;
+	}
 
 	&__text {
 		display: flex;
@@ -20,25 +27,48 @@
 			position: relative;
 		}
 
-		&::before {
-			// 線の設定
+		&--Neutral {
+			&::before {
+				// 線の設定
 
-			@include mq ('min-lg') {
-				content: "";
-				background-color: $Background-brown;
-				height: 1px;
-				width: 100%;
-				position: absolute;
+				@include mq ('min-lg') {
+					content: "";
+					background-color: $Background-brown;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+				}
+
+				@include mq ('min-xl') {
+					content: "";
+					background-color: $Background-brown;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+				}
 			}
+		}
 
-			@include mq ('min-xl') {
-				content: "";
-				background-color: $Background-brown;
-				height: 1px;
-				width: 100%;
-				position: absolute;
+		&--night-change {
+			&::before {
+				// 線の設定
+
+				@include mq ('min-lg') {
+					content: "";
+					background-color: $Background-white;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+				}
+
+				@include mq ('min-xl') {
+					content: "";
+					background-color: $Background-white;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+				}
 			}
-
 		}
 	}
 
@@ -50,13 +80,13 @@
 		padding: 1rem;
 		color: #fff;
 
-		&--brown {
+		&--Neutral {
 			background-color: $Background-brown;
 			border: 1px solid $Background-brown;
 			border-radius: 50px;
 		}
 
-		&--orangebrown {
+		&--night-change {
 			background-color: $Background-orangebrown;
 			border: 1px solid $Background-orangebrown;
 			border-radius: 50px;
