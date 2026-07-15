@@ -30,6 +30,11 @@
     height: 12.6rem;
     cursor: pointer;
    }
+   @include mq('min-xl') {
+    width: 33rem;
+    height: 12.6rem;
+    cursor: pointer;
+   }
 
    &:hover {
     transform: translateY(-4px);
@@ -50,6 +55,10 @@
       right: 3.5%;
     }
   @include mq('min-lg') {
+    right: 5%;
+    bottom: 10%;
+  }
+  @include mq('min-xl') {
     right: 5%;
     bottom: 10%;
   }
@@ -80,6 +89,12 @@
     height: 1.7rem;
     border-radius: 7rem;
   }
+
+  @include mq('min-xl') {
+    width: 3.7rem;
+    height: 1.7rem;
+    border-radius: 7rem;
+  }
 }  
     
   //  矢印の位置調整
@@ -92,6 +107,9 @@
     margin-left: 2.5rem;
   } 
   @include mq('min-lg') {
+    margin-left: 1.5rem;
+  } 
+  @include mq('min-xl') {
     margin-left: 1.5rem;
   } 
  }

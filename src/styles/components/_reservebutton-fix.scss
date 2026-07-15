@@ -25,6 +25,10 @@
     display: none;
   }
 
+  @include mq('min-xl') {
+    display: none;
+  }
+
   .reserve-btn-en, .jreserve-btn-ja {
     @include mq('max-lg') {
       display: inline-block;
