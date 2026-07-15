@@ -29,6 +29,13 @@
       height: 4rem;
     } 
 
+     @include mq('min-xl') {
+      // min-width: 30rem;
+      max-width: 30rem;
+      width: 30rem;
+      height: 4rem;
+    } 
+
 
   
  &-en, &-ja {
@@ -43,6 +50,9 @@
     @include mq('min-lg') {
       font-size: 2.1rem
     }
+    @include mq('min-xl') {
+      font-size: 2.1rem
+    }
   }
   
   &-ja {
@@ -50,6 +60,9 @@
       font-size: 2.8rem;
     }
     @include mq('min-lg') {
+      font-size: 1.8rem;
+    }
+    @include mq('min-xl') {
       font-size: 1.8rem;
     }
   }
@@ -61,6 +74,10 @@
       margin-right: 21px;
     }
     @include mq('min-lg') {
+      margin-left: 20px;
+      margin-right: 15px;
+    }
+    @include mq('min-xl') {
       margin-left: 20px;
       margin-right: 15px;
     }

@@ -24,6 +24,12 @@
     // width: 30rem;
     height: 4rem;
   }  
+  @include mq('min-xl') {
+    min-width: 30rem;
+    // max-width: 30rem;
+    // width: 30rem;
+    height: 4rem;
+  }  
   // 背景色あり
   &--brown {
     font-size: 2rem;

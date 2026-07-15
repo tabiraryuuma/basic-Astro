@@ -79,6 +79,12 @@
       bottom: 39%;
       left: 50%;
     }
+
+    @include mq('min-xl') {
+      width: 17.6rem;
+      bottom: 39%;
+      left: 50%;
+    }
   }
 
   &__logo img {

@@ -16,10 +16,22 @@
 			position: relative;
 		}
 
+		@include mq ('min-xl') {
+			position: relative;
+		}
+
 		&::before {
 			// 線の設定
 
 			@include mq ('min-lg') {
+				content: "";
+				background-color: $Background-brown;
+				height: 1px;
+				width: 100%;
+				position: absolute;
+			}
+
+			@include mq ('min-xl') {
 				content: "";
 				background-color: $Background-brown;
 				height: 1px;
@@ -76,6 +88,13 @@
 			width: 30rem;
 		}
 
+		@include mq ('min-xl') {
+			font-size: 1.8rem;
+			text-align: center;
+			position: relative;
+			width: 30rem;
+		}
+
 		@include mq ('max-lg') {
 			font-size: 3rem;
 			width: 100%;
@@ -90,6 +109,12 @@
 		color: $Background-brown;
 
 		@include mq ('min-lg') {
+			text-align: center;
+			padding-top: 6rem;
+			padding-bottom: 3rem;
+		}
+
+		@include mq ('min-xl') {
 			text-align: center;
 			padding-top: 6rem;
 			padding-bottom: 3rem;
@@ -129,6 +154,10 @@
 			font-size: 1rem;
 		}
 
+		@include mq ('min-xl') {
+			font-size: 1rem;
+		}
+
 		@include mq ('max-lg') {
 			font-size: 2rem;
 		}
@@ -140,6 +169,11 @@
 		padding-bottom: 6rem;
 
 		@include mq ('min-lg') {
+			justify-content: center;
+			gap: 1.5rem;
+		}
+
+		@include mq ('min-xl') {
 			justify-content: center;
 			gap: 1.5rem;
 		}
@@ -171,6 +205,12 @@
 				cursor: pointer;
 			}
 
+			@include mq('min-xl') {
+				width: 100%;
+				height: 12.6rem;
+				cursor: pointer;
+			}
+
 			&:hover {
 				transform: translateY(-4px);
 			}
@@ -192,6 +232,11 @@
 				}
 
 				@include mq('min-lg') {
+					right: 5%;
+					bottom: 10%;
+				}
+
+				@include mq('min-xl') {
 					right: 5%;
 					bottom: 10%;
 				}
@@ -225,6 +270,12 @@
 					height: 1.7rem;
 					border-radius: 7rem;
 				}
+
+				@include mq('min-xl') {
+					width: 3.7rem;
+					height: 1.7rem;
+					border-radius: 7rem;
+				}
 			}
 
 			//  矢印の位置調整
@@ -239,6 +290,10 @@
 				}
 
 				@include mq('min-lg') {
+					margin-left: 1.5rem;
+				}
+
+				@include mq('min-xl') {
 					margin-left: 1.5rem;
 				}
 			}
