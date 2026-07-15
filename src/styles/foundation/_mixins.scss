@@ -8,12 +8,23 @@
 
 
 
-// PC版　= min-lg（1024px以上）
+// PC版　= min-lg（1024〜1279px：中間PC幅）
+// PC版　= min-xl（1280以上）
 // SP版 = max-lg（1023px以下）
 //使い方の例： @include mq('max-lg'):{ソースコード}
 $breakpoints: (
-  'min-lg': (min-width: 1024px),
-  'max-lg': (max-width: 1023px),
+  'min-lg': (
+    min-width: 1024px ,
+    max-width: 1279px,
+    ),
+
+  'min-xl': (
+    min-width: 1280px,
+    ),
+
+  'max-lg': (
+    max-width: 1023px,
+    ),
 ) !default;
 
 
@@ -24,7 +35,13 @@ $breakpoints: (
 // ブレークポイント
 @mixin mq($breakpoint) {
   @if $breakpoint == 'min-lg' {
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'min-xl' {
+    @media (min-width: 1280px) {
       @content;
     }
   }
