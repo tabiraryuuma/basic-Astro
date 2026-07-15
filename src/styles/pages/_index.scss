@@ -124,6 +124,17 @@
         margin-right: 6rem;
       }
     }
+
+    @include mq('min-xl') {
+      justify-content: center;
+      font-size: 11.2rem;
+      font-weight: 100;
+      top: 65%;
+
+      .margin {
+        margin-right: 6rem;
+      }
+    }
   }
 
   &__title {
@@ -143,6 +154,13 @@
     }
 
     @include mq('min-lg') {
+      font-size: 2.9rem;
+      line-height: 1.2;
+      letter-spacing: 0.15em;
+      top: 82%;
+    }
+
+    @include mq('min-xl') {
       font-size: 2.9rem;
       line-height: 1.2;
       letter-spacing: 0.15em;
@@ -185,6 +203,10 @@
   }
 
   @include mq('min-lg') {
+    width: 100%;
+  }
+
+  @include mq('min-xl') {
     width: 100%;
   }
 }

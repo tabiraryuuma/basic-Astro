@@ -1,5 +1,5 @@
-@use "../foundation/variables" as *;
-@use "../foundation/mixins" as *;
+@use "../foundation/variables"as *;
+@use "../foundation/mixins"as *;
 
 // ========================================
 // Header
@@ -28,9 +28,9 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   left: 0;
   width: 100%;
   z-index: 9999;
-  transition: background-color 0.5s ease;  
+  transition: background-color 0.5s ease;
 
-  
+
   //---------------------------
   // インナーラッパー
   //---------------------------
@@ -40,13 +40,18 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     justify-content: space-between;
     max-width: 100%;
     margin-inline: auto;
-   
+
     @include mq('max-lg') {
       padding-inline: 2.3rem;
       height: 50px;
     }
 
-     @include mq('min-lg') {
+    @include mq('min-lg') {
+      padding-inline: 4.4rem;
+      height: 67px;
+    }
+
+    @include mq('min-xl') {
       padding-inline: 4.4rem;
       height: 67px;
     }
@@ -69,14 +74,20 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     padding: 0;
 
     @include mq('max-lg') {
-    width: 30px;  
-    height: 36px; 
+      width: 30px;
+      height: 36px;
     }
-    @include mq('min-lg'){
-    width: 12px;  
-    height: 36px; 
+
+    @include mq('min-lg') {
+      width: 12px;
+      height: 36px;
     }
-    
+
+    @include mq('min-xl') {
+      width: 12px;
+      height: 36px;
+    }
+
   }
 
 
@@ -98,77 +109,96 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     &:nth-child(1) {
       top: calc(50% - 4px);
     }
-     &:nth-child(2) {
+
+    &:nth-child(2) {
       top: calc(50% + 4px);
     }
-    
+
     @include mq('max-lg') {
       width: 20px;
+
       &:nth-child(1) {
-       top: calc(50% - 4px);
+        top: calc(50% - 4px);
       }
+
       &:nth-child(2) {
         top: calc(50% + 4px);
       }
     }
-    @include mq('min-lg'){
+
+    @include mq('min-xl') {
       width: 22px;
+
       &:nth-child(1) {
-       top: calc(50% - 5px);
+        top: calc(50% - 5px);
       }
+
       &:nth-child(2) {
         top: calc(50% + 4px);
       }
     }
-    
+
+    @include mq('min-lg') {
+      width: 22px;
+
+      &:nth-child(1) {
+        top: calc(50% - 5px);
+      }
+
+      &:nth-child(2) {
+        top: calc(50% + 4px);
+      }
+    }
+
   }
-  
-  &.is-menu-open{
-    .header__hamburger-line{
+
+  &.is-menu-open {
+    .header__hamburger-line {
       background-color: $Background-brown;
+    }
   }
-}
 
 
   // =============================================
   // 左エリア｜YONEDA HOTEL GROUP・ABOUT・PROJECT・CONTACTを横並び
   // =============================================
-    &__left {
-      display: flex;
-      align-items: center;
-      gap: 2.2rem;
-      
-      @include mq('max-lg') {
-        gap: $spacing-md;
-      }
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+
+    @include mq('max-lg') {
+      gap: $spacing-md;
     }
+  }
 
   // =============================================
   // ロゴ (YONEDA HOTEL GROUP)
   // =============================================
   &__logo {
-     font-family: $font-family-heading;
-     font-size: $font-size-xs;
-     font-weight: $font-weight-medium;
-     color: #ffffff;
-     text-transform: none;
-     white-space: nowrap;
-     text-transform: uppercase;
-     transition: opacity 0.2s;
-     padding: 0;
-     margin-right: 5rem;
-     
-     &:hover{
+    font-family: $font-family-heading;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: #ffffff;
+    text-transform: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+    padding: 0;
+    margin-right: 5rem;
+
+    &:hover {
       opacity: 0.7;
       color: #ffffff;
-     }
-     @include mq('max-lg') {
+    }
+
+    @include mq('max-lg') {
       font-size: 1.0rem;
     }
   }
 
   //-- パネル内：ロゴ --
-  &__panel-logo{
+  &__panel-logo {
     @include mq('max-lg') {
       color: $Background-brown;
       margin: 0 auto;
@@ -178,75 +208,90 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
       font-family: $font-family-heading; //△仮
       letter-spacing: 0.2rem;
     }
+
+    @include mq('min-xl') {
+      display: none;
+    }
+
     @include mq('min-lg') {
       display: none;
     }
   }
 
 
-  
+
   // =============================================
   // グローバルナビゲーション｜ABOUT・PROJECT・CONTACT
   // =============================================
-    &__nav {
+  &__nav {
     @include mq('max-lg') {
       display: none;
     }
   }
 
-    &__nav-list {
-      display: flex;
-      align-items: center;
-      gap: 5rem;
-      margin: 0;
-      padding: 0;
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__nav-link {
+    font-family: $font-family-heading;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-normal;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    position: relative;
+    padding-block: $spacing-xs;
+    transition: opacity 0.2s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      // background-color: $header-text-color;
+      background-color: rgb(79, 229, 255);
+      transition: opacity 0.3s ease;
     }
 
-    &__nav-link {
-      font-family: $font-family-heading;
-      font-size: $font-size-xs;
-      font-weight: $font-weight-normal;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: 0.1em;
-      position: relative;
-      padding-block: $spacing-xs;
-      transition: opacity 0.2s;
-      &::after{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 1px;
-        // background-color: $header-text-color;
-        background-color: rgb(79, 229, 255);
-        transition: opacity  0.3s ease;
-      }
-      &:hover {
-        opacity: 0.8;
-        color: $header-text-color;
-      }
-
-      &:hover::after,
-      &.is-active::after {
-        width: 100%;
-      }
-      
-      &.is-active {font-weight: $font-weight-medium;}
+    &:hover {
+      opacity: 0.8;
+      color: $header-text-color;
     }
-  
+
+    &:hover::after,
+    &.is-active::after {
+      width: 100%;
+    }
+
+    &.is-active {
+      font-weight: $font-weight-medium;
+    }
+  }
+
 
 
   // ====================================================================================
   // 右エリア｜4つの施設ボタン・アイコン・予約ボタン・言語・ハンバーガーメニューの並び
   // ====================================================================================
-  &__right{
+  &__right {
     display: flex;
     align-items: center;
+
     @include mq('max-lg') {
       gap: $spacing-sm;
     }
+
+    @include mq('min-xl') {
+      gap: 1.2rem;
+    }
+
     @include mq('min-lg') {
       gap: 1.2rem;
     }
@@ -256,20 +301,26 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   // 言語切替
   // ====================================================================================
   &__lang {
-    display: flex;  align-items: center;
+    display: flex;
+    align-items: center;
   }
 
-  &__lang-svg  {
+  &__lang-svg {
     fill: currentColor;
     font-family: AvenirNext-Regular, 'Avenir Next';
-    
-    
+
+
     @include mq('max-lg') {
-    width: 1.4rem;
-    height: 1.9rem;
-    color: #ffffff;
-  }
-     
+      width: 1.4rem;
+      height: 1.9rem;
+      color: #ffffff;
+    }
+
+    @include mq('min-xl') {
+      width: 1.7rem;
+      height: 1.9rem;
+    }
+
     @include mq('min-lg') {
       width: 1.7rem;
       height: 1.9rem;
@@ -284,52 +335,80 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     cursor: pointer;
     display: flex;
     align-items: center;
-    
+
     @include mq('max-lg') {
       color: rgba(73, 60, 60, 0.4);
       transition: color $transition-fast;
-      &.is-active {color:$Background-brown}
+
+      &.is-active {
+        color: $Background-brown
+      }
+    }
+
+    @include mq('min-xl') {
+      color: rgba(255, 255, 255, 0.4);
+      transition: color $transition-fast;
+
+      &.is-active {
+        color: #ffffff;
+      }
     }
 
     @include mq('min-lg') {
       color: rgba(255, 255, 255, 0.4);
       transition: color $transition-fast;
-      &.is-active {color: #ffffff;}
+
+      &.is-active {
+        color: #ffffff;
+      }
     }
   }
 
-    //『言語切替・縦線』
-    &__language-btn-divider { 
+  //『言語切替・縦線』
+  &__language-btn-divider {
     display: inline-block;
     padding: 0;
-    
+
     @include mq('max-lg') {
-      width: 1px;            
-      height: 14px;          
+      width: 1px;
+      height: 14px;
       background-color: #ffffff;
       margin: 0 10px 0 12px; //△仮
     }
 
+    @include mq('min-xl') {
+      width: 1px;
+      height: 12px;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 0 15px 0 14px;
+      padding: 0;
+    }
+
     @include mq('min-lg') {
-    width:1px;            
-    height: 12px;          
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 0 15px 0 14px;
-    padding: 0;
+      width: 1px;
+      height: 12px;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 0 15px 0 14px;
+      padding: 0;
+    }
   }
-}
 
   // --- パネル内: 言語 (PC版：表示｜SP版非表示) ---
-  &__panel-lang{
+  &__panel-lang {
     @include mq('max-lg') {
       display: flex;
       margin: auto 0;
-     }
-     @include mq('min-lg') {
+    }
+
+    @include mq('min-xl') {
+      display: none;
+    }
+
+    @include mq('min-lg') {
       display: none;
     }
   }
-  
+
 
 
   // ====================================================================================
@@ -340,32 +419,32 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
       display: none;
     }
   }
-  
+
   &__facilities-list {
     display: flex;
     align-items: center;
     gap: 8px;
     list-style: none;
-    margin: 0; 
+    margin: 0;
     padding: 0;
   }
 
-  &__facilities-link{
+  &__facilities-link {
     display: block;
-    padding: 6px 16px;                   //△仮
-    font-family: $font-family-heading;   //△仮
-    font-size: 1.1rem;                   //△仮
-    font-weight: $font-weight-normal;     //△仮
-    color: #6a563b;            //△調整中
-    background-color:rgba(247, 247, 245, 0.5);
+    padding: 6px 16px; //△仮
+    font-family: $font-family-heading; //△仮
+    font-size: 1.1rem; //△仮
+    font-weight: $font-weight-normal; //△仮
+    color: #6a563b; //△調整中
+    background-color: rgba(247, 247, 245, 0.5);
     border: 1px solid $header-border-color;
     border-radius: 9999px;
     letter-spacing: 0.04em;
     white-space: nowrap;
     transition: background-color $transition-fast,
-        border-color $transition-fast;
+      border-color $transition-fast;
 
-    &:hover{
+    &:hover {
       background-color: rgba(0, 0, 0, 0.151);
       border-color: rgba(255, 255, 255, 0.5);
       color: #ffffff;
@@ -377,6 +456,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     display: flex;
     flex-direction: column;
     gap: 18px;
+
     @include mq('max-lg') {
       width: 100%;
       max-width: 24rem;
@@ -387,25 +467,37 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
       margin-bottom: 0;
       padding: 0;
     }
+
+    @include mq('min-xl') {
+      margin-top: 4.6rem;
+    }
+
     @include mq('min-lg') {
       margin-top: 4.6rem;
     }
   }
+
   &__panel-facility-link {
     display: block;
-    font-size: $font-size-sm;     
+    font-size: $font-size-sm;
     font-weight: $font-weight-normal; //△仮
     color: $Background-brown;
     text-align: center;
     border: 1px solid $Background-brown;
     border-radius: 2.6rem;
     transition: background-color $transition-fast,
-    border-color $transition-fast;
+      border-color $transition-fast;
 
     @include mq('max-lg') {
       padding: 14px 20px;
     }
-    @include mq('min-lg'){
+
+    @include mq('min-xl') {
+      padding: 14px 20px;
+      margin: 0 31px;
+    }
+
+    @include mq('min-lg') {
       padding: 14px 20px;
       margin: 0 31px;
     }
@@ -416,39 +508,49 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
       color: $header-text-color;
     }
   }
-   // --- ここまでパネル内: 施設ボタン ---
+
+  // --- ここまでパネル内: 施設ボタン ---
 
 
   // ============================
   // SNS アイコン
   // ============================
-    &__sns {
+  &__sns {
     display: flex;
     align-items: center;
+
     @include mq('max-lg') {
       display: none;
-    }  
+    }
+
+    @include mq('min-xl') {
+      gap: 1.5px;
+    }
+
     @include mq('min-lg') {
       gap: 1.5px;
     }
   }
-    &__sns-link {
+
+  &__sns-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;               //△仮
-    height: 32px;              //△仮
+    width: 32px; //△仮
+    height: 32px; //△仮
     color: #f6f6f4; //△仮
     transition: opacity $transition-fast;
-    &:hover{
+
+    &:hover {
       opacity: 0.6;
       color: $header-text-color;
     }
   }
-    &__sns-icon{
-      width: 20px;
-      height: 20px;
-    }
+
+  &__sns-icon {
+    width: 20px;
+    height: 20px;
+  }
 
   // --- パネル内: SNSアイコン ---
   &__panel-sns {
@@ -458,20 +560,23 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     color: $Background-white;
     margin-bottom: 15px;
   }
+
   &__panel-sns-link {
     margin-top: 61px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 31px; 
+    width: 31px;
     height: 36px;
     padding: 0;
     transition: opacity $transition-fast;
+
     &:hover {
       opacity: 0.6;
       color: $header-text-color;
     }
   }
+
   // --- ここまでパネル内: SNSアイコン ---
 
 
@@ -490,7 +595,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     align-items: center;
     gap: 0;
     margin-right: 7px;
-    padding: 1px 10px;      
+    padding: 1px 10px;
 
     color: $header-text-color;
     background-color: $Background-brown;
@@ -498,7 +603,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     border-radius: 9999px;
     white-space: nowrap;
     transition: background-color $transition-fast,
-    box-shadow $transition-fast;
+      box-shadow $transition-fast;
 
     &:hover {
       background-color: $header-reserve-hover;
@@ -511,15 +616,18 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     display: inline-block;
     font-family: 'Avenir Roman'
   }
-  &__reserve-btn-en{
+
+  &__reserve-btn-en {
     font-size: 1.6rem;
     font-weight: 300;
   }
-  &__reserve-btn-ja{
+
+  &__reserve-btn-ja {
     font-size: 1.4rem;
   }
 
-  &__reserve-btn-divider { //『｜』縦線の設定
+  &__reserve-btn-divider {
+    //『｜』縦線の設定
     display: inline-block;
     width: 1px;
     height: 14px;
@@ -538,34 +646,44 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     align-items: center;
     justify-content: center;
     width: 100%;
-    color: $header-text-color; 
+    color: $header-text-color;
     background-color: $Background-brown;
     border-radius: 9999px;
     transition: background-color $transition-fast;
+
     @include mq('max-lg') {
       padding: 14px 20px;
       margin: auto;
       width: 100%;
       max-width: 24rem;
     }
-    @include mq('min-lg'){
+
+    @include mq('min-xl') {
       padding: 14px 20px;
       margin: 0 31px;
     }
+
+    @include mq('min-lg') {
+      padding: 14px 20px;
+      margin: 0 31px;
+    }
+
     &:hover {
       background-color: $header-reserve-hover;
       color: $header-text-color;
     }
   }
 
-  &__panel-reserve-divider { //「’｜’ 縦線の調整」
+  &__panel-reserve-divider {
+    //「’｜’ 縦線の調整」
     display: inline-block;
     width: 1px;
     height: 16px;
     background-color: rgba(255, 255, 255, 0.4);
-    margin-inline: 12px; 
+    margin-inline: 12px;
   }
-   // --- ここまでパネル内: 予約ボタン ---
+
+  // --- ここまでパネル内: 予約ボタン ---
 
 
 
@@ -597,9 +715,16 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
       padding: $spacing-2xl $spacing-xl;
       right: -100%;
     }
-    @include mq('min-lg'){
+
+    @include mq('min-xl') {
       right: -435px;
-      width: 435px;      
+      width: 435px;
+      max-width: 85vw;
+    }
+
+    @include mq('min-lg') {
+      right: -435px;
+      width: 435px;
       max-width: 85vw;
     }
   }
@@ -607,9 +732,9 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   // --- パネル閉じるボタン ---
   //△「バツ」を引き延ばしする
   &__panel-close {
-    position: absolute;  //△仮
-    top: $spacing-lg;    //△仮
-    right: $spacing-lg;  //△仮
+    position: absolute; //△仮
+    top: $spacing-lg; //△仮
+    right: $spacing-lg; //△仮
     width: 40px;
     height: 40px;
     display: none;
@@ -621,7 +746,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     cursor: pointer;
     transition: opacity $transition-fast;
     z-index: 10;
-    
+
 
     &:hover {
       opacity: 0.6;
@@ -629,12 +754,12 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   }
 
 
- //パネル内: ナビリンク（ABOUT・PROJECT・CONTACT）
+  //パネル内: ナビリンク（ABOUT・PROJECT・CONTACT）
   &__panel-nav-list {
-    display: flex;  
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px; 
+    gap: 4px;
     margin: 0;
     padding: 0;
     margin-bottom: 37.6rem;
@@ -642,11 +767,11 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
 
   //パネル内: ナビリンク（ABOUT・PROJECT・CONTACT = 詳細）
   &__panel-nav-link {
-    display: block; 
+    display: block;
     padding: 12px 16px; //△仮
-    font-family: 'Avenir Roman'; 
+    font-family: 'Avenir Roman';
     font-size: $font-size-sm;
-    color: $Background-brown; 
+    color: $Background-brown;
   }
 
 
@@ -661,12 +786,12 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   }
 
   //ホテルづくりをお考えの方へ
-  &__panel-footer-cta { 
+  &__panel-footer-cta {
     display: block;
-    font-size: 14px; 
+    font-size: 14px;
     font-family: 'Raleway', sans-serif;
-    color: $Background-brown; 
-    margin-bottom: 2rem; 
+    color: $Background-brown;
+    margin-bottom: 2rem;
     transition: color $transition-fast;
   }
 
@@ -674,7 +799,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     font-family: 'Raleway', sans-serif;
     font-size: $font-size-sm;
     color: $Background-brown;
-   
+
     //線(ネガティブマージンで横線を端から端まで伸ばす)
     margin-top: auto;
     margin-inline: -$spacing-2xl;
@@ -695,7 +820,7 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
   }
 
   &__panel-footer-brand {
-    font-family: 'Avenir Roman'; 
+    font-family: 'Avenir Roman';
     font-size: $font-size-sm;
     color: $Background-brown;
   }
@@ -717,11 +842,13 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     }
 
     .header__hamburger-line {
+
       // 上の線 → 中央に移動して右下がりに回転（SVG角度: atan(15.14/25.27) ≈ 31°）
       &:nth-child(1) {
         top: 50%;
         transform: translateX(-50%) translateY(-50%) rotate(31deg);
       }
+
       // 下の線 → 中央に移動して右上がりに回転
       &:nth-child(2) {
         top: 50%;
@@ -730,4 +857,4 @@ $header-panel-border: rgba(255, 255, 255, 0.15);
     }
   }
 
-} 
+}
