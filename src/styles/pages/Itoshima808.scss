@@ -86,7 +86,40 @@
     //  Villa（KITCHEN・BED ROOM・PRIVATE GARDEN）
 
   &__villa {
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    position: relative;
+
+    &__text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block flex;
+      flex-direction: column;
+      align-items: flex-end;
+      // width: 70%;
+      // padding: 0 10rem;
+
+      &__title {
+        font-size: 8.6rem;
+        font-weight: 300;
+        color: #c0b4a8;
+        font-family: 'Raleway', 'sans-serif';
+        margin-bottom: 4rem;
+      }
+
+      &__description {
+        font-size: 1.8rem;
+        color: #8f8574;
+        line-height: 2.1;
+        // margin-top: 1.5rem;
+
+        &__parts {
+          margin-top: 1.5rem;
+        }
+      }
+
+
+    }
 
     &__imgtop {
       display: flex;
@@ -104,8 +137,8 @@
         }
 
         &--right {
-          width: 46%;
-          margin-top: -30rem;
+          width: 40%;
+          margin-top: -10rem;
 
         }          
       }     
