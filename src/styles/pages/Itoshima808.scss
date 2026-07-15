@@ -91,8 +91,10 @@
 
     &__text {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset-block-start: -7rem;
+      inset-inline-start: 18rem;
+      // top: 0;
+      // left: 0;
       display: block flex;
       flex-direction: column;
       align-items: flex-end;
@@ -133,15 +135,19 @@
 
         &--left {
           width: 22%;
-          margin-top: 30rem;
+          margin-top: 60rem;
         }
 
         &--right {
           width: 40%;
-          margin-top: -10rem;
+          margin-top: -2rem;
 
         }          
       }     
+    }
+
+    &__imgBottom {
+      width: 60%;
     }
   }
 
