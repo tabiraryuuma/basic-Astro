@@ -123,8 +123,8 @@
   // ---------------------------------------------------------
   //--- テキストコンテンツ
   .villa__content {
-    margin-inline-start: 37%;
-    padding-block-start: 6rem;
+    inline-size: 50%;
+    max-inline-size: 100%;
     @include mq('max-lg') {
     margin-inline-start: 37%;
     padding-block-start: 6rem;           
@@ -181,12 +181,14 @@
       max-width: 432px;
       margin-inline-start: -13.5rem;
       margin-block-start: 6.9rem;
+      line-height: 2.1222;
     }
     @include mq('min-xl') {
       font-size: 1.8rem;
       max-width: 432px;
       margin-inline-start: -13.5rem;
       margin-block-start: 6.9rem;
+      line-height: 2.1222;
     }
 
     p + p {
@@ -229,6 +231,8 @@
     inset-inline-end: 5.4rem;
     margin-inline-start: auto;      // ★ 右端へ寄せる
     margin-inline-end: 0;
+    inline-size: 62.3%;               
+    max-inline-size: 85rem;         // ★ 上限（790px）
     z-index: 1;
 
     @include mq('max-lg') {
@@ -278,19 +282,19 @@
     flex-shrink: 0;
     inline-size: 25%;               // ★ %で伸縮対応
     max-inline-size: 38rem;         // ★ 上限（380px相当）
-    margin-block-start: -7rem;      // ★ ネガティブマージンで上部と重ねる
+    // margin-block-start: -7rem;      // ★ ネガティブマージンで上部と重ねる
     z-index: 1;
 
     @include mq('max-lg') {
       width: 200px;
-      inset-inline-start: -1rem; 
+      // inset-inline-start: -1rem; 
     }
     
     @include mq('min-lg') {
-      inset-inline-start: -1rem; 
+      // inset-inline-start: -1rem; 
     }
     @include mq('min-xl') {
-      inset-inline-start: -0.1rem; 
+      // inset-inline-start: -0.1rem; 
     }
 
     .villa__caption {
