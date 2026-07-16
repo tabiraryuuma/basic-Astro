@@ -75,9 +75,8 @@
 	&__decoration {
 
 		display: flex;
-		align-items: center;
 		line-height: 1;
-		padding: 1rem;
+		padding: 0.9rem;
 		color: #fff;
 
 		&--Neutral {
@@ -92,69 +91,123 @@
 			border-radius: 50px;
 		}
 
-		.span-1 {
-			display: block;
-			padding-left: 1.5rem;
-			font-size: 3.3rem;
-		}
-
-		.span-2 {
-			display: block;
-			width: 2px;
-			background-color: #f7f7f5;
-			height: 3rem;
-			margin: 0 2.3rem 0 2.1rem;
-		}
-
-		.span-3 {
-			display: block;
-			font-size: 2.8rem;
-		}
-
 		@include mq ('min-lg') {
-			font-size: 1.8rem;
-			text-align: center;
+			justify-content: center;
 			position: relative;
 			width: 30rem;
 		}
 
 		@include mq ('min-xl') {
-			font-size: 1.8rem;
-			text-align: center;
+			justify-content: center;
 			position: relative;
 			width: 30rem;
 		}
 
 		@include mq ('max-lg') {
-			font-size: 3rem;
 			width: 100%;
 			text-align: left;
+		}
+
+		.span-1 {
+			display: block;
+
+			@include mq ('min-xl') {
+				font-size: 2.1rem;
+			}
+
+			@include mq ('min-lg') {
+				font-size: 2.1rem;
+			}
+
+			@include mq ('max-lg') {
+				// イラストレーター計測
+				// font-size: 3.3rem;
+				// padding-left: 1.5rem;
+
+				font-size: 1.6rem;
+				padding-left: 0.5rem;
+				align-self: self-end;
+			}
+		}
+
+		.span-2 {
+			display: block;
+			width: 1.6px;
+			background-color: #f7f7f5;
+			margin: 0 1.3rem 0 1.1rem;
+			align-self: center;
+
+			@include mq ('min-xl') {
+				height: 2rem;
+			}
+
+			@include mq ('min-lg') {
+				height: 2rem;
+			}
+
+			@include mq ('max-lg') {
+				// イラストレーター計測
+				// height: 3rem;
+
+				height: 1.8rem;
+			}
+		}
+
+		.span-3 {
+			display: block;
+
+			@include mq ('min-xl') {
+				font-size: 1.8rem;
+			}
+
+			@include mq ('min-lg') {
+				font-size: 1.8rem;
+			}
+
+			@include mq ('max-lg') {
+				// イラストレーター計測
+				// font-size: 2.8rem;
+
+				font-size: 1.6rem;
+				align-self: self-start;
+			}
 		}
 	}
 
 	&__text-2 {
 
 		text-align: center;
-		font-size: 2.4rem;
 		color: $Background-brown;
+		line-height: 1;
+
+		&--Neutral {
+			color: $Background-brown;
+		}
+
+		&--night-change {
+			color: #ffffff;
+		}
 
 		@include mq ('min-lg') {
 			text-align: center;
-			padding-top: 6rem;
+			padding-top: 5.6rem;
 			padding-bottom: 3rem;
+			font-size: 2.4rem;
 		}
 
 		@include mq ('min-xl') {
 			text-align: center;
-			padding-top: 6rem;
+			padding-top: 5.6rem;
 			padding-bottom: 3rem;
+			font-size: 2.4rem;
 		}
 
 		@include mq ('max-lg') {
 			line-height: 1;
 			text-align: left;
 			padding-top: 1.8rem;
-			padding-bottom: 2.5rem;
+			padding-bottom: 2.2rem;
+			font-size: 1.6rem;
 		}
 	}
 
@@ -176,46 +229,47 @@
 	}
 
 	&__br {
-		padding-top: 1.2rem;
+		padding-top: 2rem;
 		opacity: 0.8;
 		display: block;
 
 		@include mq ('min-lg') {
-			font-size: 1rem;
+			font-size: 1.2rem;
 		}
 
 		@include mq ('min-xl') {
-			font-size: 1rem;
+			font-size: 1.2rem;
 		}
 
 		@include mq ('max-lg') {
-			font-size: 2rem;
+			font-size: 1.4rem;
 		}
 	}
 
 	&__Card-area {
 		width: 100%;
 		display: flex;
-		padding-bottom: 6rem;
+		padding-bottom: 6.9rem;
 
 		@include mq ('min-lg') {
 			justify-content: center;
-			gap: 1.5rem;
+			gap: 3rem;
 		}
 
 		@include mq ('min-xl') {
 			justify-content: center;
-			gap: 1.5rem;
+			gap: 3rem;
 		}
 
 		@include mq ('max-lg') {
 			flex-direction: column;
+			gap: 2rem;
 		}
 
 		&__card {
 			position: relative;
 			background-color: #ffffff;
-			border: 0.1rem solid #e7e0d8;
+			// border: 0.1rem solid #e7e0d8;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -225,8 +279,7 @@
 
 			@include mq('max-lg') {
 				width: 100%;
-				height: 10rem;
-				margin-bottom: 2rem;
+				height: 6.5rem;
 			}
 
 			@include mq('min-lg') {
@@ -246,7 +299,7 @@
 			}
 
 			&__title {
-				font-size: 3rem;
+				font-size: 2.2rem;
 				color: #b09d8b;
 				text-align: center;
 			}
@@ -257,7 +310,6 @@
 				position: absolute;
 
 				@include mq('max-lg') {
-					bottom: 28%;
 					right: 3.5%;
 				}
 
@@ -290,8 +342,8 @@
 				}
 
 				@include mq('max-lg') {
-					width: 7.3rem;
-					height: 4rem;
+					width: 3rem;
+					height: 2rem;
 					border-radius: 1.7rem;
 				}
 
@@ -316,7 +368,7 @@
 				transition: transform 0.3s ease;
 
 				@include mq('max-lg') {
-					margin-left: 2.5rem;
+					margin-left: 1.5rem;
 				}
 
 				@include mq('min-lg') {
