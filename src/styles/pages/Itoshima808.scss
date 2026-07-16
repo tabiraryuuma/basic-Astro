@@ -56,6 +56,17 @@
       text-align: center;
       letter-spacing: 0.3em;
       margin-bottom: 69px;
+
+      // @include mq('max-lg') {
+      //   font-size: 3.2rem;
+      // }
+      // @include mq('min-lg') {
+      //   font-size: 3.2rem;
+      // }
+      // @include mq('min-xl') {
+      //   font-size: 3.2rem;
+      // }
+     
     }
 
     &__catch {
@@ -93,8 +104,6 @@
       position: absolute;
       inset-block-start: -7rem;
       inset-inline-start: 18rem;
-      // top: 0;
-      // left: 0;
       display: block flex;
       flex-direction: column;
       align-items: flex-end;
@@ -102,11 +111,21 @@
       // padding: 0 10rem;
 
       &__title {
-        font-size: 8.6rem;
         font-weight: 300;
         color: #c0b4a8;
         font-family: 'Raleway', 'sans-serif';
         margin-bottom: 4rem;
+
+        @include mq('max-lg') {
+          font-size: 8.6rem;
+        }
+      @include mq('min-lg') {
+          font-size: clamp(6.6rem, -1.43rem + 7.84vw, 8.6rem);
+        }
+      @include mq('min-xl') {
+          font-size: 8.6rem;
+        }
+        
       }
 
       &__description {
@@ -128,27 +147,77 @@
       justify-content: space-between;
 
       &__item {
+
+        figure {
+        display: flex;
+        gap: 0.5rem;
+        margin: 0;
+      }
+
         img {
+          flex: 1;
           width: 100%;
           display: block;
         }
 
+        figcaption {
+        color: #8f8574;
+        writing-mode: vertical-rl;
+        flex-shrink: 0;
+      }
+
         &--left {
           width: 22%;
           margin-top: 60rem;
+
+          figure {
+            flex-direction: row;
+            align-items: flex-start;
+          }
         }
 
         &--right {
           width: 40%;
           margin-top: -2rem;
 
+          figure {
+            flex-direction: row-reverse;
+            align-items: flex-end;
+          }
+
         }          
       }     
     }
 
     &__imgBottom {
-      width: 60%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 3rem;
+      margin-top: -16rem;
+      margin-bottom: 17.1rem; 
+      
+      figure {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 0.5rem;
+        width: 60%;
+        margin: 0;
+      }
+
+      img {
+        flex: 1;
+        width: 100%;
+        display: block;
+      }
+
+      figcaption {
+        color: #8f8574;
+        writing-mode: vertical-rl;
+        flex-shrink: 0;
+      }
     }
+
   }
 
 
