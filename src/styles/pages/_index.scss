@@ -248,7 +248,7 @@
 
     .Project {
       width: 100%;
-      padding: 0 10rem;
+      padding: 0 5rem;
       display: flex;
       flex-direction: column;
 
@@ -711,6 +711,10 @@
                     width: 100%;
                     aspect-ratio: 238 / 316;
                     height: auto;
+
+                    img {
+                      width: 70%;
+                    }
                   }
                 }
 
@@ -722,6 +726,10 @@
                     width: 100%;
                     aspect-ratio: 238 / 316;
                     height: auto;
+
+                    img {
+                      width: 70%;
+                    }
                   }
                 }
               }
@@ -767,11 +775,10 @@
           flex-direction: column;
 
           a {
-            width: auto;
-            height: auto;
             padding: 0;
             font-size: 32px;
-            width: 30rem;
+            max-width: 30rem;
+            width: 100%;
             height: 6rem;
             margin-bottom: 0;
 
@@ -822,7 +829,8 @@
                 justify-content: center;
 
                 &:nth-child(1) {
-                  width: 30rem;
+                  max-width: 30rem;
+                  width: 100%;
                   height: 20rem;
                   margin: 0 auto;
                   border-radius: 10px;
@@ -848,7 +856,8 @@
 
                 &:nth-child(1) {
                   margin: 0 auto;
-                  width: 30rem;
+                  max-width: 30rem;
+                  width: 100%;
                   height: 20rem;
                   border-radius: 10px;
                   background-image: none;
@@ -960,17 +969,17 @@
         }
 
         ul {
-          width: auto;
           margin: 12rem auto 0 auto;
           list-style: none;
           text-align: center;
+          max-width: 30rem;
+          width: 100%;
 
           li {
             &:nth-child(1) {
               padding-bottom: 2rem;
 
               a {
-                width: 30rem;
                 height: 6rem;
 
                 span {
@@ -985,10 +994,11 @@
 
               a {
                 padding: 3.5rem 0;
+                width: 100%;
               }
 
               p {
-                font-size: 18px;
+                font-size: clamp(12px, 2vw, 20px);
               }
             }
           }
