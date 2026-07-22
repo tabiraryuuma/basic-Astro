@@ -123,19 +123,20 @@
   // ---------------------------------------------------------
   //--- テキストコンテンツ
   .villa__content {
-    inline-size: 50%;
-    max-inline-size: 100%;
+
     @include mq('max-lg') {
-    margin-inline-start: 37%;
-    padding-block-start: 6rem;           
+      margin-inline-start: 37%;
+      padding-block-start: 6rem;           
     }
     @include mq('min-lg') {
-    margin-inline-start: 37%;
-    padding-block-start: 6rem;           
+      margin-inline-start: 37%;
+      padding-block-start: 6rem;           
     }
     @include mq('min-xl') {
-    margin-inline-start: 37%;
-    padding-block-start: 6rem;
+      margin-inline-start: 37%;
+      padding-block-start: 6rem;
+      inline-size: 50%;
+      max-inline-size: 100%;
     }
   }
 
