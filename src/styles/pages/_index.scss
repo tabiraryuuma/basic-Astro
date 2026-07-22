@@ -370,6 +370,10 @@
             border: 1px solid #fff;
             color: #fff;
           }
+
+          span {
+            font-size: 24px;
+          }
         }
       }
     }
@@ -769,6 +773,8 @@
 
 
         .button-group {
+          max-width: 30rem;
+          width: 100%;
           margin: 0 auto;
           display: flex;
           gap: 30px;
@@ -792,16 +798,16 @@
 
               span {
                 &:nth-child(1) {
-                  font-size: 32px;
+                  font-size: 24px;
                 }
 
                 &:nth-child(2) {
-                  font-size: 32px;
+                  font-size: 24px;
                   padding-bottom: 10px;
                 }
 
                 &:nth-child(3) {
-                  font-size: 32px;
+                  font-size: 24px;
                 }
               }
             }
@@ -811,7 +817,7 @@
 
 
       .Movie {
-        padding: 15rem 4rem 30rem 4rem;
+        padding: 0 4rem;
 
         nav {
           display: flex;
@@ -885,7 +891,8 @@
       position: unset;
 
       .heading {
-        font-size: 42px;
+        // font-size: 42px;
+        font-size: 22px;
         line-height: 1;
         padding: 29.3rem 0 30.4rem 0;
 
@@ -897,10 +904,18 @@
       .gradation {
         line-height: 1;
         letter-spacing: -0.1em;
-        font-size: 3.2rem;
+        // font-size: 3.2rem;
+        font-size: 1.8rem;
         padding-bottom: 17rem;
         margin: 0;
 
+        .br {
+          height: 4.3rem;
+        }
+
+        .block {
+          height: auto;
+        }
       }
     }
   }
