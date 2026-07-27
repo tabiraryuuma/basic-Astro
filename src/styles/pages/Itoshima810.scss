@@ -78,9 +78,9 @@
   flex-direction: column;
   align-items: stretch;
   inline-size: 100%;
-  min-block-size: 100vh; //△仮
+  min-block-size: 100vh;
   padding-block-start: 8rem;
-  padding-inline-end: 8rem;
+  padding-inline-end: 0;
   overflow: hidden;
   
   @include mq('max-lg') {
@@ -88,6 +88,7 @@
     padding-block-start: 6rem;
     padding-block-end: 6rem;
   }
+
   // ---------------------------------------------------------
   // ドグルスイッチ
   &__switcher {
@@ -103,7 +104,6 @@
   .villa__upper {
     flex-direction: row;           // 横並び
     align-items: flex-start;
-    justify-content: space-between;
 
     @include mq('max-lg') {
       display: block;
@@ -115,7 +115,10 @@
     }
     @include mq('min-xl') {
       display: flex;
-      inline-size: 100%;  
+      justify-content: flex-end;
+      align-items: flex-start;
+      inline-size: 100%;
+      padding-inline-start: clamp(2.4rem, 15vw, 22.2rem);
     }
   }
   
@@ -123,20 +126,22 @@
   // ---------------------------------------------------------
   //--- テキストコンテンツ
   .villa__content {
+    margin-inline-start: auto;
+
 
     @include mq('max-lg') {
       margin-inline-start: 37%;
       padding-block-start: 6rem;           
     }
     @include mq('min-lg') {
+      padding-block-start: 6rem;   
       margin-inline-start: 37%;
-      padding-block-start: 6rem;           
     }
     @include mq('min-xl') {
-      margin-inline-start: 37%;
-      padding-block-start: 6rem;
-      inline-size: 50%;
-      max-inline-size: 100%;
+    margin-inline-start: 22.2rem; /* 画面左から22.2remの位置に固定配置 */
+    inline-size: auto;
+    max-inline-size: 43.2rem;
+    flex-shrink: 0;
     }
   }
 
@@ -145,20 +150,23 @@
     letter-spacing: 0.09em;
     line-height: 1.2;
     color: #3a3a3a;
+
     @include mq('max-lg') {
       font-size: 4.3rem;           // △仮
       font-weight: 300;           // △仮
       margin-block-end: 3.5rem;    // △仮
     }
+
     @include mq('min-lg') {
       font-size: 8.6rem;            // △仮
       font-weight: 300;             
-      margin-inline-start: -31.1rem;  
     }
+
     @include mq('min-xl') {
-      font-size: 8.6rem;            
-      font-weight: 300;             
-      margin-inline-start: -31.1rem;  
+    font-size: 8.6rem;
+    font-weight: 300;
+    margin-inline-start: -17.6rem; /* 本文より少し左に突き出す（画面外へは出ない） */
+    white-space: nowrap;         
     }
 
 
@@ -166,6 +174,7 @@
       font-weight: 400;
     }
   }
+
   // --- 説明テキスト ---
   .villa__text {
     // letter-spacing: 0.05em;
@@ -187,7 +196,7 @@
     @include mq('min-xl') {
       font-size: 1.8rem;
       max-width: 432px;
-      margin-inline-start: -13.5rem;
+      margin-inline-start: 0;
       margin-block-start: 6.9rem;
       line-height: 2.1222;
     }
@@ -229,7 +238,6 @@
   .villa__figure--01 {
     flex-grow: 0;
     flex-shrink: 0;
-    inset-inline-end: 5.4rem;
     margin-inline-start: auto;      // ★ 右端へ寄せる
     margin-inline-end: 0;
     inline-size: 62.3%;               
@@ -244,8 +252,14 @@
     @include mq('min-lg') {
       inset-inline-end: -7.9rem; 
     }
+
     @include mq('min-xl') {
-      inset-inline-end: -7.9rem;
+    flex-shrink: 0;         /* 画像サイズを絶対崩さない・縮ませない */
+    inline-size: 62.3vw;     /* 画面幅に応じた画像幅 */
+    min-inline-size: 69rem; /* 最小サイズ固定 */
+    max-inline-size: 85rem;
+    /* ★ さっき見出しがはみ出していた動きを画像に適用！ */
+    margin-inline-end: -12rem; /* 画面右端から右外へ12rem(120px)豪快にはみ出させる */
     }
 
     .villa__caption,
