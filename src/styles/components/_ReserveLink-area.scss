@@ -9,7 +9,7 @@
 		border-bottom: 1px solid $Background-brown;
 	}
 
-	&--night-change {
+	&--Night-change {
 		border-bottom: 1px solid $Background-white;
 	}
 
@@ -49,7 +49,7 @@
 			}
 		}
 
-		&--night-change {
+		&--Night-change {
 			&::before {
 				// 線の設定
 
@@ -85,7 +85,7 @@
 			border-radius: 50px;
 		}
 
-		&--night-change {
+		&--Night-change {
 			background-color: $Background-orangebrown;
 			border: 1px solid $Background-orangebrown;
 			border-radius: 50px;
@@ -184,7 +184,7 @@
 			color: $Background-brown;
 		}
 
-		&--night-change {
+		&--Night-change {
 			color: #ffffff;
 		}
 
