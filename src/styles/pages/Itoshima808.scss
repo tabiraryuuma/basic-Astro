@@ -20,12 +20,16 @@
     // }
   }
 
-  &__mainvisual img {
+  &__mainvisual {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+    .hero__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
-  
+   
 
   &__logo{
     position: absolute;
@@ -40,37 +44,74 @@
     background-color: #e9e5e1;
 
     &__content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 10rem 0;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
 
+      @include mq('max-lg') {
+        padding: 5rem;
+      }
+      @include mq('min-lg') {
+        padding: 10rem 0;
+      }
+      @include mq('min-xl') {
+        padding: 10rem 0;
+      }
     }
 
     
     &__title {
-      font-size: 3.2rem;
       font-weight: 300;
       color: #928572;
       text-align: center;
-      letter-spacing: 0.3em;
-      margin-bottom: 69px;
-
-      // @include mq('max-lg') {
-      //   font-size: 3.2rem;
-      // }
-      // @include mq('min-lg') {
-      //   font-size: 3.2rem;
-      // }
-      // @include mq('min-xl') {
-      //   font-size: 3.2rem;
-      // }
-     
+      @include mq('max-lg') {
+        font-size: 2.1rem;
+        letter-spacing: 0.2em;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+      @include mq('min-lg') {
+        font-size: 3.2rem;
+        letter-spacing: 0.3em;
+        margin-bottom: 6.9rem;
+        text-align: center;
+      }
+      @include mq('min-xl') {
+        font-size: 3.2rem;
+        letter-spacing: 0.3em;
+        margin-bottom: 6.9rem;
+        text-align: center;
+      }     
     }
 
     &__catch {
-      margin-bottom: 4.7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // width: 100%;
+      // max-width: 100%;
+      // @include mq('max-lg') {
+      //   margin: 2rem 0 4.7rem 7rem;
+      // }
+      // @include mq('min-lg') {
+      //   margin: 0 0 4.7rem 87rem;
+      // }
+      // @include mq('min-xl') {
+      //   margin: 0 0 4.7rem 87rem;
+      // }
+
+      .itoshima808__hero-title {
+        @include mq('max-lg') {
+          width: 19.25rem;
+        }
+        @include mq('min-lg') {
+          width: 29.6rem;
+        }
+        @include mq('min-xl') {
+          width: 29.6rem;
+        }
+      }
     }
 
     &__text {
@@ -78,7 +119,20 @@
       font-weight: 300;
       color: #928572;
       text-align: center;
-      margin-bottom: 6.5rem;
+      line-height: 2.1;
+      @include mq('max-lg') {
+        margin: 4.5rem 0 3rem;
+      }
+      @include mq('min-lg') {
+        margin: 6.5rem;
+      }
+      @include mq('min-xl') {
+        margin: 6.5rem;
+      }
+    }
+
+    &__reservation-button {
+      text-align: center;
     }
   }
 
@@ -97,45 +151,74 @@
     //  Villa（KITCHEN・BED ROOM・PRIVATE GARDEN）
 
   &__villa {
-    // overflow-x: hidden;
-    position: relative;
+    @include mq('max-lg') {
+      position: static;
+    }
+    @include mq('min-lg') {
+      position: relative;
+    }
+    @include mq('min-xl') {
+      position: relative;
+    }
+
+  
 
     &__text {
-      position: absolute;
-      inset-block-start: -7rem;
-      inset-inline-start: 18rem;
-      display: block flex;
-      flex-direction: column;
-      align-items: flex-end;
-      // width: 70%;
-      // padding: 0 10rem;
+      @include mq('max-lg') {
+        position: static;
+        text-align: center;
+      }
+      @include mq('min-lg') {
+        position: absolute;
+        inset-block-start: -7rem;
+        inset-inline-start: 18rem;
+        display: block flex;
+        flex-direction: column;
+        align-items: flex-end;       
+      }
+      @include mq('min-xl') {
+        position: absolute;
+        inset-block-start: -7rem;
+        inset-inline-start: 18rem;
+        display: block flex;
+        flex-direction: column;
+        align-items: flex-end;        
+      }
 
-      &__title {
+
+
+      &__title { 
         font-weight: 300;
         color: #c0b4a8;
         font-family: 'Raleway', 'sans-serif';
-        margin-bottom: 4rem;
-
         @include mq('max-lg') {
-          font-size: 8.6rem;
+          font-size: 4.3rem;
+          margin-bottom: 2rem;          
         }
-      @include mq('min-lg') {
+        @include mq('min-lg') {
           font-size: clamp(6.6rem, -1.43rem + 7.84vw, 8.6rem);
+          margin-bottom: 4rem;
         }
-      @include mq('min-xl') {
+        @include mq('min-xl') {
           font-size: 8.6rem;
+          margin-bottom: 4rem;
         }
         
       }
 
       &__description {
-        font-size: 1.8rem;
         color: #8f8574;
-        line-height: 2.1;
-        // margin-top: 1.5rem;
+        font-size: 1.8rem;
+        line-height: 2.1;        
+        @include mq('max-lg') {
+          font-size: 1.4rem;
+          line-height: 1.8;
+        }
+        
+      
 
         &__parts {
-          margin-top: 1.5rem;
+          margin-top: 1.5rem;        
         }
       }
 
@@ -144,10 +227,21 @@
 
     &__imgtop {
       display: flex;
-      justify-content: space-between;
+       @include mq('max-lg') {
+        flex-direction: column-reverse;
+        gap: 4rem;
+       }
+       @include mq('min-lg') {
+        display: flex;
+        justify-content: space-between;
+       }
+       @include mq('min-xl') {
+        display: flex;
+        justify-content: space-between;
+       }
+
 
       &__item {
-
         figure {
         display: flex;
         gap: 0.5rem;
@@ -167,8 +261,19 @@
       }
 
         &--left {
-          width: 22%;
-          margin-top: 60rem;
+           @include mq('max-lg') {
+            width: 53%;
+            margin-top: 0;
+           }
+           @include mq('min-lg') {
+            width: 22%;
+            margin-top: 60rem;
+           }
+           @include mq('min-xl') {
+             width: 22%;
+             margin-top: 60rem;
+           }
+
 
           figure {
             flex-direction: row;
@@ -177,8 +282,21 @@
         }
 
         &--right {
-          width: 40%;
-          margin-top: -2rem;
+          @include mq('max-lg') {
+            width: 85%;
+            margin-top: 3rem;
+            margin-left: auto;
+            // transform: translateX(6rem);
+          }
+          @include mq('min-lg') {
+            width: 40%;
+            margin-top: -2rem;
+          }
+          @include mq('min-xl') {
+            width: 40%;
+            margin-top: -2rem;
+          }
+
 
           figure {
             flex-direction: row-reverse;
@@ -190,19 +308,43 @@
     }
 
     &__imgBottom {
-      display: flex;
-      justify-content: flex-end;
-      padding-right: 3rem;
-      margin-top: -16rem;
-      margin-bottom: 17.1rem; 
+      @include mq('max-lg') {
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+        margin-top: 3rem;
+        margin-bottom: 9rem;
+      }
+      @include mq('min-lg') {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 3rem;
+        margin-top: -16rem;
+        margin-bottom: 17.1rem;
+      }
+      @include mq('min-xl') {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 3rem;
+        margin-top: -16rem;
+        margin-bottom: 17.1rem;
+      }
       
       figure {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-start;
         gap: 0.5rem;
-        width: 60%;
         margin: 0;
+         @include mq('max-lg') {
+          width: 80%;
+         }
+         @include mq('min-lg') {
+          width: 60%;
+         }
+         @include mq('min-xl') {
+          width: 60%;
+         }        
       }
 
       img {
