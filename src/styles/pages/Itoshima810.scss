@@ -114,11 +114,10 @@
       inline-size: 100%;              
     }
     @include mq('min-xl') {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
-      inline-size: 100%;
-      padding-inline-start: clamp(2.4rem, 15vw, 22.2rem);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(42rem, 55rem);
+      column-gap: clamp(2.4rem, 4vw, 6.4rem);
+      align-items: start;
     }
   }
   
@@ -138,10 +137,10 @@
       margin-inline-start: 37%;
     }
     @include mq('min-xl') {
-    margin-inline-start: 22.2rem; 
-    inline-size: auto;
-    max-inline-size: 43.2rem;
-    flex-shrink: 0;
+      inline-size: auto;
+      max-inline-size: 43.2rem;
+      justify-self: end;
+      margin: 0;
     }
   }
 
@@ -255,11 +254,9 @@
     }
 
     @include mq('min-xl') {
-      flex-shrink: 0;         
-      inline-size: 62.3vw;     
-      min-inline-size: 69rem; 
-      max-inline-size: 85rem;
-      margin-inline-end: -12rem; 
+    inline-size: 100%;
+    max-inline-size: none;
+    margin: 0;; 
     }
 
     .villa__caption,
