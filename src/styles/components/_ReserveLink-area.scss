@@ -3,15 +3,8 @@
 
 .Reserve-Site-area {
 	$Background-orangebrown: #baa377;
+	border-bottom: 1px solid $Background-brown;
 	margin: 0 auto;
-
-	&--Neutral {
-		border-bottom: 1px solid $Background-brown;
-	}
-
-	&--Night-change {
-		border-bottom: 1px solid $Background-white;
-	}
 
 	&__text {
 		display: flex;
@@ -27,47 +20,23 @@
 			position: relative;
 		}
 
-		&--Neutral {
-			&::before {
-				// 線の設定
+		&::before {
+			// 線の設定
 
-				@include mq ('min-lg') {
-					content: "";
-					background-color: $Background-brown;
-					height: 1px;
-					width: 100%;
-					position: absolute;
-				}
-
-				@include mq ('min-xl') {
-					content: "";
-					background-color: $Background-brown;
-					height: 1px;
-					width: 100%;
-					position: absolute;
-				}
+			@include mq ('min-lg') {
+				content: "";
+				background-color: $Background-brown;
+				height: 1px;
+				width: 100%;
+				position: absolute;
 			}
-		}
 
-		&--Night-change {
-			&::before {
-				// 線の設定
-
-				@include mq ('min-lg') {
-					content: "";
-					background-color: $Background-white;
-					height: 1px;
-					width: 100%;
-					position: absolute;
-				}
-
-				@include mq ('min-xl') {
-					content: "";
-					background-color: $Background-white;
-					height: 1px;
-					width: 100%;
-					position: absolute;
-				}
+			@include mq ('min-xl') {
+				content: "";
+				background-color: $Background-brown;
+				height: 1px;
+				width: 100%;
+				position: absolute;
 			}
 		}
 	}
@@ -78,18 +47,9 @@
 		line-height: 1;
 		padding: 0.9rem;
 		color: #fff;
-
-		&--Neutral {
-			background-color: $Background-brown;
-			border: 1px solid $Background-brown;
-			border-radius: 50px;
-		}
-
-		&--Night-change {
-			background-color: $Background-orangebrown;
-			border: 1px solid $Background-orangebrown;
-			border-radius: 50px;
-		}
+		background-color: $Background-brown;
+		border: 1px solid $Background-brown;
+		border-radius: 50px;
 
 		@include mq ('min-lg') {
 			justify-content: center;
@@ -179,14 +139,6 @@
 		text-align: center;
 		color: $Background-brown;
 		line-height: 1;
-
-		&--Neutral {
-			color: $Background-brown;
-		}
-
-		&--Night-change {
-			color: #ffffff;
-		}
 
 		@include mq ('min-lg') {
 			text-align: center;
@@ -407,6 +359,66 @@
 				@include mq('max-lg') {
 					display: none;
 				}
+			}
+		}
+	}
+
+	body.is-night & {
+		&--Night {
+			border-bottom: 1px solid $Background-white;
+		}
+
+		&--Day {
+			border-bottom: 1px solid $Background-brown;
+		}
+
+		&__text {
+			&--Night {
+				&::before {
+					@include mq ('min-lg') {
+						background-color: $Background-white;
+					}
+
+					@include mq ('min-xl') {
+						background-color: $Background-white;
+					}
+				}
+			}
+
+			&--Day {
+				&::before {
+					@include mq ('min-lg') {
+						background-color: $Background-brown;
+					}
+
+					@include mq ('min-xl') {
+						background-color: $Background-brown;
+					}
+				}
+			}
+		}
+
+		&__decoration {
+			&--Night {
+				background-color: $Background-orangebrown;
+				border: 1px solid $Background-orangebrown;
+				border-radius: 50px;
+			}
+
+			&--Day {
+				background-color: $Background-brown;
+				border: 1px solid $Background-brown;
+				border-radius: 50px;
+			}
+		}
+
+		&__text-2 {
+			&--Night {
+				color: $Background-white;
+			}
+
+			&--Day {
+				color: $Background-brown;
 			}
 		}
 	}
