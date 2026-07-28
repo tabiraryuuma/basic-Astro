@@ -138,7 +138,7 @@
       margin-inline-start: 37%;
     }
     @include mq('min-xl') {
-    margin-inline-start: 22.2rem; /* 画面左から22.2remの位置に固定配置 */
+    margin-inline-start: 22.2rem; 
     inline-size: auto;
     max-inline-size: 43.2rem;
     flex-shrink: 0;
@@ -165,7 +165,7 @@
     @include mq('min-xl') {
     font-size: 8.6rem;
     font-weight: 300;
-    margin-inline-start: -17.6rem; /* 本文より少し左に突き出す（画面外へは出ない） */
+    margin-inline-start: -17.6rem; 
     white-space: nowrap;         
     }
 
@@ -243,6 +243,7 @@
     inline-size: 62.3%;               
     max-inline-size: 85rem;         // ★ 上限（790px）
     z-index: 1;
+  
 
     @include mq('max-lg') {
       width: 200px;
@@ -254,12 +255,11 @@
     }
 
     @include mq('min-xl') {
-    flex-shrink: 0;         /* 画像サイズを絶対崩さない・縮ませない */
-    inline-size: 62.3vw;     /* 画面幅に応じた画像幅 */
-    min-inline-size: 69rem; /* 最小サイズ固定 */
-    max-inline-size: 85rem;
-    /* ★ さっき見出しがはみ出していた動きを画像に適用！ */
-    margin-inline-end: -12rem; /* 画面右端から右外へ12rem(120px)豪快にはみ出させる */
+      flex-shrink: 0;         
+      inline-size: 62.3vw;     
+      min-inline-size: 69rem; 
+      max-inline-size: 85rem;
+      margin-inline-end: -12rem; 
     }
 
     .villa__caption,
