@@ -136,29 +136,39 @@
     }
   }
 
-  &__visual {
-    margin-bottom: 2.5rem;
-  }
+  // &__visual {
+  //   margin-bottom: 2.5rem;
+  // }
+
+
+  //  Villa（KITCHEN・BED ROOM・PRIVATE GARDEN）
 
   &__switcher {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
+    // margin-bottom: 5rem;
   }
 
 
-    //  Villa（KITCHEN・BED ROOM・PRIVATE GARDEN）
 
   &__villa {
+    background-color: #e9e5e1;
+   body.is-night & {
+    background-color:#928572;  
+    
+  }
     @include mq('max-lg') {
       position: static;
+      padding-top: 1.5rem;
     }
     @include mq('min-lg') {
       position: relative;
+      padding-top: 5.5rem;
     }
     @include mq('min-xl') {
       position: relative;
+      padding-top: 5.5rem;
     }
 
   
@@ -170,7 +180,7 @@
       }
       @include mq('min-lg') {
         position: absolute;
-        inset-block-start: -7rem;
+        inset-block-start: 10rem;
         inset-inline-start: 18rem;
         display: block flex;
         flex-direction: column;
@@ -178,7 +188,7 @@
       }
       @include mq('min-xl') {
         position: absolute;
-        inset-block-start: -7rem;
+        inset-block-start: 10rem;
         inset-inline-start: 18rem;
         display: block flex;
         flex-direction: column;
@@ -188,6 +198,9 @@
 
 
       &__title { 
+      body.is-night & {
+      color: rgba(245, 240, 235, 0.7);
+      }
         font-weight: 300;
         color: #c0b4a8;
         font-family: 'Raleway', 'sans-serif';
@@ -207,6 +220,9 @@
       }
 
       &__description {
+      body.is-night & {
+      color: #fff;
+     }
         color: #8f8574;
         font-size: 1.8rem;
         line-height: 2.1;        
@@ -230,6 +246,7 @@
        @include mq('max-lg') {
         flex-direction: column-reverse;
         gap: 4rem;
+        overflow: hidden;
        }
        @include mq('min-lg') {
         display: flex;
@@ -255,9 +272,15 @@
         }
 
         figcaption {
+        body.is-night & {
+        color: #fff;
+      }
         color: #8f8574;
         writing-mode: vertical-rl;
         flex-shrink: 0;
+        @include mq('max-lg') {
+          font-size: 1.4rem;
+        }
       }
 
         &--left {
@@ -286,15 +309,15 @@
             width: 85%;
             margin-top: 3rem;
             margin-left: auto;
-            // transform: translateX(6rem);
+            transform: translateX(6rem);
           }
           @include mq('min-lg') {
             width: 40%;
-            margin-top: -2rem;
+            margin-top: 3rem;
           }
           @include mq('min-xl') {
             width: 40%;
-            margin-top: -2rem;
+            margin-top: 3rem;
           }
 
 
@@ -354,12 +377,42 @@
       }
 
       figcaption {
+        body.is-night & {
+        color: #fff;
+      }
         color: #8f8574;
         writing-mode: vertical-rl;
         flex-shrink: 0;
+        @include mq('max-lg') {
+          font-size: 1.4rem;
+        }
       }
     }
 
+
+    // 夜用の背景・テキスト・キャプションの色を切替
+
+    //   body.is-night & {    
+    //   .itoshima808__day-night {
+    //     background-color: #928572;
+    //   }
+
+    //   .itoshima808__villa__text__title {
+    //     color: #ffffff;
+    //   }
+
+    //   .itoshima808__villa__text__description {
+    //     color: #ffffff;
+    //   }
+
+    //   .itoshima808__imgtop figcaption {
+    //     color: #ffffff;
+    //   }
+
+    //   .itoshima808__imgBottom figcaption {
+    //     color: #ffffff;
+    //   }
+    // } 
   }
 
 
