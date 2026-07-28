@@ -129,9 +129,11 @@
     font-family: $font-family-heading;
     font-size: $font-size-xs;
     color:$Background-brown;
+    body.is-night & {
+      color:#c0b4a8;  
+    }
     user-select: none;
     transition: color 0.3s ease;
-
 
   }
 
