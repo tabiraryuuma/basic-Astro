@@ -198,6 +198,8 @@
 		}
 	}
 
+	// カードの設定
+
 	&__Card-area {
 		width: 100%;
 		display: flex;
@@ -362,6 +364,8 @@
 			}
 		}
 	}
+
+	// トグルスイッチ切り替え 昼=Day 夜=Night
 
 	body.is-night & {
 		&--Night {
