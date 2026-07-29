@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<main>
+		<h1>CONTACT</h1>
+		<p>お問い合わせ</p>
+
+		<form action="/contact-complete/" method="post">
+			<dl>
+				<dt>お名前</dt>
+				<dd>
+					<input type="text" name="" />
+				</dd>
+				<dt>ふりがな</dt>
+				<dd>
+					<input type="text" name="" />
+				</dd>
+				<dt>メールアドレス</dt>
+				<dd>
+					<input type="email" name="" />
+				</dd>
+				<dt>電話番号</dt>
+				<dd>
+					<input type="tel" name="" />
+				</dd>
+				<dt>ご連絡可能な曜日・時間帯</dt>
+				<dd>
+					<input type="number" name="" />
+				</dd>
+				<dt>ご住所</dt>
+				<dd>
+					<input type="text" name="address" />
+				</dd>
+			</dl>
+			<a href="">プライバシーポリシーはコチラ</a>
+			<p>
+				<input
+					type="checkbox"
+					name="check"
+					value="privacy-police"
+				/>プライバシーポリシーに同意する
+			</p>
+			<p><input type="submit" value="送信する" /></p>
+		</form>
+	</main>
+</Layout>

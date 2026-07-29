@@ -26,17 +26,14 @@ const {
 ---
 
 <!-- テキスト・見出しエリア -->
-<div
-	id="Reserve-Block"
-	class={`Reserve-Site-area Reserve-Site-area--${variant}`}
->
+<div class={`Reserve-Site-area Reserve-Site-area--${variant}`}>
 	<div class={`Reserve-Site-area__text Reserve-Site-area__text--${variant}`}>
-		<p
+		<h3
 			class={`Reserve-Site-area__decoration Reserve-Site-area__decoration--${variant}`}
 		>
 			<span class="span-1">Reserve</span><span class="span-2" aria-hidden="true"
 			></span><span class="span-3">予約</span>
-		</p>
+		</h3>
 	</div>
 	<p class={`Reserve-Site-area__text-2 Reserve-Site-area__text-2--${variant}`}>
 		<span class="Reserve-Site-area__pc-only"
@@ -50,7 +47,7 @@ const {
 	</p>
 
 	<!-- カード三種 -->
-	<div id="CARD" class="Reserve-Site-area__Card-area">
+	<div class="Reserve-Site-area__Card-area">
 		<a class="Reserve-Site-area__Card-area__card" href={href1}>
 			<div class="Reserve-Site-area__Card-area__card__content">
 				<p
