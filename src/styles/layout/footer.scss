@@ -724,6 +724,91 @@ img {
               }
 
               &:last-child {
+                a {
+                  display: flex;
+                  justify-content: center;
+
+                  &:hover {
+
+                    .span-2 {
+                      transition: 0.5s;
+                      background-color: $Background-brown;
+                    }
+                  }
+                }
+
+                .span-1 {
+                  display: block;
+                  font-family: '游ゴシック体';
+
+                  @include mq ('min-xl') {
+                    font-size: 2.1rem;
+                  }
+
+                  @include mq ('min-lg') {
+                    font-size: 2.1rem;
+                  }
+
+                  @include mq ('max-lg') {
+                    // イラストレーター計測
+                    // font-size: 3.3rem;
+                    // padding-left: 1.5rem;
+
+                    font-size: 1.6rem;
+                    padding-left: 0.5rem;
+                    align-self: self-end;
+                  }
+                }
+
+                .span-2 {
+
+                  transition: 0.5s;
+                  display: block;
+                  width: 1.6px;
+                  background-color: #f7f7f5;
+                  margin: 0 1.3rem 0 1.1rem;
+                  align-self: center;
+
+                  @include mq ('min-xl') {
+                    height: 2rem;
+                  }
+
+                  @include mq ('min-lg') {
+                    height: 2rem;
+                  }
+
+                  @include mq ('max-lg') {
+                    // イラストレーター計測
+                    // height: 3rem;
+
+                    height: 1.8rem;
+                  }
+                }
+
+                .span-3 {
+                  display: block;
+                  font-family: '游ゴシック体';
+
+                  @include mq ('min-xl') {
+                    font-size: 1.8rem;
+                  }
+
+                  @include mq ('min-lg') {
+                    font-size: 1.8rem;
+                  }
+
+                  @include mq ('max-lg') {
+                    // イラストレーター計測
+                    // font-size: 2.8rem; 
+
+                    font-size: 1.6rem;
+                    align-self: self-start;
+                  }
+                }
+              }
+
+
+              &:last-child {
 
                 a {
                   background-color: $Background-brown;
