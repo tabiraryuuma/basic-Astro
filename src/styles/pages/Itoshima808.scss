@@ -9,15 +9,14 @@
 }
 
 .itoshima808 {
+
+  // -----------------------------------
+  // メインビジュアル
+  // ----------------------------------
+
   &__content{
   position: relative;
-  width: 100%;
-    // @include mq('max-lg') {
-    //   height: 100vh;
-    // }
-    // @include mq('min-lg') {
-    //   height: auto;
-    // }
+  width: 100%;   
   }
 
   &__mainvisual {
@@ -39,16 +38,15 @@
     transform: translate(-50%);
   }
 
+  // --------------------------------------
+  // 大テキスト＋ロゴ＋小テキスト＋予約ボタン
+  // --------------------------------------
 
   &__concept {    
     background-color: #e9e5e1;
 
     &__content {
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
-
+      
       @include mq('max-lg') {
         padding: 5rem;
       }
@@ -89,18 +87,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      // width: 100%;
-      // max-width: 100%;
-      // @include mq('max-lg') {
-      //   margin: 2rem 0 4.7rem 7rem;
-      // }
-      // @include mq('min-lg') {
-      //   margin: 0 0 4.7rem 87rem;
-      // }
-      // @include mq('min-xl') {
-      //   margin: 0 0 4.7rem 87rem;
-      // }
-
+      
       .itoshima808__hero-title {
         @include mq('max-lg') {
           width: 19.25rem;
@@ -115,7 +102,6 @@
     }
 
     &__text {
-      // font-size: 1.8rem;
       font-weight: 300;
       color: #928572;
       text-align: center;
@@ -136,18 +122,15 @@
     }
   }
 
-  // &__visual {
-  //   margin-bottom: 2.5rem;
-  // }
-
-
-  //  Villa（KITCHEN・BED ROOM・PRIVATE GARDEN）
+  
+//-------------------------------------------
+//  Villa（KITCHEN・BED ROOM・PRIVATE GARDEN）
+//-------------------------------------------
 
   &__switcher {
     display: flex;
     justify-content: center;
     align-items: center;
-    // margin-bottom: 5rem;
   }
 
 
@@ -223,30 +206,35 @@
       body.is-night & {
       color: #fff;
      }
-        color: #8f8574;
-        font-size: 1.8rem;
-        line-height: 2.1;        
+        color: #8f8574;       
         @include mq('max-lg') {
           font-size: 1.4rem;
           line-height: 1.8;
+          margin-top: 0;
         }
-        
-      
+        @include mq('min-lg') {
+          font-size: 1.6rem;
+          line-height: 2.1;
+          margin-top: -3rem;
+        }
+        @include mq('min-xl') {
+          font-size: 1.6rem;
+          line-height: 2.1;
+          margin-top: -3rem;
+        }     
 
         &__parts {
           margin-top: 1.5rem;        
         }
       }
-
-
     }
 
     &__imgtop {
       display: flex;
+      overflow: hidden;
        @include mq('max-lg') {
         flex-direction: column-reverse;
         gap: 4rem;
-        overflow: hidden;
        }
        @include mq('min-lg') {
         display: flex;
@@ -289,14 +277,13 @@
             margin-top: 0;
            }
            @include mq('min-lg') {
-            width: 22%;
-            margin-top: 60rem;
+            width: 20%;
+            margin-top: 53rem;
            }
            @include mq('min-xl') {
-             width: 22%;
-             margin-top: 60rem;
+             width: 20%;
+             margin-top: 53rem;
            }
-
 
           figure {
             flex-direction: row;
@@ -314,18 +301,18 @@
           @include mq('min-lg') {
             width: 40%;
             margin-top: 3rem;
+            transform: translateX(20rem);
           }
           @include mq('min-xl') {
             width: 40%;
             margin-top: 3rem;
+            transform: translateX(20rem);
           }
-
 
           figure {
             flex-direction: row-reverse;
             align-items: flex-end;
           }
-
         }          
       }     
     }
@@ -342,14 +329,14 @@
         display: flex;
         justify-content: flex-end;
         padding-right: 3rem;
-        margin-top: -16rem;
+        margin-top: -10rem;
         margin-bottom: 17.1rem;
       }
       @include mq('min-xl') {
         display: flex;
         justify-content: flex-end;
         padding-right: 3rem;
-        margin-top: -16rem;
+        margin-top: -10rem;
         margin-bottom: 17.1rem;
       }
       
@@ -387,37 +374,8 @@
           font-size: 1.4rem;
         }
       }
-    }
-
-
-    // 夜用の背景・テキスト・キャプションの色を切替
-
-    //   body.is-night & {    
-    //   .itoshima808__day-night {
-    //     background-color: #928572;
-    //   }
-
-    //   .itoshima808__villa__text__title {
-    //     color: #ffffff;
-    //   }
-
-    //   .itoshima808__villa__text__description {
-    //     color: #ffffff;
-    //   }
-
-    //   .itoshima808__imgtop figcaption {
-    //     color: #ffffff;
-    //   }
-
-    //   .itoshima808__imgBottom figcaption {
-    //     color: #ffffff;
-    //   }
-    // } 
+    }    
   }
-
-
-
-
 
 
 
