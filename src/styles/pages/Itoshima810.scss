@@ -110,19 +110,18 @@
       inline-size: 100%;              
     }
     @include mq('min-lg') {
-      display: flex;
-      inline-size: 100%;    
-      gap: 22px;
-                
-      // display: grid;
-      // grid-template-columns: minmax(0, 1fr) minmax(42rem, 68rem);
-      // column-gap: clamp(12.4rem, 4vw, 15.4rem);
-      // align-items: start;
+      // display: flex;
+      // inline-size: 100%;    
+      // gap: 22px;  
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(22rem, 50rem);
+      column-gap: clamp(3.4rem, 4vw, 6.4rem);
+      align-items: start;
     }
     @include mq('min-xl') {
       display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(42rem, 60rem);
-    column-gap: clamp(2.4rem, 4vw, 6.4rem);
+      grid-template-columns: minmax(0, 1fr) minmax(42rem, 60rem);
+      column-gap: clamp(2.4rem, 4vw, 6.4rem);
       align-items: start;
     }
   }
@@ -141,8 +140,13 @@
     @include mq('min-lg') {
       // padding-block-start: 6rem;   
       // margin-inline-start: 7%;
+      // inline-size: auto;
+      // max-inline-size: 58rem;
+      // margin: 0;
+
       inline-size: auto;
-      max-inline-size: 58rem;
+      max-inline-size: 43.2rem;
+      justify-self: end;
       margin: 0;
     }
     @include mq('min-xl') {
@@ -169,7 +173,7 @@
       font-size: 7rem;
       font-weight: 300;
       white-space: nowrap;  
-      margin-inline-start: 2.5rem;            
+      margin-inline-start: -5.6rem; 
     }
 
     @include mq('min-xl') {
@@ -204,8 +208,6 @@
       margin-inline-start: 0;
       margin-block-start: 6.5rem;
       line-height: 2.1222;;
-    
-      align-items: center;
     }
     @include mq('min-xl') {
       font-size: 1.8rem;
@@ -265,9 +267,13 @@
     @include mq('min-lg') {
       // inset-inline-end: -7.9rem; 
       // width: 50%;
-      inline-size: 57%;
+      // inline-size: 57%;
+      // max-inline-size: none;
+      // margin: 0;
+      inline-size: 100%;
       max-inline-size: none;
       margin: 0;
+      width: 100%;
     }
     @include mq('min-xl') {
       inline-size: 100%;
