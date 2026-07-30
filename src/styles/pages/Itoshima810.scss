@@ -111,14 +111,19 @@
     }
     @include mq('min-lg') {
       display: flex;
-      inline-size: 100%;              
+      inline-size: 100%;    
+      gap: 22px;
+                
+      // display: grid;
+      // grid-template-columns: minmax(0, 1fr) minmax(42rem, 68rem);
+      // column-gap: clamp(12.4rem, 4vw, 15.4rem);
+      // align-items: start;
     }
     @include mq('min-xl') {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
-      inline-size: 100%;
-      padding-inline-start: clamp(2.4rem, 15vw, 22.2rem);
+      display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(42rem, 60rem);
+    column-gap: clamp(2.4rem, 4vw, 6.4rem);
+      align-items: start;
     }
   }
   
@@ -134,14 +139,17 @@
       padding-block-start: 6rem;           
     }
     @include mq('min-lg') {
-      padding-block-start: 6rem;   
-      margin-inline-start: 37%;
+      // padding-block-start: 6rem;   
+      // margin-inline-start: 7%;
+      inline-size: auto;
+      max-inline-size: 58rem;
+      margin: 0;
     }
     @include mq('min-xl') {
-      margin-inline-start: 17.2rem;    
       inline-size: auto;
       max-inline-size: 43.2rem;
-      flex-shrink: 0;
+      justify-self: end;
+      margin: 0;
     }
   }
 
@@ -158,16 +166,17 @@
     }
 
     @include mq('min-lg') {
-      font-size: 8.6rem;            // △仮
-      font-weight: 300;             
+      font-size: 7rem;
+      font-weight: 300;
+      white-space: nowrap;  
+      margin-inline-start: 2.5rem;            
     }
 
     @include mq('min-xl') {
-    font-size: 8.6rem;
-    font-weight: 300;
-    margin-inline-start: -17.6rem; 
-    white-space: nowrap;  
-         
+      font-size: 8.6rem;
+      font-weight: 300;
+      margin-inline-start: -17.6rem; 
+      white-space: nowrap;  
     }
 
 
@@ -178,10 +187,12 @@
 
   // --- 説明テキスト ---
   .villa__text {
-    // letter-spacing: 0.05em;
+    line-height: 2.1222;;
+
     body.is-night & {
       color: rgba(245, 240, 235, 0.7);
     }
+    
     @include mq('max-lg') {
       font-size: 1.4rem;
       line-height: 2;
@@ -190,9 +201,11 @@
     @include mq('min-lg') {
       font-size: 1.8rem;
       max-width: 432px;
-      margin-inline-start: -13.5rem;
-      margin-block-start: 6.9rem;
-      line-height: 2.1222;
+      margin-inline-start: 0;
+      margin-block-start: 6.5rem;
+      line-height: 2.1222;;
+    
+      align-items: center;
     }
     @include mq('min-xl') {
       font-size: 1.8rem;
@@ -244,23 +257,23 @@
     inline-size: 62.3%;               
     max-inline-size: 85rem;         // ★ 上限（790px）
     z-index: 1;
-  
 
     @include mq('max-lg') {
       width: 200px;
       inset-inline-end: -8rem;
     }
-    
     @include mq('min-lg') {
-      inset-inline-end: -7.9rem; 
+      // inset-inline-end: -7.9rem; 
+      // width: 50%;
+      inline-size: 57%;
+      max-inline-size: none;
+      margin: 0;
     }
-
     @include mq('min-xl') {
-      flex-shrink: 0;         
-      inline-size: 62.3vw;     
-      min-inline-size: 69rem; 
-      max-inline-size: 85rem;
-      margin-inline-end: -12rem; 
+      inline-size: 100%;
+      max-inline-size: none;
+      margin: 0;
+      width: 100%;
     }
 
     .villa__caption,
