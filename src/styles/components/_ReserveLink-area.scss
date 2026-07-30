@@ -12,6 +12,10 @@
 		align-items: center;
 		width: 100%;
 
+		&:focus-visible {
+			outline: 1px solid black
+		}
+
 		@include mq ('min-lg') {
 			position: relative;
 		}
