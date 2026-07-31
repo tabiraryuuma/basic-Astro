@@ -5,7 +5,9 @@ import * as CommonIcons from "../assets/SVG";
 interface Props {
 	text?: string;
 	title1?: string;
-	title2?: string;
+	// title2?: string;
+	title2_1?: string;
+	title2_2?: string;
 	title3?: string;
 	href1?: string;
 	href2?: string;
@@ -16,7 +18,9 @@ interface Props {
 const {
 	text = "テキスト",
 	title1 = "Airbnb",
-	title2 = "Rakuten Oyado",
+	// title2 = "Rakuten Oyado",
+	title2_1 = "Rakuten",
+	title2_2 = "Oyado",
 	title3 = "Booking.com",
 	href1 = "#",
 	href2 = "#",
@@ -47,65 +51,80 @@ const {
 	</p>
 
 	<!-- カード三種 -->
-	<div class="Reserve-Site-area__Card-area">
-		<a class="Reserve-Site-area__Card-area__card" href={href1}>
-			<div class="Reserve-Site-area__Card-area__card__content">
-				<p class="Reserve-Site-area__Card-area__card__title">{title1}</p>
-			</div>
-			<div class="Reserve-Site-area__Card-area__card__button-area">
-				<div class="Reserve-Site-area__Card-area__card__btn">
-					<img
-						class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionA arrow"
-						src={CommonIcons.WhiteArrow.src}
-						alt=""
-					/>
-					<img
-						class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionB arrow"
-						src={CommonIcons.WhiteArrow.src}
-						alt=""
-					/>
-				</div>
-			</div>
-		</a>
 
-		<a class="Reserve-Site-area__Card-area__card" href={href2}>
-			<div class="Reserve-Site-area__Card-area__card__content">
-				<p class="Reserve-Site-area__Card-area__card__title">{title2}</p>
-			</div>
-			<div class="Reserve-Site-area__Card-area__card__button-area">
-				<div class="Reserve-Site-area__Card-area__card__btn">
-					<img
-						class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionA arrow"
-						src={CommonIcons.WhiteArrow.src}
-						alt=""
-					/>
-					<img
-						class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionB arrow"
-						src={CommonIcons.WhiteArrow.src}
-						alt=""
-					/>
+	<!-- <div class="Reserve-Site-area__Card-area"> 変更前コード　div削除 ul追加-->
+	<ul class="Reserve-Site-area__Card-area">
+		<!-- liの追加 -->
+		<li class="card-width">
+			<a class="Reserve-Site-area__Card-area__card" href={href1}>
+				<div class="Reserve-Site-area__Card-area__card__content">
+					<p class="Reserve-Site-area__Card-area__card__title">{title1}</p>
 				</div>
-			</div>
-		</a>
+				<div class="Reserve-Site-area__Card-area__card__button-area">
+					<div class="Reserve-Site-area__Card-area__card__btn">
+						<img
+							class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionA arrow"
+							src={CommonIcons.WhiteArrow.src}
+							alt=""
+						/>
+						<img
+							class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionB arrow"
+							src={CommonIcons.WhiteArrow.src}
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</li>
 
-		<a class="Reserve-Site-area__Card-area__card" href={href3}>
-			<div class="Reserve-Site-area__Card-area__card__content">
-				<p class="Reserve-Site-area__Card-area__card__title">{title3}</p>
-			</div>
-			<div class="Reserve-Site-area__Card-area__card__button-area">
-				<div class="Reserve-Site-area__Card-area__card__btn">
-					<img
-						class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionA arrow"
-						src={CommonIcons.WhiteArrow.src}
-						alt=""
-					/>
-					<img
-						class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionB arrow"
-						src={CommonIcons.WhiteArrow.src}
-						alt=""
-					/>
+		<!-- liの追加 -->
+		<li class="card-width">
+			<a class="Reserve-Site-area__Card-area__card" href={href2}>
+				<div class="Reserve-Site-area__Card-area__card__content">
+					<p class="Reserve-Site-area__Card-area__card__title">
+						<span class="span-1">{title2_1}</span><span class="span-2"
+							>{title2_2}</span
+						>
+					</p>
 				</div>
-			</div>
-		</a>
-	</div>
+				<div class="Reserve-Site-area__Card-area__card__button-area">
+					<div class="Reserve-Site-area__Card-area__card__btn">
+						<img
+							class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionA arrow"
+							src={CommonIcons.WhiteArrow.src}
+							alt=""
+						/>
+						<img
+							class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionB arrow"
+							src={CommonIcons.WhiteArrow.src}
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</li>
+
+		<!-- liの追加 -->
+		<li class="card-width">
+			<a class="Reserve-Site-area__Card-area__card" href={href3}>
+				<div class="Reserve-Site-area__Card-area__card__content">
+					<p class="Reserve-Site-area__Card-area__card__title">{title3}</p>
+				</div>
+				<div class="Reserve-Site-area__Card-area__card__button-area">
+					<div class="Reserve-Site-area__Card-area__card__btn">
+						<img
+							class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionA arrow"
+							src={CommonIcons.WhiteArrow.src}
+							alt=""
+						/>
+						<img
+							class="Reserve-Site-area__Card-area__card__btn-icon Reserve-Site-area__Card-area__card__btn-icon--transitionB arrow"
+							src={CommonIcons.WhiteArrow.src}
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</li>
+	</ul>
 </div>
