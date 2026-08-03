@@ -114,14 +114,14 @@
       // inline-size: 100%;    
       // gap: 22px;  
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(22rem, 50rem);
-      column-gap: clamp(3.4rem, 4vw, 6.4rem);
+      grid-template-columns: minmax(0, 1fr) minmax(42rem, 52rem);
+      column-gap: clamp(3rem, 3vw, 6.4rem);      
       align-items: start;
     }
     @include mq('min-xl') {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(42rem, 60rem);
-      column-gap: clamp(2.4rem, 4vw, 6.4rem);
+      column-gap: clamp(3rem, 3vw, 6.4rem);      
       align-items: start;
     }
   }
@@ -134,12 +134,11 @@
 
 
     @include mq('max-lg') {
-      margin-inline-start: 37%;
+      // margin-inline-start: 37%;
       padding-block-start: 6rem;           
     }
     @include mq('min-lg') {
-      // padding-block-start: 6rem;   
-      // margin-inline-start: 7%;
+      // padding-block-start: 6rem;           
       // inline-size: auto;
       // max-inline-size: 58rem;
       // margin: 0;
@@ -147,7 +146,7 @@
       inline-size: auto;
       max-inline-size: 43.2rem;
       justify-self: end;
-      margin: 0;
+      margin-inline-end: -2rem;
     }
     @include mq('min-xl') {
       inline-size: auto;
@@ -170,10 +169,16 @@
     }
 
     @include mq('min-lg') {
-      font-size: 7rem;
+      // font-size: 8.45rem;
+      // font-weight: 300;
+      // white-space: nowrap;  
+      // margin-inline-start: -19.5rem; 
+
+      font-size: 7.2rem;
       font-weight: 300;
-      white-space: nowrap;  
-      margin-inline-start: -5.6rem; 
+      white-space: nowrap;
+      margin-inline-start: -6.5rem;
+
     }
 
     @include mq('min-xl') {
