@@ -383,21 +383,24 @@
 
   .villa__Reserve {
     padding-inline: clamp(1.25rem, 6.6666666667vw, 5rem);
-    margin: 0 auto;
-    width: 100%;
 
-    @include mq("max-lg") {
-      max-width: 48rem;
-    }
+    .villa__Reserve--upper {
+      margin: 0 auto;
+      width: 100%;
 
-    @include mq("min-lg") {
-      max-width: 125rem;
-      padding-inline: 10rem;
-    }
+      @include mq("max-lg") {
+        max-width: 48rem;
+      }
 
-    @include mq("min-xl") {
-      max-width: 125rem;
-      padding-inline: 10rem;
+      @include mq("min-lg") {
+        max-width: 125rem;
+        padding-inline: 10rem;
+      }
+
+      @include mq("min-xl") {
+        max-width: 125rem;
+        padding-inline: 10rem;
+      }
     }
   }
 
