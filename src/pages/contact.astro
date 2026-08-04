@@ -8,39 +8,42 @@ import Layout from "../layouts/Layout.astro";
 			<h1>CONTACT</h1>
 			<p>お問い合わせ</p>
 
-			<form action="/contact-complete/" method="post">
+			<form id="Contact" action="/contact-complete/" method="post">
 				<dl class="textbox">
-					<dt>お名前</dt>
+					<dt><label for="username">お名前</label><span>※</span></dt>
 					<dd>
-						<input type="text" name="" />
+						<input type="text" id="name" name="name" />
+						<span id="error-message"></span>
 					</dd>
 				</dl>
 				<dl class="textbox">
-					<dt>ふりがな</dt>
+					<dt><label for="furigana">ふりがな</label><span>※</span></dt>
 					<dd>
-						<input type="text" name="" />
+						<input type="text" id="furigana" name="furigana" />
+						<span id="error-message"></span>
 					</dd>
 				</dl>
 				<dl class="textbox">
-					<dt>メールアドレス</dt>
+					<dt><label for="user-email">メールアドレス</label><span>※</span></dt>
 					<dd>
-						<input type="email" name="" />
+						<input type="email" id="email" name="email" />
+						<span id="error-message"></span>
 					</dd>
 				</dl>
 				<dl class="textbox">
-					<dt>電話番号</dt>
+					<dt><label for="tel-number">電話番号</label></dt>
 					<dd>
-						<input type="tel" name="" />
+						<input type="text" id="tel" name="tel" />
 					</dd>
 				</dl>
 				<dl class="textbox">
-					<dt>ご連絡可能な曜日・時間帯</dt>
+					<dt><label for="Time">ご連絡可能な曜日・時間帯</label></dt>
 					<dd>
-						<input type="number" name="" />
+						<input type="text" id="time" name="time" />
 					</dd>
 				</dl>
 				<dl class="addressbox">
-					<dt>ご住所</dt>
+					<dt><label for="address">ご住所</label></dt>
 					<dd>
 						<div>
 							<input type="text" id="zipcode" name="address" />
@@ -56,17 +59,26 @@ import Layout from "../layouts/Layout.astro";
 						</div>
 					</dd>
 				</dl>
-			</form>
+				<dl class="textbox">
+					<dt><label for="inquiry"></label>お問い合わせ内容<span>※</span></dt>
+					<dd>
+						<textarea></textarea>
+						<span id="error-message"></span>
+					</dd>
+				</dl>
 
-			<a href="">プライバシーポリシーはコチラ</a>
-			<p>
-				<input
-					type="checkbox"
-					name="check"
-					value="privacy-police"
-				/>プライバシーポリシーに同意する
-			</p>
-			<p><input type="submit" onclick="dummyPost ()" value="送信する" /></p>
+				<a href="">プライバシーポリシーはコチラ</a>
+				<p>
+					<input
+						type="checkbox"
+						name="check"
+						value="privacy-police"
+					/>プライバシーポリシーに同意する
+				</p>
+				<p>
+					<input type="submit" onclick="dummyPost ()" value="送信する" />
+				</p>
+			</form>
 		</div>
 	</main>
 </Layout>
@@ -102,4 +114,22 @@ import Layout from "../layouts/Layout.astro";
 			console.error(error);
 		}
 	});
+
+	// document
+	// 	.getElementById("Contact")
+	// 	.addEventListener("submit", function (event) {
+	// 		const usernameField = document.getElementById(
+	// 			"username",
+	// 		) as HTMLInputElement;
+	// 		const errorMessage = document.getElementById(
+	// 			"error-message",
+	// 		) as HTMLInputElement;
+
+	// 		if (!usernameField.value.trim()) {
+	// 			event.preventDefault();
+	// 			errorMessage.textContent = "必須項目です。";
+	// 		} else {
+	// 			errorMessage.textContent = "";
+	// 		}
+	// 	});
 </script>
