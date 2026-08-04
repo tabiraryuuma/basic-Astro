@@ -362,6 +362,7 @@
     margin-inline-end: 4%;          // ★ 右端からの隙間（右寄りに調整し、左側にテキスト用の余白を確保）
     margin-block-start: -6rem;      // ★ ネガティブマージンで上部と重ねる
     z-index: 1;
+    margin-bottom: 10rem;
     .villa__caption,
     .hero__caption {
       left: 0;
@@ -377,6 +378,26 @@
         font-size: 1.1rem;
       }
 
+    }
+  }
+
+  .villa__Reserve {
+    padding-inline: clamp(1.25rem, 6.6666666667vw, 5rem);
+    margin: 0 auto;
+    width: 100%;
+
+    @include mq("max-lg") {
+      max-width: 48rem;
+    }
+
+    @include mq("min-lg") {
+      max-width: 125rem;
+      padding-inline: 10rem;
+    }
+
+    @include mq("min-xl") {
+      max-width: 125rem;
+      padding-inline: 10rem;
     }
   }
 
