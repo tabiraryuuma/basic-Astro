@@ -1,33 +1,41 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import "../styles/pages/contact.scss";
 ---
 
 <Layout>
 	<main>
-		<div>
-			<h1>CONTACT</h1>
-			<p>お問い合わせ</p>
+		<section class="ContactPage">
+			<div class="ContactPage__HEAD">
+				<h1>CONTACT</h1>
+				<p>お問い合わせ</p>
+			</div>
 
-			<form id="Contact" action="/contact-complete/" method="post">
+			<form
+				id="Contact"
+				action="/contact-complete/"
+				method="post"
+				class="ContactPage__form"
+			>
 				<dl class="textbox">
-					<dt><label for="username">お名前</label><span>※</span></dt>
+					<dt><label for="name">お名前</label><span>※</span></dt>
 					<dd>
 						<input type="text" id="name" name="name" />
-						<span id="error-message"></span>
+						<span id="name-error"></span>
 					</dd>
 				</dl>
 				<dl class="textbox">
 					<dt><label for="furigana">ふりがな</label><span>※</span></dt>
 					<dd>
 						<input type="text" id="furigana" name="furigana" />
-						<span id="error-message"></span>
+						<span id="furigana-error"></span>
 					</dd>
 				</dl>
 				<dl class="textbox">
-					<dt><label for="user-email">メールアドレス</label><span>※</span></dt>
+					<dt><label for="email">メールアドレス</label><span>※</span></dt>
 					<dd>
 						<input type="email" id="email" name="email" />
-						<span id="error-message"></span>
+						<span id="email-error"></span>
 					</dd>
 				</dl>
 				<dl class="textbox">
@@ -37,7 +45,7 @@ import Layout from "../layouts/Layout.astro";
 					</dd>
 				</dl>
 				<dl class="textbox">
-					<dt><label for="Time">ご連絡可能な曜日・時間帯</label></dt>
+					<dt><label for="time">ご連絡可能な曜日・時間帯</label></dt>
 					<dd>
 						<input type="text" id="time" name="time" />
 					</dd>
@@ -60,10 +68,10 @@ import Layout from "../layouts/Layout.astro";
 					</dd>
 				</dl>
 				<dl class="textbox">
-					<dt><label for="inquiry"></label>お問い合わせ内容<span>※</span></dt>
+					<dt><label for="inquiry">お問い合わせ内容</label><span>※</span></dt>
 					<dd>
-						<textarea></textarea>
-						<span id="error-message"></span>
+						<textarea id="inquiry"></textarea>
+						<span id="inquiry-error"></span>
 					</dd>
 				</dl>
 
@@ -71,15 +79,17 @@ import Layout from "../layouts/Layout.astro";
 				<p>
 					<input
 						type="checkbox"
+						id="check"
 						name="check"
 						value="privacy-police"
-					/>プライバシーポリシーに同意する
+					/><label for="check">プライバシーポリシーに同意する</label>
+					<span id="checkbox-error"></span>
 				</p>
 				<p>
 					<input type="submit" onclick="dummyPost ()" value="送信する" />
 				</p>
 			</form>
-		</div>
+		</section>
 	</main>
 </Layout>
 
@@ -115,21 +125,80 @@ import Layout from "../layouts/Layout.astro";
 		}
 	});
 
-	// document
-	// 	.getElementById("Contact")
-	// 	.addEventListener("submit", function (event) {
-	// 		const usernameField = document.getElementById(
-	// 			"username",
-	// 		) as HTMLInputElement;
-	// 		const errorMessage = document.getElementById(
-	// 			"error-message",
-	// 		) as HTMLInputElement;
+	document
+		.getElementById("Contact")!
+		.addEventListener("submit", function (event) {
+			const usernameField = document.getElementById("name") as HTMLInputElement;
 
-	// 		if (!usernameField.value.trim()) {
-	// 			event.preventDefault();
-	// 			errorMessage.textContent = "必須項目です。";
-	// 		} else {
-	// 			errorMessage.textContent = "";
-	// 		}
-	// 	});
+			const errorMessage1 = document.getElementById(
+				"name-error",
+			) as HTMLInputElement;
+
+			if (!usernameField.value.trim()) {
+				event.preventDefault();
+				errorMessage1.textContent = "必須項目です。";
+			} else {
+				errorMessage1.textContent = "";
+			}
+
+			const userfuriganaField = document.getElementById(
+				"furigana",
+			) as HTMLInputElement;
+
+			const errorMessage2 = document.getElementById(
+				"furigana-error",
+			) as HTMLInputElement;
+
+			if (!userfuriganaField.value.trim()) {
+				event.preventDefault();
+				errorMessage2.textContent = "必須項目です。";
+			} else {
+				errorMessage2.textContent = "";
+			}
+
+			const useremailField = document.getElementById(
+				"email",
+			) as HTMLInputElement;
+
+			const errorMessage3 = document.getElementById(
+				"email-error",
+			) as HTMLInputElement;
+
+			if (!useremailField.value.trim()) {
+				event.preventDefault();
+				errorMessage3.textContent = "必須項目です。";
+			} else {
+				errorMessage3.textContent = "";
+			}
+
+			const userinquiryField = document.getElementById(
+				"inquiry",
+			) as HTMLInputElement;
+
+			const errorMessage4 = document.getElementById(
+				"inquiry-error",
+			) as HTMLInputElement;
+
+			if (!userinquiryField.value.trim()) {
+				event.preventDefault();
+				errorMessage4.textContent = "必須項目です。";
+			} else {
+				errorMessage4.textContent = "";
+			}
+
+			const usercheckField = document.getElementById(
+				"check",
+			) as HTMLInputElement;
+
+			const errorMessage5 = document.getElementById(
+				"checkbox-error",
+			) as HTMLInputElement;
+
+			if (!usercheckField.checked) {
+				event.preventDefault();
+				errorMessage5.textContent = "同意されていません。";
+			} else {
+				errorMessage5.textContent = "";
+			}
+		});
 </script>
