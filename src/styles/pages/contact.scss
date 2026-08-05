@@ -1,0 +1,40 @@
+@use "../foundation/variables"as *;
+@use "../foundation/mixins"as *;
+
+main {
+	background-color: #e9e5e1;
+}
+
+.ContactPage {
+	max-width: 125rem;
+	margin: 0 auto;
+
+	&__HEAD {
+		padding-top: 5rem;
+		text-align: center;
+		color: $Background-brown;
+
+		p {
+			padding-top: 1rem;
+		}
+	}
+
+	&__form {
+
+		.textbox {
+			display: flex;
+			justify-content: space-between;
+
+			span {
+				color: red;
+			}
+
+			input {
+				border-radius: 1rem;
+				border: 1px solid #e9e5e1;
+				background-color: white;
+				padding: 0.5rem 1rem;
+			}
+		}
+	}
+}
