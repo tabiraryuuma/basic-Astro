@@ -114,15 +114,16 @@
       // inline-size: 100%;    
       // gap: 22px;  
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(42rem, 52rem);
-      column-gap: clamp(3rem, 3vw, 6.4rem);      
+      grid-template-columns: minmax(50rem, 1fr) minmax(55rem, 57rem);
+      column-gap: clamp(3rem, 2vw, 6rem);
       align-items: start;
     }
     @include mq('min-xl') {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(42rem, 60rem);
-      column-gap: clamp(3rem, 3vw, 6.4rem);      
+      grid-template-columns: minmax(50rem, 1fr) minmax(55rem, 57rem);
+      column-gap: clamp(3rem, 2vw, 6rem);
       align-items: start;
+      margin-inline-start: 11rem;
     }
   }
   
@@ -142,23 +143,26 @@
       // inline-size: auto;
       // max-inline-size: 58rem;
       // margin: 0;
+      // margin-inline-end: -2rem;
 
       inline-size: auto;
-      max-inline-size: 43.2rem;
-      justify-self: end;
-      margin-inline-end: -2rem;
+      max-inline-size: 55.2rem;
+      justify-self: start;
+
+
     }
     @include mq('min-xl') {
       inline-size: auto;
-      max-inline-size: 43.2rem;
-      justify-self: end;
-      margin: 0;
+      max-inline-size: 55.2rem;
+      justify-self: start;
+      padding-inline-start: clamp(2rem, 3vw, 6rem);
+
     }
   }
 
   // --- タイトル ---
   .villa__title {
-    letter-spacing: 0.09em;
+    // letter-spacing: 0.09em;
     line-height: 1.2;
     color: #3a3a3a;
 
@@ -174,20 +178,18 @@
       // white-space: nowrap;  
       // margin-inline-start: -19.5rem; 
 
-      font-size: 7.2rem;
+      font-size: 8.6rem;
       font-weight: 300;
       white-space: nowrap;
-      margin-inline-start: -6.5rem;
-
+      // margin-inline-start: -6.5rem;
     }
 
     @include mq('min-xl') {
       font-size: 8.6rem;
       font-weight: 300;
-      margin-inline-start: -17.6rem; 
-      white-space: nowrap;  
+      white-space: nowrap; 
+      // margin-inline-start: -17.6rem; 
     }
-
 
     &-num {
       font-weight: 400;
@@ -212,14 +214,17 @@
       max-width: 432px;
       margin-inline-start: 0;
       margin-block-start: 6.5rem;
-      line-height: 2.1222;;
+      line-height: 2.1222;
+      justify-self: end;
     }
+
     @include mq('min-xl') {
       font-size: 1.8rem;
       max-width: 432px;
       margin-inline-start: 0;
       margin-block-start: 6.9rem;
       line-height: 2.1222;
+      justify-self: end;
     }
 
     p + p {
