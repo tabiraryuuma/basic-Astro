@@ -6,7 +6,7 @@ main {
 }
 
 .ContactPage {
-	max-width: 125rem;
+	max-width: 105rem;
 	margin: 0 auto;
 
 	&__HEAD {
@@ -19,17 +19,65 @@ main {
 		}
 	}
 
-	&__form {
+	&__box {
 
-		.textbox {
+		span {
+			color: red;
+		}
+
+		dd {
+			max-width: 60rem;
+			width: 100%;
+		}
+
+		&__input {
+			width: 100%;
+			border-radius: 1rem;
+			border: 1px solid #e9e5e1;
+			background-color: white;
+			padding: 0.5rem 1rem;
+		}
+
+		&--text {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&--address {
 			display: flex;
 			justify-content: space-between;
 
-			span {
-				color: red;
+			.rightbox {
+				display: flex;
+				flex-direction: column;
+				max-width: 60rem;
+				width: 100%;
+
+				dd {
+					display: flex;
+					width: 100%;
+				}
+
+				button {
+					width: 100%;
+				}
+			}
+		}
+
+		&--inquiry {
+
+			@include mq("min-xl") {
+				display: flex;
+				justify-content: space-between;
 			}
 
-			input {
+			@include mq("min-lg") {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			textarea {
+				width: 100%;
 				border-radius: 1rem;
 				border: 1px solid #e9e5e1;
 				background-color: white;
@@ -37,4 +85,21 @@ main {
 			}
 		}
 	}
+
+	&__Privacy {
+		text-align: center;
+		color: $Background-brown;
+		max-width: 30rem;
+
+		a {
+			border-bottom: 1px solid $Background-brown;
+		}
+
+		&__check {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+
 }

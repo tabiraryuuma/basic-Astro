@@ -11,83 +11,110 @@ import "../styles/pages/contact.scss";
 				<p>お問い合わせ</p>
 			</div>
 
-			<form
-				id="Contact"
-				action="/contact-complete/"
-				method="post"
-				class="ContactPage__form"
-			>
-				<dl class="textbox">
+			<form id="Contact" action="/contact-complete/" method="post">
+				<dl class="ContactPage__box ContactPage__box--text">
 					<dt><label for="name">お名前</label><span>※</span></dt>
 					<dd>
-						<input type="text" id="name" name="name" />
+						<input
+							class="ContactPage__box__input"
+							type="text"
+							id="name"
+							name="name"
+						/>
 						<span id="name-error"></span>
 					</dd>
 				</dl>
-				<dl class="textbox">
+				<dl class="ContactPage__box ContactPage__box--text">
 					<dt><label for="furigana">ふりがな</label><span>※</span></dt>
 					<dd>
-						<input type="text" id="furigana" name="furigana" />
+						<input
+							class="ContactPage__box__input"
+							type="text"
+							id="furigana"
+							name="furigana"
+						/>
 						<span id="furigana-error"></span>
 					</dd>
 				</dl>
-				<dl class="textbox">
+				<dl class="ContactPage__box ContactPage__box--text">
 					<dt><label for="email">メールアドレス</label><span>※</span></dt>
 					<dd>
-						<input type="email" id="email" name="email" />
+						<input
+							class="ContactPage__box__input"
+							type="email"
+							id="email"
+							name="email"
+						/>
 						<span id="email-error"></span>
 					</dd>
 				</dl>
-				<dl class="textbox">
+				<dl class="ContactPage__box ContactPage__box--text">
 					<dt><label for="tel-number">電話番号</label></dt>
 					<dd>
-						<input type="text" id="tel" name="tel" />
+						<input
+							class="ContactPage__box__input"
+							type="text"
+							id="tel"
+							name="tel"
+						/>
 					</dd>
 				</dl>
-				<dl class="textbox">
+				<dl class="ContactPage__box ContactPage__box--text">
 					<dt><label for="time">ご連絡可能な曜日・時間帯</label></dt>
 					<dd>
-						<input type="text" id="time" name="time" />
+						<input
+							class="ContactPage__box__input"
+							type="text"
+							id="time"
+							name="time"
+						/>
 					</dd>
 				</dl>
-				<dl class="addressbox">
+				<dl class="ContactPage__box ContactPage__box--address">
 					<dt><label for="address">ご住所</label></dt>
-					<dd>
-						<div>
-							<input type="text" id="zipcode" name="address" />
-						</div>
-
-						<div>
-							<button type="button" id="searchBox">住所自動入力</button>
-						</div>
-
-						<div>
-							<label for="address"></label>
-							<input type="text" id="address" name="address" />
-						</div>
-					</dd>
+					<div class="rightbox">
+						<dd>
+							<input
+								class="ContactPage__box__input short"
+								type="text"
+								id="zipcode"
+								name="address"
+							/>
+							<button type="button" id="searchbox">住所自動入力</button>
+						</dd>
+						<label for="address"></label>
+						<input
+							class="ContactPage__box__input"
+							type="text"
+							id="address"
+							name="address"
+							maxlength="7"
+						/>
+					</div>
 				</dl>
-				<dl class="textbox">
+				<dl class="ContactPage__box ContactPage__box--inquiry">
 					<dt><label for="inquiry">お問い合わせ内容</label><span>※</span></dt>
 					<dd>
-						<textarea id="inquiry"></textarea>
+						<textarea id="inquiry" cols="22" rows="4"></textarea>
 						<span id="inquiry-error"></span>
 					</dd>
 				</dl>
 
-				<a href="">プライバシーポリシーはコチラ</a>
-				<p>
-					<input
-						type="checkbox"
-						id="check"
-						name="check"
-						value="privacy-police"
-					/><label for="check">プライバシーポリシーに同意する</label>
+				<div class="ContactPage__Privacy">
+					<a href="">プライバシーポリシーはコチラ</a>
+					<div class="ContactPage__Privacy__check">
+						<input
+							type="checkbox"
+							id="check"
+							name="check"
+							value="privacy-police"
+						/><label for="check">プライバシーポリシーに同意する</label>
+					</div>
 					<span id="checkbox-error"></span>
-				</p>
-				<p>
-					<input type="submit" onclick="dummyPost ()" value="送信する" />
-				</p>
+					<p>
+						<input type="submit" onclick="dummyPost ()" value="送信する" />
+					</p>
+				</div>
 			</form>
 		</section>
 	</main>
