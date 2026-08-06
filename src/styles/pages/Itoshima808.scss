@@ -1,12 +1,22 @@
 @use "../foundation/variables"as *;
 @use "../foundation/mixins"as *;
 
+
 .l-container {
   max-width: 125rem;
-  width: 100%;
-  padding: 0 10rem;
-  margin: 0 auto;
+  padding-inline: 10rem;    //左右の余白
+  margin-inline: auto;
+  @include mq('max-lg') {
+    position: static;
+  }
+  @include mq('min-lg') {
+    position: relative;
+  }
+  @include mq('min-xl') {
+    position: relative;
+  }  
 }
+
 
 .itoshima808 {
 
@@ -123,14 +133,17 @@
   }
 
   
-//-------------------------------------------
-//  Villa（KITCHEN・BED ROOM・PRIVATE GARDEN）
-//-------------------------------------------
+   //-------------------------------------------
+   //  Villa（KITCHEN・BED ROOM・PRIVATE GARDEN）
+   //-------------------------------------------
+
+  
 
   &__switcher {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-block-start: 8rem;
   }
 
 
@@ -147,13 +160,12 @@
     }
     @include mq('min-lg') {
       position: relative;
-      padding-top: 5.5rem;
+      overflow: hidden;
     }
     @include mq('min-xl') {
       position: relative;
-      padding-top: 5.5rem;
+      overflow: hidden;
     }
-
   
 
     &__text {
@@ -163,21 +175,20 @@
       }
       @include mq('min-lg') {
         position: absolute;
-        inset-block-start: 10rem;
-        inset-inline-start: 18rem;
+        inset-block-start: 20rem;
+        inset-inline-start: 15rem;
         display: block flex;
         flex-direction: column;
         align-items: flex-end;       
       }
       @include mq('min-xl') {
         position: absolute;
-        inset-block-start: 10rem;
-        inset-inline-start: 18rem;
+        inset-block-start: 20rem;
+        inset-inline-start: 15rem;
         display: block flex;
         flex-direction: column;
         align-items: flex-end;        
       }
-
 
 
       &__title { 
@@ -193,13 +204,14 @@
         }
         @include mq('min-lg') {
           font-size: clamp(6.6rem, -1.43rem + 7.84vw, 8.6rem);
-          margin-bottom: 4rem;
+          line-height: 1;
+          // margin-bottom: 4rem;
         }
         @include mq('min-xl') {
           font-size: 8.6rem;
-          margin-bottom: 4rem;
-        }
-        
+          line-height: 1;
+          // margin-bottom: 4rem;
+        }        
       }
 
       &__description {
@@ -215,12 +227,12 @@
         @include mq('min-lg') {
           font-size: 1.6rem;
           line-height: 2.1;
-          margin-top: -3rem;
+          margin-block-start: 3rem;
         }
         @include mq('min-xl') {
           font-size: 1.6rem;
           line-height: 2.1;
-          margin-top: -3rem;
+          margin-block-start: 3rem;
         }     
 
         &__parts {
@@ -229,35 +241,73 @@
       }
     }
 
-    &__imgtop {
+
+    // ３枚の画像を配置する
+
+    &__photo {
       display: flex;
-      overflow: hidden;
-       @include mq('max-lg') {
-        flex-direction: column-reverse;
-        gap: 4rem;
-       }
+      @include mq('max-lg') {
+        flex-direction: column;
+        gap: 3rem;
+        max-width: 42rem;
+      }
        @include mq('min-lg') {
-        display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 165rem;
        }
        @include mq('min-xl') {
-        display: flex;
-        justify-content: space-between;
+         // position: relative;
+         // display: flex;
+         flex-wrap: wrap;
+         height: 165rem;
+         // padding-bottom: 165rem;
+         // overflow: hidden;
        }
 
 
+      
+        // 画像の大きさを設定
+      &--kitchen {
+        width: 78.7rem;
+        height: 62.2rem;
+      }
+
+      &--bed {
+        width: 38.1rem;
+        height: 44.8rem;
+      }
+
+      &--garden {
+        width: 110rem;
+        height: 73.3rem;
+      }
+    }
+
+      
       &__item {
+        @include mq('max-lg') {
+          position: static;
+        }
+        @include mq('min-lg') {
+          position: absolute;        
+        }
+        @include mq('min-xl') {
+          position: absolute;
+        }
+
+
+      // キャプションの配置
         figure {
         display: flex;
         gap: 0.5rem;
         margin: 0;
       }
 
-        img {
-          flex: 1;
-          width: 100%;
-          display: block;
-        }
+        // img {
+        //   flex: 1;
+        //   width: 100%;
+        //   display: block;
+        // }
 
         figcaption {
         body.is-night & {
@@ -271,19 +321,22 @@
         }
       }
 
-        &--left {
-           @include mq('max-lg') {
-            width: 53%;
-            margin-top: 0;
-           }
-           @include mq('min-lg') {
-            width: 20%;
-            margin-top: 53rem;
-           }
-           @include mq('min-xl') {
-             width: 20%;
-             margin-top: 53rem;
-           }
+            // 画像の配置
+        &--bed {
+          inset-block-start: 72rem;
+          inset-inline-start: -18rem;
+          //  @include mq('max-lg') {
+          //   width: 53%;
+          //   margin-top: 0;
+          //  }
+          //  @include mq('min-lg') {
+          //   width: 20%;
+          //   margin-top: 53rem;
+          //  }
+          //  @include mq('min-xl') {
+          //    width: 20%;
+          //    margin-top: 53rem;
+          //  }
 
           figure {
             flex-direction: row;
@@ -291,29 +344,42 @@
           }
         }
 
-        &--right {
-          @include mq('max-lg') {
-            width: 85%;
-            margin-top: 3rem;
-            margin-left: auto;
-            transform: translateX(6rem);
-          }
-          @include mq('min-lg') {
-            width: 40%;
-            margin-top: 3rem;
-            transform: translateX(20rem);
-          }
-          @include mq('min-xl') {
-            width: 40%;
-            margin-top: 3rem;
-            transform: translateX(20rem);
-          }
+        &--kitchen {
+          inset-block-start: 20rem;
+          inset-inline-end: -43.5rem;
+
+          // @include mq('max-lg') {
+          //   width: 85%;
+          //   margin-top: 3rem;
+          //   margin-left: auto;
+          //   transform: translateX(6rem);
+          // }
+          // @include mq('min-lg') {
+          //   width: 40%;
+          //   margin-top: 3rem;
+          //   transform: translateX(20rem);
+          // }
+          // @include mq('min-xl') {
+          //   width: 40%;
+          //   margin-top: 3rem;
+          //   transform: translateX(20rem);
+          // }
 
           figure {
             flex-direction: row-reverse;
             align-items: flex-end;
           }
-        }          
+        }
+
+        &--garden {
+          inset-block-start: 100rem;
+          inset-inline-start: 30rem;
+          figure {
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            inline-size: 80%;
+          }
+        }           
       }     
     }
 
@@ -380,7 +446,7 @@
 
 
 
-}
+
 
 
 

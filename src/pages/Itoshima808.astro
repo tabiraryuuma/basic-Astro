@@ -75,67 +75,121 @@ import ImageSwitcher from "../components/ImageSwitcher.astro";
           />        
       </div>
 
-      <!-- Villa（KITCHEN・BED ROOM・PRIVATE GARDEN） -->
+          <!-- Villa（KITCHEN・BED ROOM・PRIVATE GARDEN） -->
       
       <section class="itoshima808__villa">
-        <div class="itoshima808__switcher">
-          <ImageSwitcher />
-        </div>
-        
-        <div class="itoshima808__villa__text">
-          <h2 class="itoshima808__villa__text__title">ITOSHIMA808</h2>
-          <div class="itoshima808__villa__text__description">
-            <p class="itoshima808__villa__text__description__parts">特徴的な三角形の外観が印象的な、海を望むヴィラ。<br>寝室やバルコニーから広がる景色が、<br>
-                滞在の時間そのものを特別なものに変えていきます。
-            </p>
-            <p class="itoshima808__villa__text__description__parts">バルコニーとつながるリビングに、<br>心地よい風が通り抜ける。<br>
-                無駄を削ぎ落としたコンパクトな設えに、<br>必要な設備を丁寧に整えました。
-            </p>
-            <p class="itoshima808__villa__text__description__parts">南国植物に囲まれたプライベートガーデンで<br>焚き火を囲み、静かに語らうひととき。<br>
-                波の音を聴きながら、まどろみの中へ。<br>心が満たされる、贅沢なひとときをお過ごしください。
-            </p>
-          </div>
-        </div>
+        <div class="itoshima808__villa__concept l-container">
 
-        <div class="itoshima808__villa__imgtop">
-          <div class="itoshima808__villa__imgtop__item itoshima808__villa__imgtop__item--left">
-            <figure>
-              <img
+          <div class="itoshima808__switcher">
+            <ImageSwitcher />
+          </div>
+        
+          <div class="itoshima808__villa__text">
+            <h2 class="itoshima808__villa__text__title">ITOSHIMA808</h2>
+            <div class="itoshima808__villa__text__description">
+              <p class="itoshima808__villa__text__description__parts">特徴的な三角形の外観が印象的な、海を望むヴィラ。<br>寝室やバルコニーから広がる景色が、<br>
+                滞在の時間そのものを特別なものに変えていきます。
+              </p>
+              <p class="itoshima808__villa__text__description__parts">バルコニーとつながるリビングに、<br>心地よい風が通り抜ける。<br>
+                無駄を削ぎ落としたコンパクトな設えに、<br>必要な設備を丁寧に整えました。
+              </p>
+              <p class="itoshima808__villa__text__description__parts">南国植物に囲まれたプライベートガーデンで<br>焚き火を囲み、静かに語らうひととき。<br>
+                波の音を聴きながら、まどろみの中へ。<br>心が満たされる、贅沢なひとときをお過ごしください。
+              </p>
+            </div>
+          </div>
+
+
+                   <!-- ３枚の画像を配置する -->
+          <div class="itoshima808__villa__photo">
+
+            <div class="itoshima808__villa__item itoshima808__villa__item--kitchen">
+              <figure>
+                <div class="itoshima808__villa__photo--kitchen">
+                  <img
+                    class=""
+                    src={ImagesItoshima808.Itoshima808Day2.src}
+                    data-day-src={ImagesItoshima808.Itoshima808Day2.src}
+                    data-night-src={ImagesItoshima808.Itoshima808Night2.src}              
+                    alt="" 
+                    />     
+                </div>
+                <figcaption>KITCHEN</figcaption>
+              </figure>
+            </div>
+
+            <div class="itoshima808__villa__item itoshima808__villa__item--bed">
+              <figure>
+                <div class="itoshima808__villa__photo--bed">
+                  <img
+                    class=""
+                    src={ImagesItoshima808.Itoshima808Day3.src}
+                    data-day-src={ImagesItoshima808.Itoshima808Day3.src}
+                    data-night-src={ImagesItoshima808.Itoshima808Night3.src}              
+                    alt="" 
+                    />       
+                </div>
+                <figcaption>BED ROOM</figcaption>
+              </figure>
+            </div>
+
+            <div class="itoshima808__villa__item itoshima808__villa__item--garden">
+              <figure>
+                <div class="itoshima808__villa__photo--garden">
+                  <img
+                  class=""
+                  src={ImagesItoshima808.Itoshima808Day4.src}
+                  data-day-src={ImagesItoshima808.Itoshima808Day4.src}
+                  data-night-src={ImagesItoshima808.Itoshima808Night4.src}              
+                  alt="" 
+                  />          
+                </div>
+                <figcaption>PRIVATE GARDEN</figcaption>
+              </figure>
+            </div>
+          </div>
+        
+          <!-- <div class="itoshima808__villa__imgtop">
+            <div class="itoshima808__villa__imgtop__item itoshima808__villa__imgtop__item--left">
+              <figure>
+                <img
                 class="itoshima808__villa__imgtop__left"
                 src={ImagesItoshima808.Itoshima808Day3.src}
                 data-day-src={ImagesItoshima808.Itoshima808Day3.src}
                 data-night-src={ImagesItoshima808.Itoshima808Night3.src}              
                 alt="" 
                 />            
-              <figcaption>BED ROOM</figcaption>
-            </figure>
-          </div>
-          <div class="itoshima808__villa__imgtop__item itoshima808__villa__imgtop__item--right">
-            <figure>
-              <img
+                <figcaption>BED ROOM</figcaption>
+              </figure>
+            </div>
+            <div class="itoshima808__villa__imgtop__item itoshima808__villa__imgtop__item--right">
+              <figure>
+                <img
                 class="itoshima808__villa__imgtop__right"
                 src={ImagesItoshima808.Itoshima808Day2.src}
                 data-day-src={ImagesItoshima808.Itoshima808Day2.src}
                 data-night-src={ImagesItoshima808.Itoshima808Night2.src}              
                 alt="" 
                 />            
-              <figcaption>KITCHEN</figcaption>
-            </figure>
+                <figcaption>KITCHEN</figcaption>
+              </figure>
+            </div>
           </div>
-        </div>
         
-        <div class="itoshima808__villa__imgBottom">
-          <figure>
+          <div class="itoshima808__villa__imgBottom">
+            <figure>
               <img
-                class=""
-                src={ImagesItoshima808.Itoshima808Day4.src}
-                data-day-src={ImagesItoshima808.Itoshima808Day4.src}
-                data-night-src={ImagesItoshima808.Itoshima808Night4.src}              
-                alt="" 
-                />            
+              class=""
+              src={ImagesItoshima808.Itoshima808Day4.src}
+              data-day-src={ImagesItoshima808.Itoshima808Day4.src}
+              data-night-src={ImagesItoshima808.Itoshima808Night4.src}              
+              alt="" 
+              />            
               <figcaption>PRIVATE GARDEN</figcaption>
             </figure>
-        </div>
+          </div>
+      </div> -->
+      
 
       </section>
 
