@@ -1,18 +1,21 @@
 @use "../foundation/variables"as *;
 @use "../foundation/mixins"as *;
 
-main {
-	background-color: #e9e5e1;
-}
-
 .ContactPage {
-	max-width: 105rem;
-	margin: 0 auto;
+	background-color: #e9e5e1;
+	padding-bottom: 10rem;
+
+	&__form {
+		max-width: 102.3rem;
+		margin: 0 auto;
+		padding-inline: 10rem;
+	}
 
 	&__HEAD {
 		padding-top: 5rem;
 		text-align: center;
 		color: $Background-brown;
+		margin-bottom: 10rem;
 
 		p {
 			padding-top: 1rem;
@@ -26,7 +29,13 @@ main {
 		}
 
 		dd {
-			max-width: 60rem;
+			max-width: 45rem;
+			width: 100%;
+		}
+
+		dt {
+			color: $Background-brown;
+			max-width: 20rem;
 			width: 100%;
 		}
 
@@ -35,36 +44,48 @@ main {
 			border-radius: 1rem;
 			border: 1px solid #e9e5e1;
 			background-color: white;
-			padding: 0.5rem 1rem;
+			padding: 1.1rem 1rem;
 		}
 
 		&--text {
 			display: flex;
 			justify-content: space-between;
+			margin-bottom: 4.5rem;
+			align-items: center;
 		}
 
 		&--address {
 			display: flex;
 			justify-content: space-between;
+			margin-bottom: 4rem;
+			align-items: baseline;
 
 			.rightbox {
 				display: flex;
 				flex-direction: column;
-				max-width: 60rem;
+				max-width: 45rem;
 				width: 100%;
 
 				dd {
+					max-width: 35rem;
 					display: flex;
 					width: 100%;
+					margin-bottom: 2.5rem;
+					gap: 1rem;
 				}
 
 				button {
+					max-width: 12rem;
 					width: 100%;
+					background-color: rgb(219, 211, 199);
+					border: 1px solid rgb(219, 211, 199);
+					border-radius: 1rem;
 				}
 			}
 		}
 
 		&--inquiry {
+			margin-bottom: 10rem;
 
 			@include mq("min-xl") {
 				display: flex;
@@ -89,17 +110,37 @@ main {
 	&__Privacy {
 		text-align: center;
 		color: $Background-brown;
-		max-width: 30rem;
+		max-width: 26rem;
+		margin: 2rem auto;
+
+		span {
+			color: red;
+		}
 
 		a {
 			border-bottom: 1px solid $Background-brown;
 		}
 
 		&__check {
+			margin: 2rem 0;
 			display: flex;
-			flex-direction: column;
+			justify-content: space-between;
 		}
 	}
 
+	&__send-type {
+		max-width: 30rem;
+		width: 100%;
+		margin: 0 auto;
+		background-color: $Background-brown;
+		border: 1px solid $Background-brown;
+		border-radius: 50px;
+		padding: 0.9rem;
+		text-align: center;
 
+		input {
+			color: #fff;
+
+		}
+	}
 }
