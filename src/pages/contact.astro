@@ -6,12 +6,16 @@ import "../styles/pages/contact.scss";
 <Layout>
 	<main>
 		<section class="ContactPage">
-			<div class="ContactPage__HEAD">
-				<h1>CONTACT</h1>
-				<p>お問い合わせ</p>
-			</div>
-
-			<form id="Contact" action="/contact-complete/" method="post">
+			<form
+				class="ContactPage__form"
+				id="Contact"
+				action="/contact-complete/"
+				method="post"
+			>
+				<div class="ContactPage__HEAD">
+					<h1>CONTACT</h1>
+					<p>お問い合わせ</p>
+				</div>
 				<dl class="ContactPage__box ContactPage__box--text">
 					<dt><label for="name">お名前</label><span>※</span></dt>
 					<dd>
@@ -79,8 +83,9 @@ import "../styles/pages/contact.scss";
 								type="text"
 								id="zipcode"
 								name="address"
+								maxlength="7"
 							/>
-							<button type="button" id="searchbox">住所自動入力</button>
+							<button type="button" id="searchBox">住所自動入力</button>
 						</dd>
 						<label for="address"></label>
 						<input
@@ -88,7 +93,6 @@ import "../styles/pages/contact.scss";
 							type="text"
 							id="address"
 							name="address"
-							maxlength="7"
 						/>
 					</div>
 				</dl>
@@ -111,9 +115,11 @@ import "../styles/pages/contact.scss";
 						/><label for="check">プライバシーポリシーに同意する</label>
 					</div>
 					<span id="checkbox-error"></span>
-					<p>
-						<input type="submit" onclick="dummyPost ()" value="送信する" />
-					</p>
+				</div>
+
+				<div class="ContactPage__send-type">
+					<label for="submit"></label>
+					<input type="submit" onclick="dummyPost ()" value="送信する" />
 				</div>
 			</form>
 		</section>
