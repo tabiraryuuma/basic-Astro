@@ -8,7 +8,18 @@
 	&__form {
 		max-width: 102.3rem;
 		margin: 0 auto;
-		padding-inline: 10rem;
+
+		@include mq("min-xl") {
+			padding-inline: 10rem;
+		}
+
+		@include mq("min-lg") {
+			padding-inline: 10rem;
+		}
+
+		@include mq("max-lg") {
+			padding-inline: 5rem;
+		}
 	}
 
 	&__HEAD {
@@ -29,14 +40,29 @@
 		}
 
 		dd {
-			max-width: 45rem;
+
 			width: 100%;
+
+			@include mq("min-xl") {
+				max-width: 45rem;
+			}
+
+			@include mq("min-lg") {
+				max-width: 45rem;
+			}
 		}
 
 		dt {
 			color: $Background-brown;
-			max-width: 20rem;
 			width: 100%;
+
+			@include mq("min-xl") {
+				max-width: 20rem;
+			}
+
+			@include mq("min-lg") {
+				max-width: 20rem;
+			}
 		}
 
 		&__input {
@@ -44,34 +70,87 @@
 			border-radius: 1rem;
 			border: 1px solid #e9e5e1;
 			background-color: white;
-			padding: 1.1rem 1rem;
+
+			@include mq("min-xl") {
+				padding: 1.1rem 1rem;
+			}
+
+			@include mq("min-lg") {
+				padding: 1.1rem 1rem;
+			}
+
+			@include mq("max-lg") {
+				padding: 1.5rem 1rem;
+			}
 		}
 
 		&--text {
 			display: flex;
-			justify-content: space-between;
-			margin-bottom: 4.5rem;
 			align-items: center;
+
+			@include mq("min-xl") {
+				justify-content: space-between;
+				margin-bottom: 4.5rem;
+			}
+
+			@include mq("min-lg") {
+				justify-content: space-between;
+				margin-bottom: 4.5rem;
+			}
+
+			@include mq("max-lg") {
+				flex-direction: column;
+				margin-bottom: 3.5rem;
+			}
 		}
 
 		&--address {
 			display: flex;
-			justify-content: space-between;
 			margin-bottom: 4rem;
 			align-items: baseline;
+
+			@include mq("min-xl") {
+				justify-content: space-between;
+			}
+
+			@include mq("min-lg") {
+				justify-content: space-between;
+			}
+
+			@include mq("max-lg") {
+				flex-direction: column;
+			}
 
 			.rightbox {
 				display: flex;
 				flex-direction: column;
-				max-width: 45rem;
 				width: 100%;
 
+				@include mq("min-xl") {
+					max-width: 45rem;
+				}
+
+				@include mq("min-lg") {
+					max-width: 45rem;
+				}
+
 				dd {
-					max-width: 35rem;
 					display: flex;
 					width: 100%;
 					margin-bottom: 2.5rem;
 					gap: 1rem;
+
+					@include mq("min-xl") {
+						max-width: 35rem;
+					}
+
+					@include mq("min-lg") {
+						max-width: 35rem;
+					}
+
+					@include mq("max-lg") {
+						margin-bottom: 1.5rem;
+					}
 				}
 
 				button {
