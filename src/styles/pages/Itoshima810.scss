@@ -114,16 +114,15 @@
       // inline-size: 100%;    
       // gap: 22px;  
       display: grid;
-      grid-template-columns: minmax(50rem, 1fr) minmax(55rem, 57rem);
+      grid-template-columns: minmax(44rem, 1fr) minmax(40rem, 54rem);
       column-gap: clamp(3rem, 2vw, 6rem);
       align-items: start;
     }
     @include mq('min-xl') {
       display: grid;
-      grid-template-columns: minmax(50rem, 1fr) minmax(55rem, 57rem);
+      grid-template-columns: minmax(44rem, 1fr) minmax(40rem, 55rem);
       column-gap: clamp(3rem, 2vw, 6rem);
       align-items: start;
-      margin-inline-start: 11rem;
     }
   }
   
@@ -132,8 +131,6 @@
   //--- テキストコンテンツ
   .villa__content {
     margin-inline-start: auto;
-
-
     @include mq('max-lg') {
       // margin-inline-start: 37%;
       padding-block-start: 6rem;           
@@ -145,18 +142,18 @@
       // margin: 0;
       // margin-inline-end: -2rem;
 
-      inline-size: auto;
-      max-inline-size: 55.2rem;
+      // inline-size: auto;
+      // max-inline-size: 55.2rem;
+      // justify-self: start;
+      display: grid;
+      inline-size: 100%;
+      max-inline-size: none;
       justify-self: start;
-
-
     }
     @include mq('min-xl') {
       inline-size: auto;
       max-inline-size: 55.2rem;
       justify-self: start;
-      padding-inline-start: clamp(2rem, 3vw, 6rem);
-
     }
   }
 
@@ -181,6 +178,7 @@
       font-size: 8.6rem;
       font-weight: 300;
       white-space: nowrap;
+      justify-self: end;
       // margin-inline-start: -6.5rem;
     }
 
@@ -216,6 +214,7 @@
       margin-block-start: 6.5rem;
       line-height: 2.1222;
       justify-self: end;
+      inline-size: min(100%, 43.2rem);
     }
 
     @include mq('min-xl') {
