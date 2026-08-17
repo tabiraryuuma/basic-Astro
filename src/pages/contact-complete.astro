@@ -1,14 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import "../styles/pages/contact-complete.scss";
 ---
 
 <Layout>
 	<main>
-		<div>
-			<h1>CONTACT</h1>
-			<p>お問い合わせ</p>
+		<section class="ContactPage">
+			<div class="ContactPage__HEAD">
+				<h1>CONTACT</h1>
+				<p>お問い合わせ</p>
+			</div>
 
-			<p>プライバシーポリシーに同意する</p>
-		</div>
+			<div class="ContactPage__text">
+				<h2>お問い合わせいただき、ありがとうございます。</h2>
+				<p>
+					内容を確認の上、スタッフより折り返しご連絡させていただきます。
+					<br />営業日を過ぎても連絡がない場合は、
+					<br />誠に恐れ入りますが再度お問い合わせいただけますと幸いです。
+				</p>
+			</div>
+
+			<a href="/">TOP PAGE</a>
+		</section>
 	</main>
 </Layout>
