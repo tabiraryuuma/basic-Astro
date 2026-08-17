@@ -214,12 +214,13 @@
 		background-color: $Background-brown;
 		border: 1px solid $Background-brown;
 		border-radius: 50px;
-		padding: 0.9rem;
 		text-align: center;
 
 		input {
 			color: #fff;
-
+			border-radius: 50px;
+			width: 100%;
+			padding: 0.9rem;
 		}
 	}
 }

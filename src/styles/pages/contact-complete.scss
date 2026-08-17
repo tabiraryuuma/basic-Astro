@@ -18,5 +18,29 @@
 
 	&__text {
 		text-align: center;
+		color: $Background-brown;
+
+		p {
+			line-height: 2;
+			padding: 5rem 0;
+		}
+	}
+
+	.TOP-button {
+		max-width: 30rem;
+		width: 100%;
+		margin: 0 auto;
+		background-color: white;
+		border: 1px solid white;
+		border-radius: 50px;
+		text-align: center;
+
+		a {
+			display: block;
+			color: $Background-brown;
+			border-radius: 50px;
+			padding: 0.9rem;
+			width: 100%;
+		}
 	}
 }
