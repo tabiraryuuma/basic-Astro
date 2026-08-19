@@ -18,7 +18,7 @@
 		}
 
 		@include mq("max-lg") {
-			padding-inline: 5rem;
+			padding-inline: clamp(2rem, 6.77vw, 5rem);
 		}
 	}
 
@@ -36,6 +36,7 @@
 	&__box {
 
 		span {
+			padding-left: 0.5rem;
 			color: red;
 		}
 
@@ -81,6 +82,16 @@
 
 			@include mq("max-lg") {
 				padding: 1.5rem 1rem;
+			}
+		}
+
+		.short {
+			&::before {
+				content: "〒";
+				position: absolute;
+				font-size: 2rem;
+				padding: 1.2rem;
+				line-height: 1;
 			}
 		}
 
@@ -182,6 +193,10 @@
 				border: 1px solid #e9e5e1;
 				background-color: white;
 				padding: 0.5rem 1rem;
+
+				@include mq("max-lg") {
+					height: 20rem;
+				}
 			}
 		}
 	}

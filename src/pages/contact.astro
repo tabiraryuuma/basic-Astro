@@ -78,13 +78,15 @@ import "../styles/pages/contact.scss";
 					<dt><label for="address">ご住所</label></dt>
 					<div class="rightbox">
 						<dd>
-							<input
-								class="ContactPage__box__input short"
-								type="text"
-								id="zipcode"
-								name="address"
-								maxlength="7"
-							/>
+							<div class="short">
+								<input
+									class="ContactPage__box__input"
+									type="text"
+									id="zipcode"
+									name="address"
+									maxlength="7"
+								/>
+							</div>
 							<button type="button" id="searchBox">住所自動入力</button>
 						</dd>
 						<label for="address"></label>

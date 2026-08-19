@@ -26,6 +26,23 @@
 		}
 	}
 
+	&__pc-only {
+		display: block;
+
+		@include mq ('max-lg') {
+			display: none;
+		}
+	}
+
+	&__sp-only {
+		display: none;
+
+		@include mq ('max-lg') {
+			display: block;
+
+		}
+	}
+
 	.TOP-button {
 		max-width: 30rem;
 		width: 100%;
