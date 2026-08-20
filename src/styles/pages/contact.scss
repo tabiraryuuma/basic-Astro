@@ -41,7 +41,6 @@
 		}
 
 		dd {
-
 			width: 100%;
 
 			@include mq("min-xl") {
@@ -71,27 +70,55 @@
 			border-radius: 1rem;
 			border: 1px solid #e9e5e1;
 			background-color: white;
+			padding-left: 2rem;
 
 			@include mq("min-xl") {
-				padding: 1.1rem 1rem;
+				height: 4.5rem;
 			}
 
 			@include mq("min-lg") {
-				padding: 1.1rem 1rem;
+				height: 4.5rem;
 			}
 
 			@include mq("max-lg") {
-				padding: 1.5rem 1rem;
+				height: 5rem;
+			}
+
+			&:focus-visible {
+				outline: unset;
+				box-shadow: 0 0 0 2px orange;
+				background-color: #00c3ff90
 			}
 		}
 
 		.short {
+			position: relative;
+
 			&::before {
 				content: "〒";
+				color: $Background-brown;
 				position: absolute;
-				font-size: 2rem;
-				padding: 1.2rem;
+				font-size: 1.8rem;
 				line-height: 1;
+
+				@include mq("min-xl") {
+					top: 1.2rem;
+					left: 1.2rem;
+				}
+
+				@include mq("min-lg") {
+					top: 1.2rem;
+					left: 1.2rem;
+				}
+
+				@include mq("max-lg") {
+					top: 1.5rem;
+					left: 1.5rem;
+				}
+			}
+
+			&__box {
+				padding-left: 3rem;
 			}
 		}
 
@@ -192,7 +219,7 @@
 				border-radius: 1rem;
 				border: 1px solid #e9e5e1;
 				background-color: white;
-				padding: 0.5rem 1rem;
+				padding: 1rem 2rem;
 
 				@include mq("max-lg") {
 					height: 20rem;
