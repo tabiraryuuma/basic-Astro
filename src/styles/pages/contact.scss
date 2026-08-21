@@ -71,6 +71,7 @@
 			border: 1px solid #e9e5e1;
 			background-color: white;
 			padding-left: 2rem;
+			transition: 0.3s;
 
 			@include mq("min-xl") {
 				height: 4.5rem;
@@ -87,7 +88,13 @@
 			&:focus-visible {
 				outline: unset;
 				box-shadow: 0 0 0 2px orange;
-				background-color: #00c3ff90
+				background-color: rgb(232, 240, 254);
+
+				&:hover {
+					outline: unset;
+					box-shadow: 0 0 0 2px orange;
+					background-color: rgb(232, 240, 254);
+				}
 			}
 		}
 
@@ -197,6 +204,16 @@
 					background-color: rgb(219, 211, 199);
 					border: 1px solid rgb(219, 211, 199);
 					border-radius: 1rem;
+
+					&:focus-visible {
+						outline: unset;
+						box-shadow: 0 0 0 2px orange;
+
+						&:hover {
+							outline: unset;
+							box-shadow: 0 0 0 2px orange;
+						}
+					}
 				}
 			}
 		}
@@ -220,6 +237,19 @@
 				border: 1px solid #e9e5e1;
 				background-color: white;
 				padding: 1rem 2rem;
+				transition: 0.3s;
+
+				&:focus-visible {
+					outline: unset;
+					box-shadow: 0 0 0 2px orange;
+					background-color: rgb(232, 240, 254);
+
+					&:hover {
+						outline: unset;
+						box-shadow: 0 0 0 2px orange;
+						background-color: rgb(232, 240, 254);
+					}
+				}
 
 				@include mq("max-lg") {
 					height: 20rem;
